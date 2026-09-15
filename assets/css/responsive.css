@@ -1683,9 +1683,18 @@
 
 
   .visual-split-row {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
     margin-bottom: 3.5rem;
+  }
+
+  .visual-split-row .visual-media-frame {
+    min-height: 180px !important;
+    height: 180px !important;
+  }
+
+  .visual-split-row > div:last-child {
+    padding: 1.75rem 1.25rem !important;
   }
 
   .visual-split-row.reverse > :first-child {

@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aegis Recovery Partners — Enterprise debt resolution, multi-tier skip-tracing intelligence, and strict CFPB Reg F compliance. High-yield contingency collections with zero reputation risk.">
+  <meta name="keywords" content="predictive debt recovery, commercial debt collection, skip-tracing intelligence, CFPB compliance debt collection, enterprise account resolution">
+  <title>Intelligence & Compliance Debt Recovery | Aegis Recovery Partners</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=106">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=106">
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="pagePreloader" style="position: fixed; inset: 0; z-index: 999999; background-color: #0A192F; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem;">
+    <div class="preloader-spinner-ring"></div>
+    <div class="preloader-brand-box">
+      <div class="preloader-text-brand">AEGIS <span class="gold-accent">RECOVERY</span></div>
+    </div>
+    <div class="preloader-bar-track"><div class="preloader-bar-fill"></div></div>
+  </div>
+
+  <!-- ==========================================================================
+       PUBLIC HEADER / NAVBAR (ROYAL SAPPHIRE THEME)
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Logo / Brand with Attractive Shield Emblem -->
+        <a href="index.html" class="nav-brand" aria-label="Aegis Recovery Partners Homepage">
+          <div class="brand-emblem">
+            <img src="assets/images/icons/logo.svg" alt="Aegis Logo Emblem" width="28" height="28">
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span>
+            <span class="brand-subtitle">Ethical Debt Resolution</span>
+          </div>
+        </a>
+
+        <!-- Main Navigation Menu (Clean Labels, Compact Spacing) -->
+        <ul class="nav-menu" id="navMenu">
+          <!-- 1. Home (Dropdown: Home 1, Home 2) -->
+          <li class="nav-item nav-dropdown" id="homeDropdown">
+            <a href="home-2.html" class="nav-link active" id="homeDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <span class="dropdown-arrow">▼</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="homeDropdownToggle">
+              <a href="index.html" class="dropdown-item">
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Home 1 — Ethical Recovery</span>
+                  <span class="dropdown-item-desc">Trust-first commercial &amp; consumer resolution</span>
+                </div>
+              </a>
+              <a href="home-2.html" class="dropdown-item active">
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Home 2 — Intelligence &amp; Compliance</span>
+                  <span class="dropdown-item-desc">Editorial data-driven debt recovery</span>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <!-- 2. About -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+
+          <!-- 3. Services -->
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+
+          <!-- 4. Compliance & Licensing -->
+          <li class="nav-item">
+            <a href="compliance.html" class="nav-link">Compliance &amp; Licensing</a>
+          </li>
+
+          <!-- 5. Pricing -->
+          <li class="nav-item">
+            <a href="pricing.html" class="nav-link">Pricing</a>
+          </li>
+
+          <!-- 6. Recovery Process -->
+          <li class="nav-item">
+            <a href="recovery-process.html" class="nav-link">Recovery Process</a>
+          </li>
+
+          <!-- 7. Contact -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+          <!-- 8. Dashboard (Clean Label Format) -->
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+        </ul>
+
+        <!-- Right Controls: Theme Toggle, RTL Toggle, Login Button, Mobile Hamburger -->
+        <div class="nav-actions">
+          <!-- Theme Toggle -->
+          <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle light and dark mode" id="themeToggleBtn">
+            <span class="theme-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </span>
+          </button>
+
+          <!-- RTL/LTR Toggle -->
+          <button type="button" class="icon-btn rtl-toggle-btn" aria-label="Toggle text direction RTL/LTR" id="rtlToggleBtn">
+            <span class="dir-label" style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+          </button>
+
+          <!-- Login Button -->
+          <a href="login.html" class="btn btn-gold btn-sm" id="navLoginBtn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+            <span>Login</span>
+          </a>
+
+          <!-- Mobile Menu Hamburger Button -->
+          <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile navigation" aria-expanded="false" aria-controls="mobileDrawer" onclick="toggleMobileMenu(event)">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Sidebar Navigation -->
+  <div class="mobile-drawer-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-text">
+        <span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span>
+      </div>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item has-dropdown">
+          <a href="#" class="mobile-nav-link mobile-dropdown-toggle active">
+            <span>Home</span>
+            <span class="mobile-toggle-arrow">▼</span>
+          </a>
+          <ul class="mobile-submenu">
+            <li><a href="index.html" class="mobile-submenu-link">Home 1 — Ethical Recovery</a></li>
+            <li><a href="home-2.html" class="mobile-submenu-link active">Home 2 — Intelligence &amp; Compliance</a></li>
+          </ul>
+        </li>
+        <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+        <li class="mobile-nav-item"><a href="compliance.html" class="mobile-nav-link">Compliance &amp; Licensing</a></li>
+        <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+        <li class="mobile-nav-item"><a href="recovery-process.html" class="mobile-nav-link">Recovery Process</a></li>
+        <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+
+      <div class="mobile-drawer-actions">
+        <a href="login.html" class="btn btn-gold btn-block">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Client Portal Login</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         SECTION 1: PANORAMIC CINEMATIC TELEMETRY COMMAND HERO (DISTINCT FROM HOME 1)
+         ========================================================================== -->
+    <section class="hero-panoramic-section" id="heroIntelligence">
+      <div class="container">
+        <div class="hero-panoramic-header reveal-fade-up">
+          <div class="hero-panoramic-badge">
+            <span class="pulse-dot"></span>
+            <span>Live Radar &bull; AI Propensity Engine Active &bull; 100% CFPB Audit Cleared</span>
+          </div>
+          <h1 class="hero-panoramic-title">
+            Predictive Intelligence &amp; Ethical Governance in <span class="gold-accent">Debt Resolution</span>
+          </h1>
+          <p class="hero-panoramic-desc">
+            Autonomous multi-tier skip-tracing waterfalls, propensity-to-pay machine learning, and accredited negotiation directors recovering overdue receivables with zero brand risk.
+          </p>
+          <div class="hero-panoramic-actions">
+            <a href="#yield-calculator" class="btn btn-gold btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                <line x1="8" y1="6" x2="16" y2="6"></line>
+                <line x1="16" y1="14" x2="16" y2="18"></line>
+              </svg>
+              <span>Launch Yield Simulator</span>
+            </a>
+            <a href="#intake-cta" class="btn btn-outline-white btn-lg">
+              <span>Request 48-Hour Portfolio Scrub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 2: INTERACTIVE PRACTICE VERTICALS CONSOLE (TABBED ARCHITECTURE)
+         ========================================================================== -->
+    <section class="section bg-surface-alt" id="practiceVerticals">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <div class="section-badge badge-gold">Interactive Practice Vertical Console</div>
+          <h2 class="section-title">Specialized Recovery Protocols by Industry Vertical</h2>
+          <p class="section-desc">
+            Select an industry below to examine our dedicated compliance architecture, skip-tracing workflows, and verified benchmark recovery rates.
+          </p>
+        </div>
+
+        <!-- 4 Vertical Tabs Navigation -->
+        <div class="verticals-tab-nav reveal-fade-up delay-100">
+          <button type="button" class="vertical-tab-btn active" data-tab="tabHealthcare">
+            <div class="vertical-tab-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <div>
+              <div class="vertical-tab-title">Healthcare Networks</div>
+              <div class="vertical-tab-sub">HIPAA &bull; No Surprises Act</div>
+            </div>
+          </button>
+
+          <button type="button" class="vertical-tab-btn" data-tab="tabCommercial">
+            <div class="vertical-tab-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <div>
+              <div class="vertical-tab-title">Commercial B2B</div>
+              <div class="vertical-tab-sub">UCC-1 &bull; Trade Credit</div>
+            </div>
+          </button>
+
+          <button type="button" class="vertical-tab-btn" data-tab="tabFintech">
+            <div class="vertical-tab-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <div>
+              <div class="vertical-tab-title">Fintech &amp; Banking</div>
+              <div class="vertical-tab-sub">CFPB Reg F &bull; FCRA</div>
+            </div>
+          </button>
+
+          <button type="button" class="vertical-tab-btn" data-tab="tabSaas">
+            <div class="vertical-tab-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <div>
+              <div class="vertical-tab-title">SaaS &amp; Recurring</div>
+              <div class="vertical-tab-sub">PCI-DSS &bull; Smart Dunning</div>
+            </div>
+          </button>
+        </div>
+
+        <!-- Tab 1: Healthcare Content -->
+        <div class="vertical-tab-pane active" id="tabHealthcare">
+          <div class="tab-pane-grid">
+            <div>
+              <span class="section-tag">HIPAA &amp; HITECH Governed</span>
+              <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">
+                Patient-Centric Financial Advocacy &amp; Co-Pay Resolution
+              </h3>
+              <p style="color: var(--text-body); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                Our healthcare recovery team utilizes empathetic patient advocacy, income-scaled payment structuring, and charity care pre-screening to maximize collections without community backlash or regulatory sanctions.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 0.65rem; font-size: 0.9375rem; color: var(--text-main); font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>100% HIPAA and No Surprises Act compliance scrubbing</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.65rem; font-size: 0.9375rem; color: var(--text-main); font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Direct integration with Epic, Cerner, and AthenaHealth systems</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.65rem; font-size: 0.9375rem; color: var(--text-main); font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Zero-interest patient self-service installment portal</span>
+                </div>
+              </div>
+              <a href="#intake-cta" class="btn btn-gold">Deploy Healthcare Playbook &rarr;</a>
+            </div>
+
+            <div class="tab-metrics-box">
+              <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Average Resolution Rate</div>
+                <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-accent); font-family: var(--font-heading);">78.4%</div>
+              </div>
+              <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Average Days to Settle</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: var(--text-main); font-family: var(--font-heading);">26 Days</div>
+              </div>
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Patient Grievance Rate</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: #10B981; font-family: var(--font-heading);">&lt; 0.04%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Commercial Content -->
+        <div class="vertical-tab-pane" id="tabCommercial">
+          <div class="tab-pane-grid">
+            <div>
+              <span class="section-tag">Corporate Dispute Mediation</span>
+              <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">
+                Commercial B2B Arbitration &amp; UCC-1 Asset Protection
+              </h3>
+              <p style="color: var(--text-body); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                Executive-level trade debt negotiations designed to recover large outstanding invoices, vendor contract defaults, and freight charges without destroying ongoing commercial partnerships.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 0.65rem; font-size: 0.9375rem; color: var(--text-main); font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Corporate asset discovery &amp; corporate solvency verification</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.65rem; font-size: 0.9375rem; color: var(--text-main); font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Executive-to-executive arbitration led by licensed commercial counsel</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.65rem; font-size: 0.9375rem; color: var(--text-main); font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Nationwide legal network for UCC lien attachment if required</span>
+                </div>
+              </div>
+              <a href="#intake-cta" class="btn btn-gold">Deploy Commercial Playbook &rarr;</a>
+            </div>
+
+            <div class="tab-metrics-box">
+              <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Average B2B Liquidation Rate</div>
+                <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-accent); font-family: var(--font-heading);">86.2%</div>
+              </div>
+              <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Average Days to Settle</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: var(--text-main); font-family: var(--font-heading);">34 Days</div>
+              </div>
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Preserved Vendor Relationships</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: #10B981; font-family: var(--font-heading);">91.5%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Fintech Content -->
+        <div class="vertical-tab-pane" id="tabFintech">
+          <div class="tab-pane-grid">
+            <div>
+              <span class="section-tag">Institutional Compliance</span>
+              <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">
+                Fintech &amp; Banking Primary &amp; Secondary Charge-Offs
+              </h3>
+              <p style="color: var(--text-body); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                High-volume, automated digital omnichannel validation notices, real-time credit bureau scrubbing, and instant settlement capture for consumer credit, personal loans, and BNPL accounts.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 0.65rem; font-size: 0.9375rem; color: var(--text-main); font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Automated CFPB 7-in-7 frequency capping and call recording scrubs</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.65rem; font-size: 0.9375rem; color: var(--text-main); font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Instant ACH &amp; debit card digital settlement capture</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.65rem; font-size: 0.9375rem; color: var(--text-main); font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Daily settlement reconciliation &amp; bi-weekly client remittances</span>
+                </div>
+              </div>
+              <a href="#intake-cta" class="btn btn-gold">Deploy Fintech Playbook &rarr;</a>
+            </div>
+
+            <div class="tab-metrics-box">
+              <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Average Liquidation Yield</div>
+                <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-accent); font-family: var(--font-heading);">81.5%</div>
+              </div>
+              <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Regulatory Inquiries</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: #10B981; font-family: var(--font-heading);">0.08%</div>
+              </div>
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Digital Self-Pay Rate</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: var(--text-main); font-family: var(--font-heading);">64.2%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 4: SaaS Content -->
+        <div class="vertical-tab-pane" id="tabSaas">
+          <div class="tab-pane-grid">
+            <div>
+              <span class="section-tag">Subscription Reactivation</span>
+              <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-main);">
+                SaaS, Cloud &amp; Telecom Contract Recovery
+              </h3>
+              <p style="color: var(--text-body); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                Frictionless recovery for enterprise recurring contracts, auto-renewal disputes, and failed credit card updates, integrating directly into Stripe, Chargebee, and Zuora.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 0.65rem; font-size: 0.9375rem; color: var(--text-main); font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Smart dunning and automated billing retry logic</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.65rem; font-size: 0.9375rem; color: var(--text-main); font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>User reactivation workflows preserving customer lifetime value</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.65rem; font-size: 0.9375rem; color: var(--text-main); font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>PCI-DSS Level 1 payment gateway tokenization</span>
+                </div>
+              </div>
+              <a href="#intake-cta" class="btn btn-gold">Deploy SaaS Playbook &rarr;</a>
+            </div>
+
+            <div class="tab-metrics-box">
+              <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Subscriber Reactivation Rate</div>
+                <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-accent); font-family: var(--font-heading);">89.1%</div>
+              </div>
+              <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Average Days to Settle</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: var(--text-main); font-family: var(--font-heading);">14 Days</div>
+              </div>
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Portal Payment Share</div>
+                <div style="font-size: 1.6rem; font-weight: 800; color: #10B981; font-family: var(--font-heading);">94.8%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- ==========================================================================
+         SECTION 4: CONNECTED SKIP-TRACE & LIQUIDITY DATA STREAM
+         ========================================================================== -->
+    <section class="section bg-surface-alt" id="skipTraceIntelligence">
+      <div class="container">
+        <div class="connected-pipeline-grid">
+          <!-- Left: Connected Node Stream -->
+          <div class="reveal-fade-left">
+            <div class="section-badge badge-gold">Multi-Tier Data Architecture</div>
+            <h2 class="section-title">Autonomous Skip-Tracing &amp; Propensity Data Stream</h2>
+            <p class="section-desc" style="margin-bottom: 2rem;">
+              Locating vanished debtors and assessing true repayment capacity requires continuous waterfall enrichment across tri-bureau APIs, property records, and commercial registries.
+            </p>
+
+            <div class="pipeline-stream">
+              <div class="pipeline-card-node">
+                <div class="pipeline-node-icon">01</div>
+                <div class="pipeline-node-body">
+                  <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--text-main);">Tri-Bureau Real-Time Identity Reconciliation</h4>
+                  <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.55; margin: 0;">Direct API synchronization across Experian, Equifax, and TransUnion ensures active phone, email, and residential verification within seconds of portfolio intake.</p>
+                </div>
+              </div>
+
+              <div class="pipeline-card-node">
+                <div class="pipeline-node-icon">02</div>
+                <div class="pipeline-node-body">
+                  <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--text-main);">Commercial Asset &amp; Corporate Waterfall Ingestion</h4>
+                  <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.55; margin: 0;">Automated discovery of corporate operating accounts, UCC-1 lien filings, pending contract receivables, and state corporate registry filings.</p>
+                </div>
+              </div>
+
+              <div class="pipeline-card-node">
+                <div class="pipeline-node-icon">03</div>
+                <div class="pipeline-node-body">
+                  <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--text-main);">Machine-Learning Propensity &amp; Liquidity Scoring</h4>
+                  <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.55; margin: 0;">Proprietary algorithms analyze debtor cash flow velocity to recommend realistic installment agreements that guarantee completed settlement fulfillment.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Visual Tech Showcase Frame -->
+          <div class="compliance-visual-frame reveal-fade-right">
+            <img src="assets/images/sections/skip-trace-technology.webp" alt="Aegis Multi-Tier Skip-Tracing Data Architecture and Analytics" width="600" height="480">
+            <div class="compliance-floating-card">
+              <div class="compliance-score">99.4%</div>
+              <div class="compliance-score-label">Verified Contact Accuracy</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">Multi-Bureau Automated Waterfall</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 5: STUDIO RECOVERY YIELD CALCULATOR (FULL-WIDTH STUDIO CONTAINER)
+         ========================================================================== -->
+    <section class="section bg-surface" id="yield-calculator">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <div class="section-badge badge-gold">Interactive Financial Projection</div>
+          <h2 class="section-title">Gross-to-Net Recovery Yield Calculator</h2>
+          <p class="section-desc">
+            Estimate your net balance sheet cash injection. Adjust your portfolio volume, delinquency bucket, and industry sector to view instant expected recovery yields.
+          </p>
+        </div>
+
+        <div class="calculator-box reveal-scale delay-100">
+          <div class="calculator-grid">
+            <!-- Left Side: Interactive Controls -->
+            <div class="calc-controls">
+              <!-- Slider: Portfolio Dollar Size -->
+              <div class="calc-slider-group">
+                <div class="calc-slider-header">
+                  <label for="calcPortfolio" class="calc-slider-label">Total Portfolio Outstanding Balance</label>
+                  <span class="calc-slider-display" id="calcPortfolioDisplay">$500,000</span>
+                </div>
+                <input type="range" id="calcPortfolio" class="calc-range-input" min="50000" max="5000000" step="25000" value="500000">
+                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 0.4rem;">
+                  <span>$50,000</span>
+                  <span>$2,500,000</span>
+                  <span>$5,000,000+</span>
+                </div>
+              </div>
+
+              <!-- Delinquency Age Bucket Selectors -->
+              <div style="margin-bottom: 1.5rem;">
+                <label class="calc-slider-label" style="display: block; margin-bottom: 0.75rem;">Account Delinquency Age</label>
+                <div class="calc-options-grid">
+                  <label class="calc-radio-card">
+                    <input type="radio" name="delinquencyTier" value="tier1">
+                    <div class="calc-radio-content">
+                      <span class="calc-radio-title">30–60 Days</span>
+                      <span class="calc-radio-sub">Primary Pre-Collection</span>
+                    </div>
+                  </label>
+                  <label class="calc-radio-card">
+                    <input type="radio" name="delinquencyTier" value="tier2" checked>
+                    <div class="calc-radio-content">
+                      <span class="calc-radio-title">61–120 Days</span>
+                      <span class="calc-radio-sub">Active Delinquency</span>
+                    </div>
+                  </label>
+                  <label class="calc-radio-card">
+                    <input type="radio" name="delinquencyTier" value="tier3">
+                    <div class="calc-radio-content">
+                      <span class="calc-radio-title">121–180 Days</span>
+                      <span class="calc-radio-sub">Advanced Arrears</span>
+                    </div>
+                  </label>
+                  <label class="calc-radio-card">
+                    <input type="radio" name="delinquencyTier" value="tier4">
+                    <div class="calc-radio-content">
+                      <span class="calc-radio-title">180+ Days</span>
+                      <span class="calc-radio-sub">Charge-Off Recovery</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Industry Selector -->
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="calcIndustry" class="form-label">Client Industry Sector</label>
+                <select id="calcIndustry" class="form-select">
+                  <option value="commercial" selected>Commercial B2B / Manufacturing &amp; Wholesale</option>
+                  <option value="healthcare">Healthcare / Hospital Network</option>
+                  <option value="fintech">Financial Services &amp; Fintech</option>
+                  <option value="saas">SaaS, Cloud &amp; Telecom</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Right Side: Dynamic Projection Output Card -->
+            <div class="calc-output-card">
+              <div class="calc-output-header">
+                <div class="calc-output-title">Estimated Net Cash Returned to Client</div>
+                <div class="calc-output-hero-val" id="calcNetClientReturn">$280,800</div>
+                <div style="font-size: 0.8125rem; color: var(--color-accent-light); margin-top: 0.35rem;">
+                  100% Pure Contingency &bull; $0 Upfront Fee
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div class="calc-breakdown-row">
+                  <span class="calc-breakdown-label">Estimated Gross Recovery:</span>
+                  <span class="calc-breakdown-val" id="calcGrossRecovered">$360,000</span>
+                </div>
+                <div class="calc-breakdown-row">
+                  <span class="calc-breakdown-label">Success Rate Benchmark:</span>
+                  <span class="calc-breakdown-val" id="calcSuccessRate">72% Estimated Recovery</span>
+                </div>
+                <div class="calc-breakdown-row">
+                  <span class="calc-breakdown-label">Aegis Contingency Rate:</span>
+                  <span class="calc-breakdown-val" id="calcFeeRate">22% Contingency (No Upfront Cost)</span>
+                </div>
+                <div class="calc-breakdown-row">
+                  <span class="calc-breakdown-label">Average Resolution Window:</span>
+                  <span class="calc-breakdown-val">28 to 45 Days</span>
+                </div>
+              </div>
+
+              <a href="#intake-cta" class="btn btn-gold btn-block" style="margin-top: 0.5rem;">
+                <span>Lock In This Rate &amp; Submit Portfolio</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 6: LEGAL COMPLIANCE & ETHICS ADVISORY COUNCIL (SOVEREIGN PAVILION)
+         ========================================================================== -->
+    <section class="section bg-surface-alt" id="ethicsCouncil" aria-label="Legal Compliance and Ethics Advisory Council">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center reveal-fade-up">
+          <div class="section-badge badge-gold">Regulatory Governance</div>
+          <h2 class="section-title">Independent Legal Oversight &amp; Ethics Advisory Council</h2>
+          <p class="section-desc">
+            Aegis operates under the continuous governance of our internal Legal Council and external compliance auditors. Every communications template, telephone cadence, and settlement protocol is vetted against federal and state mandates.
+          </p>
+        </div>
+
+        <!-- Cinema Panoramic Showcase with Overlaid HUD -->
+        <div class="council-panoramic-showcase reveal-fade-up">
+          <img src="assets/images/sections/compliance-council.webp" alt="Aegis Legal Compliance and Ethics Advisory Council Meeting" width="1200" height="440">
+          <div class="council-top-badge">50-State Admitted Bar Council</div>
+          
+          <div class="council-panoramic-hud">
+            <div>
+              <div class="council-hud-val">100%</div>
+              <div class="council-hud-label">Licensed in All 50 U.S. States</div>
+            </div>
+            <div style="border-left: 1px solid rgba(197, 160, 89, 0.3); border-right: 1px solid rgba(197, 160, 89, 0.3);">
+              <div class="council-hud-val">$10,000,000</div>
+              <div class="council-hud-label">Surety Bond Client Indemnity Shield</div>
+            </div>
+            <div>
+              <div class="council-hud-val">0</div>
+              <div class="council-hud-label">CFPB Sanctions • 12 Consecutive Years</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-Column Governance Vault Cards -->
+        <div class="council-governance-grid">
+          <!-- Card 1 -->
+          <div class="council-gov-card reveal-fade-up delay-100">
+            <div class="council-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <h3 class="council-card-title">Bi-Weekly Third-Party Auditing</h3>
+            <p class="council-card-desc">Independent legal examiners conduct randomized quality assurance scrubs on 100% of recorded phone dialogues and written correspondences.</p>
+            <div class="council-card-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>100% Verified Quality Assurance</span>
+            </div>
+          </div>
+
+          <!-- Card 2 (Highlighted) -->
+          <div class="council-gov-card highlighted reveal-fade-up delay-200">
+            <div class="council-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="council-card-title">Zero-Complaint Standard</h3>
+            <p class="council-card-desc">Immediate ombudsman escalation ensures any debtor inquiry is resolved amicably within 24 hours, preventing CFPB and FTC escalations.</p>
+            <div class="council-card-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>24-Hour Ombudsman Protocol</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="council-gov-card reveal-fade-up delay-300">
+            <div class="council-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3 class="council-card-title">SOC 2 Type II &amp; HIPAA Cloud</h3>
+            <p class="council-card-desc">End-to-end encrypted databases, automated role-based access control, and complete data isolation for sensitive enterprise client files.</p>
+            <div class="council-card-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>256-Bit Cryptographic Vault</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 7: EXECUTIVE LEADERSHIP SPOTLIGHT (DIRECTOR SPOTLIGHT + TEAM GRID)
+         ========================================================================== -->
+    <section class="section bg-surface" id="executiveTeam">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <div class="section-badge badge-gold">Executive Leadership</div>
+          <h2 class="section-title">Senior Recovery Directors &amp; Regulatory Officers</h2>
+          <p class="section-desc">
+            Led by veteran commercial attorneys, risk analysts, and compliance specialists with decades of combined experience in institutional debt resolution.
+          </p>
+        </div>
+
+        <div class="executive-spotlight-wrapper">
+          <!-- Featured Director Card -->
+          <div class="featured-director-card reveal-fade-left delay-100">
+            <img src="assets/images/sections/executive-director-portrait.webp" alt="Marcus Vance, Senior Managing Director at Aegis Recovery Partners" class="featured-director-img" width="400" height="380">
+            <div class="featured-director-body">
+              <span class="testimonial-metric-pill" style="margin-bottom: 0.75rem;">Senior Managing Director &bull; CLO</span>
+              <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.35rem; color: #FFFFFF !important;">Marcus Vance, JD</h3>
+              <div style="font-size: 0.875rem; font-weight: 700; color: #DFBA73 !important; margin-bottom: 1rem;">Chief Executive &amp; Managing Director</div>
+              <p style="font-size: 0.9375rem; color: #CBD5E1 !important; line-height: 1.65; margin-bottom: 1.5rem; flex: 1;">
+                Over 22 years spearheading complex commercial bankruptcy workouts, high-value corporate mediations, and institutional debt resolution across North America.
+              </p>
+              <div style="padding-top: 1rem; border-top: 1px solid rgba(197, 160, 89, 0.3); font-size: 0.8125rem; color: #94A3B8 !important; font-weight: 600;">
+                NY &amp; DC Bar &bull; Commercial Law Master
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Executives Column -->
+          <div class="secondary-execs-column reveal-fade-right delay-200">
+            <!-- Exec 1 -->
+            <div class="secondary-exec-card">
+              <img src="assets/images/sections/avatar-exec-elena.jpg" alt="Elena Rostova, VP of Data Science" class="secondary-exec-avatar avatar-profile-headshot" width="72" height="72">
+              <div class="secondary-exec-info">
+                <h4 style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF !important; margin-bottom: 0.2rem;">Elena Rostova, MS</h4>
+                <div style="font-size: 0.8125rem; font-weight: 700; color: #DFBA73 !important; margin-bottom: 0.4rem;">VP of Data Intelligence &amp; Skip-Tracing</div>
+                <p style="font-size: 0.85rem; color: #CBD5E1 !important; line-height: 1.5; margin: 0;">Architect of the Aegis Propensity-to-Pay ML Engine, reducing debtor outreach cycles by 40%.</p>
+              </div>
+            </div>
+
+            <!-- Exec 2 -->
+            <div class="secondary-exec-card">
+              <img src="assets/images/sections/avatar-exec-david.jpg" alt="David Chen, Director of Regulatory Audits" class="secondary-exec-avatar avatar-profile-headshot" width="72" height="72">
+              <div class="secondary-exec-info">
+                <h4 style="font-size: 1.15rem; font-weight: 800; color: #FFFFFF !important; margin-bottom: 0.2rem;">David Chen, CAMS</h4>
+                <div style="font-size: 0.8125rem; font-weight: 700; color: #DFBA73 !important; margin-bottom: 0.4rem;">Director of Regulatory Compliance</div>
+                <p style="font-size: 0.85rem; color: #CBD5E1 !important; line-height: 1.5; margin: 0;">Certified Anti-Money Laundering Specialist managing 50-state licensing and telephony oversight.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 8: STUDIO DISCOVERY BRIEFING & PORTFOLIO AUDIT INTAKE CTA
+         ========================================================================== -->
+    <section class="section bg-surface-alt" id="intake-cta">
+      <div class="container">
+        <div class="studio-cta-box reveal-scale">
+          <div class="studio-cta-grid">
+            <!-- Left Side Info -->
+            <div>
+              <span class="section-badge badge-gold" style="background: rgba(197, 160, 89, 0.25); color: #F3E5AB;">Confidential Onboarding Studio</span>
+              <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.25rem; color: #FFFFFF;">
+                Request a Complimentary 48-Hour Portfolio Scrub &amp; Valuation
+              </h2>
+              <p style="color: #CBD5E1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">
+                Discover the exact recoverable value hiding in your accounts receivable. We run automated skip-trace scrubs and provide a clear recovery yield forecast before you sign any agreement.
+              </p>
+
+              <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9375rem; color: #E2E8F0; font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>100% Pure Contingency — Zero Out-of-Pocket Expense</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9375rem; color: #E2E8F0; font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Mutual NDA Executed Prior to Any Sensitive Data Transfer</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9375rem; color: #E2E8F0; font-weight: 600;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Instant 24/7 Client Dashboard Access Upon Portfolio Activation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side Form -->
+            <div class="cta-form">
+              <h3 class="cta-form-title">Portfolio Discovery Briefing</h3>
+              <p class="cta-form-desc">Complete this brief form to speak directly with an Account Director.</p>
+
+              <form action="#" method="POST" id="home2IntakeForm">
+                <div class="form-group">
+                  <label for="companyName" class="form-label">Enterprise / Organization Name *</label>
+                  <input type="text" id="companyName" class="form-input" placeholder="e.g. Apex Logistics Corp" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="portfolioSize" class="form-label">Estimated Delinquent Volume *</label>
+                  <select id="portfolioSize" class="form-select" required>
+                    <option value="" disabled selected>Select estimated volume range</option>
+                    <option value="under100k">$50,000 – $100,000</option>
+                    <option value="100k-500k">$100,000 – $500,000</option>
+                    <option value="500k-2m">$500,000 – $2,000,000</option>
+                    <option value="over2m">$2,000,000+</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="businessEmail" class="form-label">Executive Business Email *</label>
+                  <input type="email" id="businessEmail" class="form-input" placeholder="cfo@company.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="phoneDirect" class="form-label">Direct Contact Phone *</label>
+                  <input type="tel" id="phoneDirect" class="form-input" placeholder="+1 (555) 019-2834" required>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                  <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.8125rem; color: var(--text-muted); cursor: pointer;">
+                    <input type="checkbox" required style="margin-top: 3px;">
+                    <span>I request an executed Mutual Non-Disclosure Agreement (NDA).</span>
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-gold btn-block btn-lg">
+                  <span>Submit Portfolio for Audit</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       PUBLIC FOOTER (HIGH-TRUST COMPLIANCE & NAVIGATION)
+       ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand / About Column -->
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand" style="margin-bottom: 1.25rem;">
+            <div class="brand-emblem">
+              <img src="assets/images/icons/logo.svg" alt="Aegis Logo Emblem" width="28" height="28">
+            </div>
+            <div class="brand-text">
+              <span class="brand-title" style="color: #FFFFFF;">AEGIS <span class="gold-accent">RECOVERY</span></span>
+              <span class="brand-subtitle" style="color: #94A3B8;">Ethical Debt Resolution</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Aegis Recovery Partners is a premier national debt collection agency providing ethical commercial and consumer recovery services backed by predictive intelligence and continuous compliance auditing.
+          </p>
+          <div class="footer-compliance-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>CFPB Reg F &bull; FCRA &bull; FDCPA Licensed</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h4 class="footer-column-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 — Ethical Recovery</a></li>
+            <li><a href="home-2.html">Home 2 — Intelligence Briefing</a></li>
+            <li><a href="services.html">Recovery Services</a></li>
+            <li><a href="compliance.html">Compliance &amp; Licensing</a></li>
+            <li><a href="pricing.html">Contingency Pricing</a></li>
+            <li><a href="recovery-process.html">6-Stage Workflow</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Client Access -->
+        <div>
+          <h4 class="footer-column-title">Client Access</h4>
+          <ul class="footer-links">
+            <li><a href="dashboard.html">Client Dashboard</a></li>
+            <li><a href="dashboard.html#cases">Active Case Tracking</a></li>
+            <li><a href="dashboard.html#analytics">Recovery Analytics</a></li>
+            <li><a href="dashboard.html#compliance">Compliance Vault</a></li>
+            <li><a href="dashboard.html#payments">Settlement Ledgers</a></li>
+            <li><a href="login.html">Client Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Headquarters -->
+        <div>
+          <h4 class="footer-column-title">Headquarters</h4>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-contact-icon">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>One Financial Plaza, Suite 2400<br>New York, NY 10005</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-contact-icon">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>+1 (800) 584-3920 (Toll-Free)</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-contact-icon">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>intake@aegisrecovery.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Aegis Recovery Partners LLC. All Rights Reserved. This is a communication from a debt collection agency.
+        </div>
+        <div class="footer-legal-links">
+          <a href="compliance.html#privacy">Privacy Policy</a>
+          <a href="compliance.html#terms">Terms of Service</a>
+          <a href="compliance.html#licensing">State Licenses</a>
+          <a href="compliance.html#consumer-rights">Consumer Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top-btn back-to-top" id="backToTopBtn" aria-label="Scroll back to top of page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js?v=106"></script>
+</body>
+</html>

@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Aegis Recovery Partners — Established 2012. Our sovereign leadership, governance pillars, executive command hubs, and ethical consumer charter.">
+  <title>About Our Firm &amp; Leadership | Aegis Recovery Partners</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=302">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=302">
+  <script>
+    window.toggleMobileMenu = function(e) {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      }
+      var drawer = document.getElementById('mobileDrawer');
+      var overlay = document.getElementById('mobileOverlay') || document.getElementById('drawerOverlay');
+      var hamburgers = document.querySelectorAll('.hamburger-btn, #hamburgerBtn');
+      if (!drawer) return;
+
+      var isOpen = drawer.classList.contains('is-open') || drawer.classList.contains('active');
+      if (isOpen) {
+        drawer.classList.remove('is-open', 'active');
+        if (overlay) overlay.classList.remove('is-open', 'active');
+        hamburgers.forEach(function(btn) {
+          btn.classList.remove('is-active', 'active');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+        document.body.classList.remove('menu-open');
+      } else {
+        drawer.classList.add('is-open', 'active');
+        if (overlay) overlay.classList.add('is-open', 'active');
+        hamburgers.forEach(function(btn) {
+          btn.classList.add('is-active', 'active');
+          btn.setAttribute('aria-expanded', 'true');
+        });
+        document.body.classList.add('menu-open');
+      }
+
+      var dropdownTargets = drawer.querySelectorAll('.mobile-nav-item, .has-dropdown, .has-submenu, .mobile-submenu, .mobile-dropdown-toggle');
+      dropdownTargets.forEach(function(item) {
+        item.classList.remove('is-expanded', 'active', 'show', 'open');
+      });
+    };
+  </script>
+  <style>
+    /* Modern Horizontal Progress Stepper Tracker Bar */
+    .history-stepper-container {
+      position: relative !important;
+      margin: 3rem 0 3.5rem !important;
+      padding: 0 1rem !important;
+    }
+    .stepper-track-line {
+      position: absolute !important;
+      top: 50% !important;
+      left: 8% !important;
+      right: 8% !important;
+      height: 3px !important;
+      background: linear-gradient(90deg, #F59E0B 0%, #10B981 50%, #3B82F6 100%) !important;
+      transform: translateY(-50%) !important;
+      z-index: 1 !important;
+      border-radius: 9999px !important;
+    }
+    .stepper-nodes-grid {
+      position: relative !important;
+      z-index: 2 !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
+    .stepper-node {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      cursor: pointer !important;
+      transition: all 0.3s ease !important;
+      opacity: 0.65 !important;
+    }
+    .stepper-node:hover,
+    .stepper-node.active {
+      opacity: 1 !important;
+    }
+    .node-year {
+      font-size: 0.85rem !important;
+      font-weight: 800 !important;
+      color: #F59E0B !important;
+      background: rgba(15, 23, 42, 0.9) !important;
+      padding: 0.25rem 0.75rem !important;
+      border-radius: 9999px !important;
+      border: 1px solid rgba(245, 158, 11, 0.4) !important;
+    }
+    .node-dot {
+      width: 22px !important;
+      height: 22px !important;
+      border-radius: 50% !important;
+      background: #0F172A !important;
+      border: 3px solid #F59E0B !important;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.5) !important;
+      transition: all 0.3s ease !important;
+    }
+    .stepper-node.active .node-dot {
+      background: #F59E0B !important;
+      transform: scale(1.3) !important;
+      box-shadow: 0 0 20px #F59E0B !important;
+    }
+    .node-label {
+      font-size: 0.8rem !important;
+      font-weight: 700 !important;
+      color: #FFFFFF !important;
+    }
+
+    /* Milestone Panels Showcase Container */
+    .timeline-milestones-container {
+      max-width: 1040px !important;
+      margin: 0 auto !important;
+    }
+    .milestone-panel-card {
+      display: none !important;
+      grid-template-columns: 1.1fr 1fr !important;
+      gap: 3rem !important;
+      align-items: center !important;
+      background: #0F172A !important;
+      border: 1.5px solid rgba(245, 158, 11, 0.3) !important;
+      border-radius: 24px !important;
+      padding: 2.5rem !important;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4) !important;
+      transition: all 0.4s ease !important;
+    }
+    .milestone-panel-card.active {
+      display: grid !important;
+      animation: fadeInMilestone 0.4s ease forwards !important;
+    }
+    @keyframes fadeInMilestone {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .milestone-card-media {
+      position: relative !important;
+      border-radius: 18px !important;
+      overflow: hidden !important;
+      height: 320px !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+    .milestone-img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+    }
+    .milestone-media-overlay {
+      position: absolute !important;
+      inset: 0 !important;
+      background: linear-gradient(180deg, transparent 40%, rgba(15, 23, 42, 0.85) 100%) !important;
+    }
+    .milestone-badge-tag {
+      position: absolute !important;
+      bottom: 14px !important;
+      left: 14px !important;
+      background: rgba(15, 23, 42, 0.9) !important;
+      border: 1px solid rgba(245, 158, 11, 0.4) !important;
+      color: #F59E0B !important;
+      font-size: 0.72rem !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.06em !important;
+      padding: 0.35rem 0.85rem !important;
+      border-radius: 8px !important;
+    }
+    .milestone-phase-num {
+      display: inline-block !important;
+      font-size: 0.75rem !important;
+      font-weight: 900 !important;
+      color: #10B981 !important;
+      letter-spacing: 0.08em !important;
+      margin-bottom: 0.5rem !important;
+    }
+    .milestone-card-title {
+      font-size: 1.45rem !important;
+      font-weight: 900 !important;
+      color: #FFFFFF !important;
+      margin-bottom: 0.85rem !important;
+      line-height: 1.25 !important;
+    }
+    .milestone-card-text {
+      font-size: 0.92rem !important;
+      color: #94A3B8 !important;
+      line-height: 1.65 !important;
+      margin-bottom: 1.25rem !important;
+    }
+    .milestone-highlights-list {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0.6rem !important;
+      margin-bottom: 1.5rem !important;
+    }
+    .m-highlight-item {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.65rem !important;
+      font-size: 0.85rem !important;
+      font-weight: 700 !important;
+      color: #E2E8F0 !important;
+    }
+    .milestone-metric-pill {
+      display: flex !important;
+      align-items: center !important;
+      gap: 1rem !important;
+      padding: 0.85rem 1.25rem !important;
+      background: rgba(245, 158, 11, 0.12) !important;
+      border: 1px solid rgba(245, 158, 11, 0.3) !important;
+      border-radius: 12px !important;
+    }
+    .milestone-metric-pill .metric-num {
+      font-size: 1.35rem !important;
+      font-weight: 900 !important;
+      color: #F59E0B !important;
+    }
+    .milestone-metric-pill .metric-label {
+      font-size: 0.78rem !important;
+      font-weight: 700 !important;
+      color: #CBD5E1 !important;
+    }
+    @media (max-width: 900px) {
+      .milestone-panel-card.active {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+      .milestone-card-media {
+        height: 240px !important;
+      }
+      .stepper-nodes-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 0.25rem !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+      }
+      .stepper-node {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 0.2rem !important;
+      }
+      .stepper-node-dot {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 0.7rem !important;
+      }
+      .stepper-node-lbl {
+        font-size: 0.58rem !important;
+        line-height: 1.15 !important;
+        text-align: center !important;
+        word-break: break-word !important;
+      }
+      .stepper-track-line {
+        display: none !important;
+      }
+    }
+
+    /* Executive Leadership Dossier Grid (One By One Vertical Stack Layout) */
+    .leadership-dossier-grid {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.75rem !important;
+      max-width: 1040px !important;
+      margin: 3rem auto 0 !important;
+    }
+    .leader-dossier-card {
+      background: #0F172A !important;
+      border: 1.5px solid rgba(245, 158, 11, 0.25) !important;
+      border-radius: 20px !important;
+      padding: 2.25rem 2.5rem !important;
+      display: flex !important;
+      gap: 2rem !important;
+      align-items: center !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35) !important;
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease !important;
+    }
+    .leader-dossier-card:hover {
+      transform: translateY(-4px) !important;
+      border-color: #F59E0B !important;
+      box-shadow: 0 25px 45px rgba(245, 158, 11, 0.25) !important;
+    }
+    .leader-avatar-wrapper {
+      position: relative !important;
+      flex-shrink: 0 !important;
+      width: 90px !important;
+      height: 90px !important;
+      border-radius: 50% !important;
+      overflow: hidden !important;
+      border: 2.5px solid #F59E0B !important;
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.3) !important;
+    }
+    .leader-avatar-img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+    }
+    .leader-profile {
+      flex: 1 !important;
+    }
+    .leader-title-tag {
+      display: inline-block !important;
+      font-size: 0.72rem !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      color: #F59E0B !important;
+      margin-bottom: 0.3rem !important;
+    }
+    .leader-name {
+      font-family: inherit !important;
+      font-size: 1.25rem !important;
+      font-weight: 800 !important;
+      color: #FFFFFF !important;
+      margin: 0 0 0.25rem 0 !important;
+    }
+    .leader-credentials {
+      font-size: 0.8rem !important;
+      color: #94A3B8 !important;
+      display: block !important;
+      margin-bottom: 0.75rem !important;
+      font-weight: 600 !important;
+    }
+    .leader-bio {
+      font-size: 0.85rem !important;
+      color: #CBD5E1 !important;
+      line-height: 1.5 !important;
+      margin-bottom: 1rem !important;
+    }
+    .leader-disciplines {
+      display: flex !important;
+      gap: 0.5rem !important;
+      flex-wrap: wrap !important;
+    }
+    .discipline-badge {
+      font-size: 0.72rem !important;
+      font-weight: 700 !important;
+      padding: 0.25rem 0.65rem !important;
+      border-radius: 6px !important;
+      background: rgba(245, 158, 11, 0.12) !important;
+      color: #F59E0B !important;
+      border: 1px solid rgba(245, 158, 11, 0.3) !important;
+    }
+    @media (max-width: 900px) {
+      .leadership-dossier-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+
+
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="pagePreloader" style="position: fixed; inset: 0; z-index: 999999; background-color: #0A192F; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem;">
+    <div class="preloader-spinner-ring"></div>
+    <div class="preloader-brand-box">
+      <div class="preloader-text-brand">AEGIS <span class="gold-accent">RECOVERY</span></div>
+    </div>
+    <div class="preloader-bar-track"><div class="preloader-bar-fill"></div></div>
+  </div>
+  <!-- ========================================================================= -->
+  <!-- SITE HEADER & GLOBAL NAVIGATION                                           -->
+  <!-- ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="nav-brand">
+          <div class="brand-emblem"><img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="28" height="28"></div>
+          <div class="brand-text"><span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span><span class="brand-subtitle">Ethical Debt Resolution</span></div>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item nav-dropdown">
+            <a href="index.html" class="nav-link"><span>Home</span><span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item"><div class="dropdown-item-content"><span class="dropdown-item-title">Home 1 — Ethical Recovery</span></div></a>
+              <a href="home-2.html" class="dropdown-item"><div class="dropdown-item-content"><span class="dropdown-item-title">Home 2 — Intelligence</span></div></a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="compliance.html" class="nav-link">Compliance &amp; Licensing</a></li>
+          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="recovery-process.html" class="nav-link">Recovery Process</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme"><span class="theme-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span></button>
+          <button type="button" class="icon-btn rtl-toggle-btn" aria-label="Toggle direction"><span class="dir-label" style="font-size: 0.75rem; font-weight: 700;">RTL</span></button>
+          <a href="login.html" class="btn btn-gold btn-sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg><span>Login</span></a>
+          <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" onclick="toggleMobileMenu(event)"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER NAVIGATION -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-emblem" style="width: 38px; height: 38px;">
+          <img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="24" height="24">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title" style="font-size: 1.1rem;">AEGIS <span class="gold-accent">RECOVERY</span></span>
+        </div>
+      </a>
+      <button type="button" class="icon-btn" id="drawerCloseBtn" aria-label="Close navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item has-dropdown">
+        <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+          <span>Home</span>
+          <span class="dropdown-arrow">▼</span>
+        </a>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-submenu-link">Home 1 — Ethical Recovery</a>
+          <a href="home-2.html" class="mobile-submenu-link">Home 2 — Compliance &amp; Intelligence</a>
+        </div>
+      </li>
+      <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li class="mobile-nav-item"><a href="compliance.html" class="mobile-nav-link">Compliance &amp; Licensing</a></li>
+      <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li class="mobile-nav-item"><a href="recovery-process.html" class="mobile-nav-link">Recovery Process</a></li>
+      <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link active">About</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn btn-gold btn-sm" style="width: 100%;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+        <span>Portal Login</span>
+      </a>
+    </div>
+  </aside>
+
+  <main id="mainContent" role="main">
+    <!-- ========================================================================= -->
+    <!-- 01 · PANORAMIC CITADEL HERO & LIVE CHRONOMETER HUD                        -->
+    <!-- ========================================================================= -->
+    <section class="about-citadel-hero" id="aboutHero">
+      <div class="container">
+        <div class="about-hero-grid">
+          <div class="about-hero-text reveal-fade-up">
+            <div class="hero-subtag-pill">
+              <span class="pulse-dot"></span>
+              <span>ESTABLISHED 2012 · INSTITUTIONAL DEBT RECOVERY</span>
+            </div>
+            <h1 class="about-hero-title">
+              The Vanguard of <span class="gold-gradient-text">Ethical Capital Recovery</span> &amp; Governance
+            </h1>
+            <p class="about-hero-lead">
+              Founded on the unyielding principle that institutional fiduciary duty and human dignity are mutually reinforcing. We combine sovereign compliance architecture, advanced data intelligence, and forensic litigation defense to rehabilitate non-performing assets across all 50 U.S. jurisdictions.
+            </p>
+            <div class="about-hero-actions">
+              <a href="#historyTimeline" class="btn btn-gold btn-lg">
+                <span>Explore Firm History</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+              </a>
+              <a href="#executiveLeadership" class="btn btn-outline-white btn-lg" style="color: #FFFFFF !important; border-color: rgba(255,255,255,0.5) !important; background: rgba(255,255,255,0.08) !important;">
+                <span style="color: #FFFFFF !important; font-weight: 700;">Executive Leadership</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="about-hero-media reveal-fade-up">
+            <div class="citadel-media-frame">
+              <img src="assets/images/sections/about-headquarters-citadel.jpg" alt="Aegis Recovery Partners Headquarters Citadel" class="citadel-hero-img">
+              <div class="citadel-media-overlay"></div>
+              <div class="citadel-floating-seal">
+                <div class="seal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 3l9 7H3l9-7z"/></svg></div>
+                <div class="seal-text">
+                  <span class="seal-title">50-State Bar Certified</span>
+                  <span class="seal-sub">RMAI Certified Business #NV-941</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Chronometer HUD Metrics -->
+        <div class="about-chronometer-hud reveal-fade-up">
+          <div class="chrono-hud-cell">
+            <span class="chrono-digit" data-counter="2012" data-prefix="" data-suffix="">2012</span>
+            <span class="chrono-label">Year Established</span>
+            <span class="chrono-note">Over a decade of leadership</span>
+          </div>
+          <div class="chrono-hud-cell">
+            <span class="chrono-digit" data-counter="480" data-prefix="$" data-suffix="M+">$480M+</span>
+            <span class="chrono-label">Capital Repatriated</span>
+            <span class="chrono-note">Direct institutional recoveries</span>
+          </div>
+          <div class="chrono-hud-cell">
+            <span class="chrono-digit" data-counter="99.8" data-prefix="" data-suffix="%" data-decimals="1">99.8%</span>
+            <span class="chrono-label">CFPB Clean Audit Score</span>
+            <span class="chrono-note">Zero regulatory consent decrees</span>
+          </div>
+          <div class="chrono-hud-cell">
+            <span class="chrono-digit" data-counter="50" data-prefix="" data-suffix=" States">50 States</span>
+            <span class="chrono-label">Jurisdictions Licensed</span>
+            <span class="chrono-note">Full nationwide master bond</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 02 · 2012–2026 SOVEREIGN HISTORY & CONNECTED ROADMAP FLOW                 -->
+    <!-- ========================================================================= -->
+    <section class="section section-lg history-timeline-section" id="historyTimeline" style="background: #0A192F; padding: 4.5rem 0;">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-tag">Historical Progression</span>
+          <h2 class="section-title">A Decade of Transforming Debt Resolution</h2>
+          <p class="section-desc">From our founding as a specialized commercial receivables counsel to a national sovereign recovery powerhouse.</p>
+        </div>
+
+        <!-- Modern Horizontal Progress Stepper Tracker Bar -->
+        <div class="timeline-stepper-wrapper reveal-fade-up">
+          <div class="stepper-track-line"></div>
+          <div class="stepper-nodes-grid" id="stepperNodes">
+            <div class="stepper-node active" data-target="milestone2012">
+              <span class="node-year">2012</span>
+              <span class="node-dot"></span>
+              <span class="node-label">Inception</span>
+            </div>
+            <div class="stepper-node" data-target="milestone2016">
+              <span class="node-year">2016</span>
+              <span class="node-dot"></span>
+              <span class="node-label">50-State Scale</span>
+            </div>
+            <div class="stepper-node" data-target="milestone2020">
+              <span class="node-year">2020</span>
+              <span class="node-dot"></span>
+              <span class="node-label">ML Intel Lab</span>
+            </div>
+            <div class="stepper-node" data-target="milestone2024">
+              <span class="node-year">2024</span>
+              <span class="node-dot"></span>
+              <span class="node-label">SOC 2 Vault</span>
+            </div>
+            <div class="stepper-node" data-target="milestone2026">
+              <span class="node-year">2026</span>
+              <span class="node-dot"></span>
+              <span class="node-label">Sovereign Citadel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Milestone Showcase Panels -->
+        <div class="timeline-milestones-container reveal-fade-up">
+          
+          <!-- Milestone 1: 2012 -->
+          <div class="milestone-panel-card active" id="milestone2012">
+            <div class="milestone-card-media">
+              <img src="assets/images/sections/about-founding-partners.jpg" alt="Inception 2012" class="milestone-img">
+              <div class="milestone-media-overlay"></div>
+              <span class="milestone-badge-tag">2012 FOUNDING CHARTER</span>
+            </div>
+            <div class="milestone-card-content">
+              <span class="milestone-phase-num">PHASE 01 · 2012</span>
+              <h3 class="milestone-card-title">Founding &amp; Zero-Harassment Charter</h3>
+              <p class="milestone-card-text">
+                Established in Denver, Colorado by trial attorneys Alexander Vance and Elena Rostova. Aegis introduced a revolutionary zero-harassment consumer mediation pledge that transformed commercial collection standards.
+              </p>
+              <div class="milestone-highlights-list">
+                <div class="m-highlight-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Denver HQ &amp; Executive Legal Tribunal Charter</span></div>
+                <div class="m-highlight-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>$25M Initial Commercial Mandate Repatriated</span></div>
+              </div>
+              <div class="milestone-metric-pill">
+                <span class="metric-num">$25M</span>
+                <span class="metric-label">Initial Portfolio Recovery Mandate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 2: 2016 -->
+          <div class="milestone-panel-card" id="milestone2016">
+            <div class="milestone-card-media">
+              <img src="assets/images/sections/about-timeline-2016.jpg" alt="Expansion 2016" class="milestone-img">
+              <div class="milestone-media-overlay"></div>
+              <span class="milestone-badge-tag">2016 NATIONWIDE NETWORK</span>
+            </div>
+            <div class="milestone-card-content">
+              <span class="milestone-phase-num">PHASE 02 · 2016</span>
+              <h3 class="milestone-card-title">50-State Legal Jurisdiction Licensing</h3>
+              <p class="milestone-card-text">
+                Expanded operations nationwide, securing master litigation bonds, RMAI certification, and establishing local counsel partnerships across all 50 U.S. states to enforce post-judgment asset executions.
+              </p>
+              <div class="milestone-highlights-list">
+                <div class="m-highlight-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>50 U.S. States Fully Bonded &amp; Licensed</span></div>
+                <div class="m-highlight-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>RMAI Certified Business #NV-941</span></div>
+              </div>
+              <div class="milestone-metric-pill">
+                <span class="metric-num">50 States</span>
+                <span class="metric-label">Nationwide Jurisdictional Coverage</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 3: 2020 -->
+          <div class="milestone-panel-card" id="milestone2020">
+            <div class="milestone-card-media">
+              <img src="assets/images/sections/about-timeline-2020.jpg" alt="Intelligence 2020" class="milestone-img">
+              <div class="milestone-media-overlay"></div>
+              <span class="milestone-badge-tag">2020 DATA INTEL LAB</span>
+            </div>
+            <div class="milestone-card-content">
+              <span class="milestone-phase-num">PHASE 03 · 2020</span>
+              <h3 class="milestone-card-title">Acoustic AI &amp; Skip-Trace Deployment</h3>
+              <p class="milestone-card-text">
+                Opened the Dallas Forensic Skip-Trace &amp; Intel Lab. Deployed machine learning predictive models for instant asset discovery and real-time acoustic Reg F Speech AI tone auditing.
+              </p>
+              <div class="milestone-highlights-list">
+                <div class="m-highlight-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Live Acoustic Reg F 7-in-7 Speech AI Auditing</span></div>
+                <div class="m-highlight-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>3.2x Accelerated Liquidation Velocity</span></div>
+              </div>
+              <div class="milestone-metric-pill">
+                <span class="metric-num">3.2x</span>
+                <span class="metric-label">Liquidation Velocity Acceleration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 4: 2024 -->
+          <div class="milestone-panel-card" id="milestone2024">
+            <div class="milestone-card-media">
+              <img src="assets/images/sections/about-timeline-2024.jpg" alt="Security 2024" class="milestone-img">
+              <div class="milestone-media-overlay"></div>
+              <span class="milestone-badge-tag">2024 SOC 2 CERTIFIED</span>
+            </div>
+            <div class="milestone-card-content">
+              <span class="milestone-phase-num">PHASE 04 · 2024</span>
+              <h3 class="milestone-card-title">SOC 2 Type II Encrypted Placement Vault</h3>
+              <p class="milestone-card-text">
+                Achieved SOC 2 Type II compliance and launched the 256-bit encrypted Client Placement Enclave, guaranteeing segregated FDIC escrow trust accounts and 48-hour wire remittance.
+              </p>
+              <div class="milestone-highlights-list">
+                <div class="m-highlight-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>SOC 2 Type II Certified Data Security</span></div>
+                <div class="m-highlight-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>48-Hour FDIC Segregated Escrow Remit</span></div>
+              </div>
+              <div class="milestone-metric-pill">
+                <span class="metric-num">100%</span>
+                <span class="metric-label">Segregated Escrow Security Guarantee</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 5: 2026 -->
+          <div class="milestone-panel-card" id="milestone2026">
+            <div class="milestone-card-media">
+              <img src="assets/images/sections/about-timeline-2026.jpg" alt="Sovereign 2026" class="milestone-img">
+              <div class="milestone-media-overlay"></div>
+              <span class="milestone-badge-tag">2026 SOVEREIGN CITADEL</span>
+            </div>
+            <div class="milestone-card-content">
+              <span class="milestone-phase-num">PHASE 05 · 2026</span>
+              <h3 class="milestone-card-title">Sovereign Recovery Leader ($480M+ Repatriated)</h3>
+              <p class="milestone-card-text">
+                Surpassed $480M+ in total repatriated institutional debt. Established 4 specialized regional command hubs (Denver, Chicago, Dallas, NYC) with guaranteed &lt; 15-minute intake SLA.
+              </p>
+              <div class="milestone-highlights-list">
+                <div class="m-highlight-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>$480M+ Total Institutional Recoveries</span></div>
+                <div class="m-highlight-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>4 Regional Command Centers Nationwide</span></div>
+              </div>
+              <div class="milestone-metric-pill">
+                <span class="metric-num">$480M+</span>
+                <span class="metric-label">Total Capital Repatriated to Date</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 04 · EXECUTIVE BOARD OF GOVERNORS & SENIOR LEADERSHIP                     -->
+    <!-- ========================================================================= -->
+    <section class="section section-lg leadership-section" id="executiveLeadership">
+      <div class="container">
+        <div class="leadership-feature-header reveal-fade-up">
+          <div class="header-text-block">
+            <span class="section-tag">Executive Governance</span>
+            <h2 class="section-title">Board of Governors &amp; Senior Leadership</h2>
+            <p class="section-desc">Directed by seasoned trial attorneys, certified forensic risk officers, and computational data economists.</p>
+          </div>
+          <div class="leadership-overview-media">
+            <img src="assets/images/sections/about-executive-leadership.jpg" alt="Aegis Recovery Executive Leadership Team" class="exec-team-img">
+          </div>
+        </div>
+
+        <div class="leadership-dossier-grid">
+          <!-- Leader 1 -->
+          <div class="leader-dossier-card reveal-fade-up">
+            <div class="leader-avatar-wrapper">
+              <img src="assets/images/sections/executive-director-portrait.webp" alt="Alexander Vance" class="leader-avatar-img">
+              <div class="leader-status-indicator" title="Active Bar Member"></div>
+            </div>
+            <div class="leader-profile">
+              <span class="leader-title-tag">Managing Partner &amp; CEO</span>
+              <h3 class="leader-name">Alexander Vance, J.D.</h3>
+              <span class="leader-credentials">Colo. Bar #39184 · Ex-Federal Commercial Litigator</span>
+              <p class="leader-bio">
+                Over 22 years spearheading complex multi-district commercial debt litigation and distressed asset workouts for Fortune 500 creditors and regional banks.
+              </p>
+              <div class="leader-disciplines">
+                <span class="discipline-badge">Litigation Forensics</span>
+                <span class="discipline-badge">Institutional Workouts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leader 2 -->
+          <div class="leader-dossier-card reveal-fade-up">
+            <div class="leader-avatar-wrapper">
+              <img src="assets/images/sections/avatar-exec-elena.jpg" alt="Elena Rostova" class="leader-avatar-img">
+              <div class="leader-status-indicator" title="CPA / CAMS Certified"></div>
+            </div>
+            <div class="leader-profile">
+              <span class="leader-title-tag">Chief Financial Officer &amp; Escrow</span>
+              <h3 class="leader-name">Elena Rostova, CPA, CAMS</h3>
+              <span class="leader-credentials">Former Tier-1 Bank Risk Director</span>
+              <p class="leader-bio">
+                Oversees multi-million-dollar segregated client trust accounts, ensuring full compliance with GLBA financial privacy rules and daily tripartite banking audits.
+              </p>
+              <div class="leader-disciplines">
+                <span class="discipline-badge">Escrow Fiduciary</span>
+                <span class="discipline-badge">Anti-Money Laundering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leader 3 -->
+          <div class="leader-dossier-card reveal-fade-up">
+            <div class="leader-avatar-wrapper">
+              <img src="assets/images/sections/avatar-exec-david.jpg" alt="Marcus Sterling" class="leader-avatar-img">
+              <div class="leader-status-indicator" title="RMAI Fellow"></div>
+            </div>
+            <div class="leader-profile">
+              <span class="leader-title-tag">Chief Compliance Officer</span>
+              <h3 class="leader-name">Marcus Sterling, Esq.</h3>
+              <span class="leader-credentials">Ex-CFPB Industry Advisory Fellow · RMAI CRB</span>
+              <p class="leader-bio">
+                Directs the agency's 50-state licensing portfolio, automated call recording quality assurance, and real-time speech analytics compliance filters.
+              </p>
+              <div class="leader-disciplines">
+                <span class="discipline-badge">CFPB Reg F Oversight</span>
+                <span class="discipline-badge">50-State Licensing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leader 4 -->
+          <div class="leader-dossier-card reveal-fade-up">
+            <div class="leader-avatar-wrapper">
+              <img src="assets/images/sections/compliance-auditor.webp" alt="Dr. Harrison Thorne" class="leader-avatar-img">
+              <div class="leader-status-indicator" title="Ph.D. Computational Economics"></div>
+            </div>
+            <div class="leader-profile">
+              <span class="leader-title-tag">Chief Technology Officer</span>
+              <h3 class="leader-name">Dr. Harrison Thorne</h3>
+              <span class="leader-credentials">Ph.D. Computational Economics (MIT)</span>
+              <p class="leader-bio">
+                Pioneered Aegis's proprietary skip-tracing intelligence engine and automated consumer sentiment scoring algorithms with zero biometric data retention.
+              </p>
+              <div class="leader-disciplines">
+                <span class="discipline-badge">Propensity Analytics</span>
+                <span class="discipline-badge">Zero-Knowledge Security</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 05 · NATIONWIDE OPERATIONS CONTROL ROOM                                    -->
+    <!-- ========================================================================= -->
+    <section class="section section-lg command-room-section" id="operationsCommand">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-tag">Command Infrastructure</span>
+          <h2 class="section-title">Nationwide Operations Control Room</h2>
+          <p class="section-desc">Four specialized regional intelligence hubs coordinating recovery, compliance, and litigation in real-time.</p>
+        </div>
+
+        <div class="command-room-arena reveal-fade-up">
+          <!-- Hub Selectors -->
+          <div class="command-hubs-nav" id="commandHubsNav">
+            <button type="button" class="command-hub-btn active" data-hub="denver">
+              <div class="hub-btn-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 3l9 7H3l9-7z"/></svg></div>
+              <div class="hub-btn-info">
+                <span class="hub-city">Denver, CO</span>
+                <span class="hub-type">Global HQ &amp; Executive Command</span>
+              </div>
+            </button>
+            <button type="button" class="command-hub-btn" data-hub="chicago">
+              <div class="hub-btn-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+              <div class="hub-btn-info">
+                <span class="hub-city">Chicago, IL</span>
+                <span class="hub-type">Forensic Valuation &amp; Portfolio Ops</span>
+              </div>
+            </button>
+            <button type="button" class="command-hub-btn" data-hub="dallas">
+              <div class="hub-btn-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div>
+              <div class="hub-btn-info">
+                <span class="hub-city">Dallas, TX</span>
+                <span class="hub-type">Data Intelligence &amp; Skip-Trace Lab</span>
+              </div>
+            </button>
+            <button type="button" class="command-hub-btn" data-hub="newyork">
+              <div class="hub-btn-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+              <div class="hub-btn-info">
+                <span class="hub-city">New York, NY</span>
+                <span class="hub-type">Institutional Escrow &amp; Legal Works</span>
+              </div>
+            </button>
+          </div>
+
+          <!-- Active Hub Display Panel -->
+          <div class="command-display-panel" id="commandDisplayPanel">
+            <div class="display-panel-content">
+              <div class="command-hub-meta">
+                <span class="command-badge">PRIMARY COMMAND CENTER</span>
+                <h3 class="command-hub-title" id="commandHubTitle">Denver Global Headquarters</h3>
+                <p class="command-hub-desc" id="commandHubDesc">
+                  Centrally houses the Executive Board of Governors, Enterprise Dispute Resolution Tribunal, and the 24/7 Compliance Recording Vault. All sovereign recovery strategies and client reporting pipelines are routed through this master facility.
+                </p>
+              </div>
+
+              <div class="command-telemetry-grid">
+                <div class="telemetry-box">
+                  <span class="telemetry-lbl">Licensed Capacity</span>
+                  <span class="telemetry-val" id="telemetryCap">180 Specialized Officers</span>
+                </div>
+                <div class="telemetry-box">
+                  <span class="telemetry-lbl">Audit Latency</span>
+                  <span class="telemetry-val" id="telemetryLat">&lt; 14ms Real-time Scrub</span>
+                </div>
+                <div class="telemetry-box">
+                  <span class="telemetry-lbl">Data Protection</span>
+                  <span class="telemetry-val" id="telemetrySec">SOC 2 Type II Encrypted</span>
+                </div>
+                <div class="telemetry-box">
+                  <span class="telemetry-lbl">Primary Focus</span>
+                  <span class="telemetry-val" id="telemetryFoc">Corporate Governance &amp; Strategy</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="display-panel-media">
+              <img src="assets/images/sections/about-operations-command.jpg" alt="Aegis Operations Control Command Room" class="command-panel-img">
+              <div class="command-media-live-badge">
+                <span class="live-blink-dot"></span>
+                <span>SECURE ENCLAVE · OPERATIONAL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 06 · ETHICAL CODE OF CONDUCT & SOVEREIGN CONSUMER CHARTER                 -->
+    <!-- ========================================================================= -->
+    <section class="section section-lg consumer-charter-section" id="consumerCharter">
+      <div class="container">
+        <div class="consumer-charter-split reveal-fade-up">
+          <div class="charter-text-block">
+            <span class="section-tag">Ethical Standard</span>
+            <h2 class="section-title">The Sovereign Consumer Charter</h2>
+            <p class="section-desc">
+              We believe every delinquent account represents a person facing unforeseen economic disruption. Our recovery protocol is engineered to provide dignified avenues for voluntary resolution.
+            </p>
+
+            <div class="charter-articles-list">
+              <div class="charter-article reveal-fade-up">
+                <div class="article-icon">01</div>
+                <div class="article-content">
+                  <h4 class="article-title">Respectful &amp; Transparent Communication</h4>
+                  <p class="article-desc">Zero deceptive language, absolute clarity regarding account ownership, debt validation rights, and transparent calculation of principal and interest.</p>
+                </div>
+              </div>
+
+              <div class="charter-article reveal-fade-up">
+                <div class="article-icon">02</div>
+                <div class="article-content">
+                  <h4 class="article-title">Immediate Hardship &amp; Disaster Forbearance</h4>
+                  <p class="article-desc">Automatic temporary relief and restructured payment pauses for consumers experiencing medical emergencies, natural disasters, or verified involuntary layoffs.</p>
+                </div>
+              </div>
+
+              <div class="charter-article reveal-fade-up">
+                <div class="article-icon">03</div>
+                <div class="article-content">
+                  <h4 class="article-title">Independent Dispute Escalation Ombudsperson</h4>
+                  <p class="article-desc">Every consumer can directly access an independent internal compliance officer who holds the authority to freeze collection activity during dispute investigation.</p>
+                </div>
+              </div>
+
+              <div class="charter-article reveal-fade-up">
+                <div class="article-icon">04</div>
+                <div class="article-content">
+                  <h4 class="article-title">Guaranteed Credit Reporting Accuracy</h4>
+                  <p class="article-desc">Immediate update across all three nationwide credit bureaus within 48 hours of account settlement or resolution confirmation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="charter-image-frame reveal-fade-up">
+            <img src="assets/images/sections/about-ethics-counsel.jpg" alt="Aegis Ethics Counsel and Consumer Mediation" class="charter-img">
+            <div class="charter-seal-overlay">
+              <div class="charter-seal-icon">🏆</div>
+              <h4 class="charter-seal-title">RMAI Certified Consumer Protection</h4>
+              <p class="charter-seal-text">Certified Compliance Business #NV-941 · 100% Bonded</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 07 · ENTERPRISE ACCREDITATIONS & CERTIFICATIONS RIBBON                    -->
+    <!-- ========================================================================= -->
+    <section class="section accreditations-ribbon-section" id="accreditations">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-tag">Institutional Endorsements</span>
+          <h2 class="section-title">Industry Accreditations &amp; Sovereign Certifications</h2>
+          <p class="section-desc">Audited and verified by the world's most stringent financial regulatory and receivable management bodies.</p>
+        </div>
+
+        <div class="accreditations-ribbon-showcase">
+          <!-- Seal 1 -->
+          <div class="accreditation-seal-card reveal-fade-up">
+            <div class="accreditation-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 3l9 7H3l9-7z"/></svg></div>
+            <div class="accreditation-body">
+              <h4 class="accreditation-name">RMAI Certified Business</h4>
+              <span class="accreditation-cert">CRB Designation #941</span>
+              <p class="accreditation-desc">Receivables Management Association International rigorous audit standard.</p>
+            </div>
+          </div>
+
+          <!-- Seal 2 -->
+          <div class="accreditation-seal-card reveal-fade-up">
+            <div class="accreditation-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <div class="accreditation-body">
+              <h4 class="accreditation-name">ACA International</h4>
+              <span class="accreditation-cert">Member in Good Standing</span>
+              <p class="accreditation-desc">Association of Credit and Collection Professionals strict code compliance.</p>
+            </div>
+          </div>
+
+          <!-- Seal 3 -->
+          <div class="accreditation-seal-card reveal-fade-up">
+            <div class="accreditation-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#EAB308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="accreditation-body">
+              <h4 class="accreditation-name">BBB Accredited A+</h4>
+              <span class="accreditation-cert">Top Rating Since 2014</span>
+              <p class="accreditation-desc">Better Business Bureau verified ethical business practices and resolution index.</p>
+            </div>
+          </div>
+
+          <!-- Seal 4 -->
+          <div class="accreditation-seal-card reveal-fade-up">
+            <div class="accreditation-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg></div>
+            <div class="accreditation-body">
+              <h4 class="accreditation-name">AICPA SOC 2 Type II</h4>
+              <span class="accreditation-cert">Security &amp; Confidentiality</span>
+              <p class="accreditation-desc">Independent annual audit verifying bank-grade data encryption and operational security.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 08 · EXECUTIVE PLACEMENT & INSTITUTIONAL CONSULTATION CTA                 -->
+    <!-- ========================================================================= -->
+    <section class="section about-cta-section" id="aboutCta">
+      <div class="container">
+        <div class="about-cta-card reveal-fade-up">
+          <div class="about-cta-content">
+            <span class="cta-overhead-badge">PORTFOLIO PLACEMENT INQUIRIES</span>
+            <h2 class="about-cta-title">Partner with America's Most Respected Ethical Recovery Agency</h2>
+            <p class="about-cta-desc">
+              Whether placing a $50,000 primary portfolio or liquidating a $20M+ multi-year non-performing asset tier, our institutional team delivers benchmark liquidation with zero brand risk.
+            </p>
+            <div class="about-cta-buttons">
+              <a href="contact.html" class="btn btn-gold btn-lg">
+                <span>Schedule Executive Briefing</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="compliance.html" class="btn btn-outline-white btn-lg">
+                <span>Review 50-State Licensing Directory</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- SITE FOOTER                                                               -->
+  <!-- ========================================================================= -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col footer-col-brand">
+          <a href="index.html" class="footer-brand">
+            <div class="brand-emblem"><img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="28" height="28"></div>
+            <div class="brand-text"><span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span><span class="brand-subtitle">Ethical Debt Resolution</span></div>
+          </a>
+          <p class="footer-brand-bio">
+            Aegis Recovery Partners is a nationally licensed, RMAI-certified ethical debt resolution and commercial receivables management firm operating across all 50 U.S. states.
+          </p>
+          <div class="footer-security-seal">
+            <span class="seal-dot"></span>
+            <span>256-Bit SSL Encrypted Escrow Systems</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Primary Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home (Ethical Standard)</a></li>
+            <li><a href="home-2.html">Home 2 (Intelligence Hub)</a></li>
+            <li><a href="services.html">Services &amp; Solutions</a></li>
+            <li><a href="compliance.html">Compliance Directory</a></li>
+            <li><a href="pricing.html">Contingency Pricing</a></li>
+            <li><a href="recovery-process.html">Methodology &amp; Process</a></li>
+            <li><a href="about.html">About Leadership</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Legal &amp; Compliance</h4>
+          <ul class="footer-links-list">
+            <li><a href="compliance.html#stateLicenses">50-State Licensing Matrix</a></li>
+            <li><a href="compliance.html#regulatoryAudit">CFPB Reg F Guidelines</a></li>
+            <li><a href="about.html#consumerCharter">Consumer Rights Charter</a></li>
+            <li><a href="contact.html#disputes">Dispute Escalation Form</a></li>
+            <li><a href="login.html">Client Escrow Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">National Headquarters</h4>
+          <div class="footer-contact-info">
+            <p><strong>Executive Office:</strong> 1700 Broadway, Suite 2100, Denver, CO 80290</p>
+            <p><strong>Direct Inquiries:</strong> (800) 555-AEGIS / (800) 555-2344</p>
+            <p><strong>Compliance Officer:</strong> compliance@aegisrecovery.example.com</p>
+            <p><strong>Escrow Department:</strong> escrow@aegisrecovery.example.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-legal-copy">&copy; 2026 Aegis Recovery Partners LLC. All rights reserved. NMLS ID #982141. Licensed by the California Department of Financial Protection and Innovation under the Debt Collection Licensing Act.</div>
+        <div class="footer-legal-links">
+          <a href="compliance.html">Privacy Policy</a>
+          <a href="compliance.html">Terms of Service</a>
+          <a href="compliance.html">FDCPA Consumer Notice</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top-btn back-to-top" id="backToTopBtn" aria-label="Scroll back to top of page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js?v=303"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const stepperNodes = document.querySelectorAll('#stepperNodes .stepper-node');
+      const milestonePanels = document.querySelectorAll('.milestone-panel-card');
+
+      stepperNodes.forEach(node => {
+        node.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target');
+          if (!targetId) return;
+
+          stepperNodes.forEach(n => n.classList.remove('active'));
+          milestonePanels.forEach(p => p.classList.remove('active'));
+
+          this.classList.add('active');
+          const targetPanel = document.getElementById(targetId);
+          if (targetPanel) {
+            targetPanel.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

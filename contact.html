@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Aegis Recovery Partners — Enterprise Placement Portal & Regional Command Centers. Submit commercial placements, schedule fiduciary consultations, or request emergency dispute holds.">
+  <title>Contact Us &amp; Placement Portal | Aegis Recovery Partners</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css?v=304">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=304">
+  <style>
+    /* Prevent mobile drawer/sidebar from leaking on contact page by default */
+    .mobile-nav-drawer,
+    .mobile-drawer,
+    .mobile-drawer-overlay,
+    .drawer-overlay {
+      display: none !important;
+      transform: translateX(100%) !important;
+      visibility: hidden !important;
+    }
+    .mobile-nav-drawer.active,
+    .mobile-nav-drawer.is-open,
+    .mobile-drawer.active,
+    .mobile-drawer.is-open {
+      display: block !important;
+      transform: translateX(0) !important;
+      visibility: visible !important;
+    }
+    .mobile-drawer-overlay.active,
+    .mobile-drawer-overlay.is-open,
+    .drawer-overlay.active,
+    .drawer-overlay.is-open {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    /* ========================================================================= */
+    /* LIGHT & DARK THEME ADAPTIVE STYLES FOR CONTACT PAGE                       */
+    /* ========================================================================= */
+
+    /* Sovereign Royal Sapphire Hero Section for Contact Page */
+    .contact-hero-section {
+      padding: 4rem 0 3.5rem;
+      background: radial-gradient(circle at 75% 20%, #1E3A8A 0%, #0A192F 55%, #060D1A 100%) !important;
+      color: #FFFFFF !important;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.3) !important;
+    }
+
+    .contact-hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .hero-live-sla-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #B45309;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.25rem;
+    }
+    html[data-theme="dark"] .hero-live-sla-badge {
+      color: #F59E0B;
+    }
+    .sla-dot-blink {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10B981;
+      box-shadow: 0 0 10px #10B981;
+      display: inline-block;
+    }
+    .contact-hero-title {
+      font-family: inherit;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.18;
+      color: #FFFFFF !important;
+      margin-bottom: 1.25rem;
+    }
+    html[data-theme="dark"] .contact-hero-title,
+    html[data-theme="light"] .contact-hero-title {
+      color: #FFFFFF !important;
+    }
+    .contact-hero-lead {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: #CBD5E1 !important;
+      margin-bottom: 2rem;
+    }
+    html[data-theme="dark"] .contact-hero-lead,
+    html[data-theme="light"] .contact-hero-lead {
+      color: #CBD5E1 !important;
+    }
+
+    /* Contact Priority Chips */
+    .contact-priority-chips {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .priority-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 14px;
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E1;
+      color: #0F172A;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    html[data-theme="dark"] .priority-chip {
+      background: #1E293B;
+      border-color: rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+    }
+    .priority-chip:hover {
+      border-color: #F59E0B;
+      transform: translateY(-2px);
+    }
+    .priority-chip.active {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: #F59E0B;
+      color: #D97706;
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+    }
+    html[data-theme="dark"] .priority-chip.active {
+      background: rgba(245, 158, 11, 0.2);
+      color: #F59E0B;
+    }
+
+    /* Telemetry Stat Cards */
+    .contact-quick-telemetry {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .telemetry-stat-card {
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E1;
+      padding: 1.1rem 1rem;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    html[data-theme="dark"] .telemetry-stat-card {
+      background: rgba(15, 23, 42, 0.8);
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    .telemetry-stat-card .stat-num {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #D97706;
+      margin-bottom: 0.2rem;
+    }
+    html[data-theme="dark"] .telemetry-stat-card .stat-num {
+      color: #F59E0B;
+    }
+    .telemetry-stat-card .stat-lbl {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    html[data-theme="dark"] .telemetry-stat-card .stat-lbl {
+      color: #94A3B8;
+    }
+
+    /* Contact Hero Media Frame & Seal */
+    .contact-hero-media {
+      position: relative;
+    }
+    .contact-media-frame {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      border: 1.5px solid rgba(245, 158, 11, 0.3);
+      height: 420px;
+      width: 100%;
+    }
+    .contact-hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .contact-media-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(15, 23, 42, 0.8) 100%);
+    }
+    .contact-live-seal {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 1rem 1.25rem;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      z-index: 5;
+    }
+    .seal-heading {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+    .seal-subheading {
+      display: block;
+      font-size: 0.78rem;
+      color: #94A3B8;
+      font-weight: 600;
+    }
+
+    /* 02 · Contact Intake Terminal Wizard & Form Controls */
+    .intake-terminal-section {
+      padding: 4rem 0;
+      background: #F8FAFC;
+    }
+    html[data-theme="dark"] .intake-terminal-section {
+      background: #0F172A;
+    }
+
+    .intake-wizard-container {
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 24px;
+      padding: 3rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+      max-width: 960px;
+      margin: 2.5rem auto 0;
+    }
+    html[data-theme="dark"] .intake-wizard-container {
+      background: #0F172A;
+      border-color: rgba(245, 158, 11, 0.25);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Wizard Steps Progress Indicator */
+    .wizard-steps-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    html[data-theme="dark"] .wizard-steps-header {
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+    .wizard-step-node {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+    }
+    .wizard-step-node.active,
+    .wizard-step-node.completed {
+      opacity: 1;
+    }
+    .wizard-step-node .step-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #E2E8F0;
+      border: 1.5px solid #CBD5E1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: #0F172A;
+      transition: all 0.3s ease;
+    }
+    html[data-theme="dark"] .wizard-step-node .step-num {
+      background: #1E293B;
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #FFFFFF;
+    }
+    .wizard-step-node.active .step-num {
+      background: #F59E0B;
+      color: #0F172A;
+      border-color: #F59E0B;
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+    }
+    .wizard-step-node .step-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #0F172A;
+    }
+    html[data-theme="dark"] .wizard-step-node .step-title {
+      color: #FFFFFF;
+    }
+    .wizard-step-line {
+      flex: 1;
+      height: 2px;
+      background: #E2E8F0;
+      margin: 0 1rem;
+    }
+    html[data-theme="dark"] .wizard-step-line {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    /* STEP HIDING - Only active step is displayed */
+    .wizard-card-step {
+      display: none !important;
+    }
+    .wizard-card-step.active {
+      display: block !important;
+    }
+
+    .step-card-heading {
+      font-family: inherit;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid #E2E8F0;
+      padding-bottom: 0.75rem;
+    }
+    html[data-theme="dark"] .step-card-heading {
+      color: #FFFFFF;
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Form Layout Grid & Input Field Controls */
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1E293B;
+      margin-bottom: 0.45rem;
+    }
+    html[data-theme="dark"] .form-label {
+      color: #E2E8F0;
+    }
+    .form-control {
+      width: 100%;
+      box-sizing: border-box;
+      background: #F8FAFC;
+      color: #0F172A;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 12px;
+      padding: 0.85rem 1.1rem;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    html[data-theme="dark"] .form-control {
+      background: #1E293B;
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+    .form-control::placeholder {
+      color: #64748B;
+    }
+    .form-control:focus {
+      border-color: #F59E0B;
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+    }
+    select.form-control option {
+      background: #FFFFFF;
+      color: #0F172A;
+    }
+    html[data-theme="dark"] select.form-control option {
+      background: #0F172A;
+      color: #FFFFFF;
+    }
+
+    .wizard-actions-bar {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #E2E8F0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+    html[data-theme="dark"] .wizard-actions-bar {
+      border-top-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* 03 · Regional Headquarters Command Matrix */
+    .regional-matrix-section {
+      padding: 4rem 0;
+      background: #F1F5F9;
+    }
+    html[data-theme="dark"] .regional-matrix-section {
+      background: #0B1120;
+    }
+    .regional-hubs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .regional-hub-card {
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 18px;
+      padding: 1.75rem 1.5rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    html[data-theme="dark"] .regional-hub-card {
+      background: #0F172A;
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .regional-hub-card:hover,
+    .regional-hub-card.active {
+      border-color: #F59E0B;
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    .hub-timezone-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #059669;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+    }
+    html[data-theme="dark"] .hub-timezone-tag {
+      color: #10B981;
+    }
+    .hub-name {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #0F172A;
+      margin-bottom: 0.35rem;
+    }
+    html[data-theme="dark"] .hub-name {
+      color: #FFFFFF;
+    }
+    .hub-role {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #D97706;
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+    html[data-theme="dark"] .hub-role {
+      color: #F59E0B;
+    }
+    .hub-contact-details p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #334155;
+      margin-bottom: 0.6rem;
+    }
+    html[data-theme="dark"] .hub-contact-details p {
+      color: #94A3B8;
+    }
+    .hub-contact-details strong {
+      color: #0F172A;
+    }
+    html[data-theme="dark"] .hub-contact-details strong {
+      color: #CBD5E1;
+    }
+    .hub-action-row {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid #E2E8F0;
+    }
+    html[data-theme="dark"] .hub-action-row {
+      border-top-color: rgba(255, 255, 255, 0.1);
+    }
+    .hub-action-row .btn {
+      width: 100%;
+      background: #0F172A;
+      border: 1px solid #0F172A;
+      color: #FFFFFF;
+      font-weight: 700;
+      padding: 0.65rem 1rem;
+      border-radius: 10px;
+      transition: all 0.25s ease;
+      display: inline-block;
+      text-align: center;
+    }
+    html[data-theme="dark"] .hub-action-row .btn {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .hub-action-row .btn:hover {
+      background: #F59E0B;
+      border-color: #F59E0B;
+      color: #0F172A;
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+    }
+
+    /* 04 · Secure Enclave & Hotline */
+    .secure-enclave-section {
+      padding: 4rem 0;
+      background: #FFFFFF;
+    }
+    html[data-theme="dark"] .secure-enclave-section {
+      background: #0F172A;
+    }
+    .enclave-split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .enclave-media-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1.5px solid rgba(245, 158, 11, 0.3);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+    }
+    .enclave-img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+    .enclave-vault-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      border-radius: 12px;
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: #10B981;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      backdrop-filter: blur(10px);
+    }
+    .hotline-form-box {
+      background: #F8FAFC;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 20px;
+      padding: 2.25rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      margin-top: 1.5rem;
+    }
+    html[data-theme="dark"] .hotline-form-box {
+      background: #1E293B;
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    /* 05 · FAQ Grid Section */
+    .faq-grid-section {
+      padding: 4.5rem 0;
+      background: #F8FAFC;
+    }
+    html[data-theme="dark"] .faq-grid-section {
+      background: #0B1120;
+    }
+
+    .faq-accordion-matrix {
+      max-width: 860px;
+      margin: 2.5rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+    }
+    .faq-item-card {
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+    }
+    html[data-theme="dark"] .faq-item-card {
+      background: #0F172A;
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .faq-item-card.active {
+      border-color: #0F172A;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    html[data-theme="dark"] .faq-item-card.active {
+      border-color: #F59E0B;
+      box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+    }
+    .faq-question-btn {
+      width: 100%;
+      padding: 1.25rem 1.75rem;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      text-align: left;
+      transition: color 0.25s ease;
+    }
+    .faq-question-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1E293B;
+      line-height: 1.45;
+      padding-right: 1.5rem;
+      transition: color 0.25s ease;
+    }
+    html[data-theme="dark"] .faq-question-text {
+      color: #F8FAFC;
+    }
+    .faq-item-card:hover .faq-question-text,
+    .faq-item-card.active .faq-question-text {
+      color: #B8860B;
+    }
+    html[data-theme="dark"] .faq-item-card:hover .faq-question-text,
+    html[data-theme="dark"] .faq-item-card.active .faq-question-text {
+      color: #F59E0B;
+    }
+    .faq-toggle-circle {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 50%;
+      background: #EBF1F5;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    html[data-theme="dark"] .faq-toggle-circle {
+      background: #1E293B;
+      color: #94A3B8;
+    }
+    .faq-item-card.active .faq-toggle-circle {
+      background: #B8860B;
+      color: #FFFFFF;
+    }
+    html[data-theme="dark"] .faq-item-card.active .faq-toggle-circle {
+      background: #F59E0B;
+      color: #0F172A;
+    }
+    .faq-arrow-icon {
+      width: 12px;
+      height: 12px;
+      transition: transform 0.3s ease;
+      fill: currentColor;
+    }
+    .faq-item-card.active .faq-arrow-icon {
+      transform: rotate(180deg);
+    }
+    .faq-answer-pane {
+      display: none;
+      padding: 0.5rem 1.75rem 1.5rem;
+      color: #64748B;
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+    html[data-theme="dark"] .faq-answer-pane {
+      color: #94A3B8;
+    }
+    .faq-item-card.active .faq-answer-pane {
+      display: block !important;
+    }
+
+    /* 06 · Emergency Dispute Section */
+    .emergency-dispute-section {
+      padding: 3rem 0;
+      background: #FFFFFF;
+    }
+    html[data-theme="dark"] .emergency-dispute-section {
+      background: #0F172A;
+    }
+    .dispute-alert-banner {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.08) 0%, #FFFFFF 100%);
+      border: 1.5px solid rgba(239, 68, 68, 0.35);
+      border-radius: 20px;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    html[data-theme="dark"] .dispute-alert-banner {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.12) 0%, rgba(15, 23, 42, 0.95) 100%);
+    }
+    .dispute-banner-content {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .dispute-banner-title {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: #0F172A;
+      margin-bottom: 0.35rem;
+    }
+    html[data-theme="dark"] .dispute-banner-title {
+      color: #FFFFFF;
+    }
+    .dispute-banner-desc {
+      font-size: 0.88rem;
+      color: #475569;
+      margin-bottom: 0;
+    }
+    html[data-theme="dark"] .dispute-banner-desc {
+      color: #94A3B8;
+    }
+
+    /* 07 · Sovereign Placement Guarantee */
+    .placement-guarantee-section {
+      padding: 4rem 0;
+      background: #F1F5F9;
+    }
+    html[data-theme="dark"] .placement-guarantee-section {
+      background: #0B1120;
+    }
+    .placement-guarantee-matrix {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+    .guarantee-card {
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 20px;
+      padding: 2.25rem 1.75rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    html[data-theme="dark"] .guarantee-card {
+      background: #0F172A;
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .guarantee-card:hover {
+      border-color: #F59E0B;
+      transform: translateY(-4px);
+    }
+    .guarantee-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+    }
+    .guarantee-title {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #0F172A;
+      margin-bottom: 0.65rem;
+    }
+    html[data-theme="dark"] .guarantee-title {
+      color: #FFFFFF;
+    }
+    .guarantee-desc {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #475569;
+    }
+    html[data-theme="dark"] .guarantee-desc {
+      color: #94A3B8;
+    }
+
+    @media (max-width: 1023px) {
+      .contact-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .regional-hubs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .enclave-split-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .dispute-alert-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .placement-guarantee-matrix {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 767px) {
+      .form-grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .form-group.full-width {
+        grid-column: span 1;
+      }
+      .wizard-steps-header {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .wizard-step-line {
+        display: none;
+      }
+      .contact-quick-telemetry {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 639px) {
+      .regional-hubs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="pagePreloader" style="position: fixed; inset: 0; z-index: 999999; background-color: #0A192F; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem;">
+    <div class="preloader-spinner-ring"></div>
+    <div class="preloader-brand-box">
+      <div class="preloader-text-brand">AEGIS <span class="gold-accent">RECOVERY</span></div>
+    </div>
+    <div class="preloader-bar-track"><div class="preloader-bar-fill"></div></div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- SITE HEADER & GLOBAL NAVIGATION                                           -->
+  <!-- ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="nav-brand">
+          <div class="brand-emblem"><img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="28" height="28"></div>
+          <div class="brand-text"><span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span><span class="brand-subtitle">Ethical Debt Resolution</span></div>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item nav-dropdown">
+            <a href="index.html" class="nav-link"><span>Home</span><span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item"><div class="dropdown-item-content"><span class="dropdown-item-title">Home 1 — Ethical Recovery</span></div></a>
+              <a href="home-2.html" class="dropdown-item"><div class="dropdown-item-content"><span class="dropdown-item-title">Home 2 — Intelligence</span></div></a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="compliance.html" class="nav-link">Compliance &amp; Licensing</a></li>
+          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="recovery-process.html" class="nav-link">Recovery Process</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme"><span class="theme-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span></button>
+          <button type="button" class="icon-btn rtl-toggle-btn" aria-label="Toggle direction"><span class="dir-label" style="font-size: 0.75rem; font-weight: 700;">RTL</span></button>
+          <a href="login.html" class="btn btn-gold btn-sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg><span>Login</span></a>
+          <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" onclick="toggleMobileMenu(event)"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- Mobile Nav Drawer -->
+  <aside class="mobile-nav-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-emblem"><img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="24" height="24"></div>
+        <div class="brand-text"><span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span></div>
+      </a>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-menu">
+      <li class="mobile-nav-item has-submenu">
+        <a href="#" class="mobile-nav-link dropdown-toggle">
+          <span>Home</span>
+          <span class="mobile-arrow">▼</span>
+        </a>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">Home 1 — Ethical Recovery</a>
+          <a href="home-2.html" class="mobile-sublink">Home 2 — Intelligence</a>
+        </div>
+      </li>
+      <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li class="mobile-nav-item"><a href="compliance.html" class="mobile-nav-link">Compliance &amp; Licensing</a></li>
+      <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li class="mobile-nav-item"><a href="recovery-process.html" class="mobile-nav-link">Recovery Process</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+      <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+    </ul>
+    <div style="padding: 1.5rem; border-top: 1px solid var(--border-color);">
+      <a href="login.html" class="btn btn-gold btn-block">Client Portal Login</a>
+    </div>
+  </aside>
+
+  <main id="mainContent">
+
+    <!-- ========================================================================= -->
+    <!-- 01 · SOVEREIGN TELEMETRY INTAKE HERO SECTION                              -->
+    <!-- ========================================================================= -->
+    <section class="section contact-hero-section" id="contactHero">
+      <div class="container">
+        <div class="contact-hero-grid">
+          <div class="contact-hero-content reveal-fade-up">
+            <div class="hero-live-sla-badge">
+              <span class="sla-dot-blink"></span>
+              <span>24/7 INTAKE COMMAND · GUARANTEED &lt; 15 MINUTE RESPONSE</span>
+            </div>
+            <h1 class="contact-hero-title">
+              Initiate <span class="gold-gradient-text">Institutional Placement</span> &amp; Fiduciary Inquiry
+            </h1>
+            <p class="contact-hero-lead">
+              Direct access to our senior barred litigators, commercial portfolio valuation directors, and SOC 2 Type II encrypted placement enclaves. Secure 0% contingency recovery now.
+            </p>
+
+            <div class="contact-priority-chips" id="contactPriorityChips">
+              <button type="button" class="priority-chip active" data-type="placement">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                <span>Commercial Placement</span>
+              </button>
+              <button type="button" class="priority-chip" data-type="counsel">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span>Executive Consultation</span>
+              </button>
+              <button type="button" class="priority-chip" data-type="dispute">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Reg F Dispute Hold</span>
+              </button>
+            </div>
+
+            <div class="contact-quick-telemetry">
+              <div class="telemetry-stat-card">
+                <span class="stat-num">$480M+</span>
+                <span class="stat-lbl">Repatriated</span>
+              </div>
+              <div class="telemetry-stat-card">
+                <span class="stat-num">&lt; 24h</span>
+                <span class="stat-lbl">Initial Data Scrub</span>
+              </div>
+              <div class="telemetry-stat-card">
+                <span class="stat-num">100%</span>
+                <span class="stat-lbl">FDIC Escrow Remit</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-hero-media reveal-fade-up">
+            <div class="contact-media-frame">
+              <img src="assets/images/sections/contact-hero-command.jpg" alt="Aegis Recovery Denver HQ Intake Command Desk" class="contact-hero-img">
+              <div class="contact-media-overlay"></div>
+              <div class="contact-live-seal">
+                <div class="seal-icon-gold"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+                <div class="seal-info">
+                  <span class="seal-heading">256-Bit Vault Connection</span>
+                  <span class="seal-subheading">AES-256 TLS 1.3 Certified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 02 · MULTI-STEP INTERACTIVE INTAKE COMMAND TERMINAL                      -->
+    <!-- ========================================================================= -->
+    <section class="section intake-terminal-section" id="intakeTerminal">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Interactive Intake Engine</span>
+          <h2 class="section-title">Enterprise Commercial Placement Terminal</h2>
+          <p class="section-desc">Submit your delinquent portfolio metrics in 4 easy steps for instant algorithmic liquidity modeling and placement terms.</p>
+        </div>
+
+        <div class="intake-wizard-container">
+          <!-- Step Progress Indicator -->
+          <div class="wizard-steps-header">
+            <div class="wizard-step-node active" data-step="1">
+              <span class="step-num">01</span>
+              <span class="step-title">Entity &amp; Industry</span>
+            </div>
+            <div class="wizard-step-line"></div>
+            <div class="wizard-step-node" data-step="2">
+              <span class="step-num">02</span>
+              <span class="step-title">Portfolio Metrics</span>
+            </div>
+            <div class="wizard-step-line"></div>
+            <div class="wizard-step-node" data-step="3">
+              <span class="step-num">03</span>
+              <span class="step-title">Secure Documents</span>
+            </div>
+            <div class="wizard-step-line"></div>
+            <div class="wizard-step-node" data-step="4">
+              <span class="step-num">04</span>
+              <span class="step-title">Instant Estimate</span>
+            </div>
+          </div>
+
+          <!-- Wizard Forms Form Deck -->
+          <form class="intake-wizard-form" id="intakeWizardForm" onsubmit="return false;">
+            
+            <!-- STEP 1: Entity & Industry -->
+            <div class="wizard-card-step active" id="wizardStep1">
+              <h3 class="step-card-heading">Creditor Entity &amp; Receivable Type</h3>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="institutionName" class="form-label">Institution / Organization Name *</label>
+                  <input type="text" id="institutionName" class="form-control" placeholder="e.g. Sovereign Commerce Bank N.A." required>
+                </div>
+                <div class="form-group">
+                  <label for="contactPerson" class="form-label">Primary Fiduciary Representative *</label>
+                  <input type="text" id="contactPerson" class="form-control" placeholder="e.g. Victoria Sterling, VP Risk" required>
+                </div>
+                <div class="form-group">
+                  <label for="officialEmail" class="form-label">Corporate Email Address *</label>
+                  <input type="email" id="officialEmail" class="form-control" placeholder="vsterling@sovereignbank.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="officialPhone" class="form-label">Direct Telephone / Extension *</label>
+                  <input type="tel" id="officialPhone" class="form-control" placeholder="+1 (800) 555-0199" required>
+                </div>
+                <div class="form-group full-width">
+                  <label for="portfolioCategory" class="form-label">Portfolio Receivable Category *</label>
+                  <select id="portfolioCategory" class="form-control">
+                    <option value="commercial">Commercial B2B Trade Credit ($50k+ Avg Account Size)</option>
+                    <option value="banking">Institutional Commercial Loan &amp; Credit Line Default</option>
+                    <option value="healthcare">Healthcare System &amp; Medical Enterprise Receivables</option>
+                    <option value="equipment">Equipment Leasing &amp; Asset Finance Judgments</option>
+                    <option value="judgment">Post-Judgment Asset Recovery &amp; Litigation Enforcement</option>
+                  </select>
+                </div>
+              </div>
+              <div class="wizard-actions-bar text-right">
+                <button type="button" class="btn btn-gold btn-md wizard-next-btn" data-next="2">
+                  <span>Proceed to Portfolio Metrics</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2: Portfolio Metrics -->
+            <div class="wizard-card-step" id="wizardStep2">
+              <h3 class="step-card-heading">Portfolio Liquidation Metrics &amp; Delinquency Age</h3>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="totalDebtVolume" class="form-label">Aggregate Face Value Outstanding ($ USD) *</label>
+                  <input type="text" id="totalDebtVolume" class="form-control" placeholder="e.g. $1,250,000" required>
+                </div>
+                <div class="form-group">
+                  <label for="accountCount" class="form-label">Total Account Claim Count *</label>
+                  <input type="number" id="accountCount" class="form-control" placeholder="e.g. 45 Accounts" required>
+                </div>
+                <div class="form-group">
+                  <label for="delinquencyAge" class="form-label">Average Delinquency Age (Months) *</label>
+                  <select id="delinquencyAge" class="form-control">
+                    <option value="30-90">Primary Placement (30–90 Days Past Due)</option>
+                    <option value="91-180">Secondary Placement (91–180 Days Past Due)</option>
+                    <option value="181-360">Tertiary Placement (181–360 Days Past Due)</option>
+                    <option value="360+">Warehoused / Charged-Off (365+ Days / Judgments)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="primaryState" class="form-label">Primary Jurisdiction / State Concentration *</label>
+                  <input type="text" id="primaryState" class="form-control" placeholder="e.g. Texas, New York, Colorado, Nationwide">
+                </div>
+              </div>
+              <div class="wizard-actions-bar flex-between">
+                <button type="button" class="btn btn-outline-white btn-md wizard-prev-btn" data-prev="1">Back</button>
+                <button type="button" class="btn btn-gold btn-md wizard-next-btn" data-next="3">
+                  <span>Proceed to Secure Vault Upload</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 3: Secure Vault Documents -->
+            <div class="wizard-card-step" id="wizardStep3">
+              <h3 class="step-card-heading">256-Bit Encrypted Document Upload Enclave</h3>
+              <p class="step-card-sub">Upload placement statement CSV, credit agreements, or sample invoices. All uploads undergo instant AES-256 TLS encryption.</p>
+              
+              <div class="vault-dropzone-box" id="vaultDropzone">
+                <div class="dropzone-icon">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                </div>
+                <h4 class="dropzone-title">Drag &amp; Drop Portfolio Placement File (.CSV, .XLSX, .PDF)</h4>
+                <p class="dropzone-sub">or <button type="button" class="dropzone-browse-btn" onclick="document.getElementById('vaultFileInput').click()">Browse Local Files</button> (Max File Size: 100MB)</p>
+                <input type="file" id="vaultFileInput" style="display: none;" multiple>
+                <div class="file-uploaded-tag" id="uploadedFileStatus" style="display: none;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span id="uploadedFileName">portfolio_placement_manifest.xlsx (12.4 MB) — Encrypted</span>
+                </div>
+              </div>
+
+              <div class="wizard-actions-bar flex-between">
+                <button type="button" class="btn btn-outline-white btn-md wizard-prev-btn" data-prev="2">Back</button>
+                <button type="button" class="btn btn-gold btn-md wizard-next-btn" data-next="4" id="btnCalculateEstimate">
+                  <span>Generate Algorithmic Estimate</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 4: Instant Estimate & Submission Confirmation -->
+            <div class="wizard-card-step" id="wizardStep4">
+              <div class="estimate-result-box text-center">
+                <div class="estimate-badge">ALGORITHMIC PLACEMENT ESTIMATE READY</div>
+                <h3 class="estimate-title">Projected Portfolio Recovery Model</h3>
+                
+                <div class="estimate-metrics-grid">
+                  <div class="estimate-card">
+                    <span class="estimate-lbl">Estimated Liquidation Rate</span>
+                    <span class="estimate-val" id="estLiquidationRate">78.4%</span>
+                  </div>
+                  <div class="estimate-card">
+                    <span class="estimate-lbl">Est. Repatriated Yield</span>
+                    <span class="estimate-val" id="estYieldVal">$980,000 USD</span>
+                  </div>
+                  <div class="estimate-card">
+                    <span class="estimate-lbl">Est. Liquidation SLA</span>
+                    <span class="estimate-val">34 Days</span>
+                  </div>
+                </div>
+
+                <div class="estimate-guarantee-note">
+                  ✓ Includes 0% Upfront Contingency Fee + 100% Segregated FDIC Escrow Remittance within 48 Hours.
+                </div>
+
+                <div class="wizard-actions-bar text-center" style="margin-top: 1.5rem;">
+                  <button type="submit" class="btn btn-gold btn-lg" id="btnSubmitPlacement">
+                    <span>Execute Sovereign Placement Ticket</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 03 · REGIONAL HEADQUARTERS COMMAND MATRIX SECTION                         -->
+    <!-- ========================================================================= -->
+    <section class="section regional-matrix-section" id="regionalMatrix">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Global Facilities</span>
+          <h2 class="section-title">Regional Command Centers &amp; Operational Hubs</h2>
+          <p class="section-desc">Four specialized facilities coordinating nationwide litigation, compliance recordings, and portfolio asset tracing.</p>
+        </div>
+
+        <div class="regional-hubs-grid">
+          <!-- Hub 1: Denver HQ -->
+          <div class="regional-hub-card active">
+            <div class="hub-card-header">
+              <span class="hub-timezone-tag" id="timeDenver">MST · 10:42 AM</span>
+              <h3 class="hub-name">Denver Global Headquarters</h3>
+              <span class="hub-role">Executive Command &amp; Legal Tribunal</span>
+            </div>
+            <div class="hub-contact-details">
+              <p><strong>Address:</strong> 1700 Broadway, Suite 2100, Denver, CO 80290</p>
+              <p><strong>Direct Line:</strong> +1 (800) 555-2344 / Ext. 101</p>
+              <p><strong>Email:</strong> denver.hq@aegisrecovery.example.com</p>
+            </div>
+            <div class="hub-action-row">
+              <a href="tel:+18005552344" class="btn btn-outline-white btn-sm">Call Denver HQ</a>
+            </div>
+          </div>
+
+          <!-- Hub 2: Chicago -->
+          <div class="regional-hub-card">
+            <div class="hub-card-header">
+              <span class="hub-timezone-tag" id="timeChicago">CST · 11:42 AM</span>
+              <h3 class="hub-name">Chicago Operations Hub</h3>
+              <span class="hub-role">Commercial Portfolio Valuation Floor</span>
+            </div>
+            <div class="hub-contact-details">
+              <p><strong>Address:</strong> 190 S. LaSalle Street, Floor 28, Chicago, IL 60603</p>
+              <p><strong>Direct Line:</strong> +1 (800) 555-2344 / Ext. 204</p>
+              <p><strong>Email:</strong> chicago.ops@aegisrecovery.example.com</p>
+            </div>
+            <div class="hub-action-row">
+              <a href="tel:+18005552344" class="btn btn-outline-white btn-sm">Call Chicago Ops</a>
+            </div>
+          </div>
+
+          <!-- Hub 3: Dallas -->
+          <div class="regional-hub-card">
+            <div class="hub-card-header">
+              <span class="hub-timezone-tag" id="timeDallas">CST · 11:42 AM</span>
+              <h3 class="hub-name">Dallas Skip-Trace &amp; Intel Lab</h3>
+              <span class="hub-role">Forensic Asset Discovery Enclave</span>
+            </div>
+            <div class="hub-contact-details">
+              <p><strong>Address:</strong> 2100 Ross Avenue, Suite 1400, Dallas, TX 75201</p>
+              <p><strong>Direct Line:</strong> +1 (800) 555-2344 / Ext. 308</p>
+              <p><strong>Email:</strong> dallas.intel@aegisrecovery.example.com</p>
+            </div>
+            <div class="hub-action-row">
+              <a href="tel:+18005552344" class="btn btn-outline-white btn-sm">Call Dallas Lab</a>
+            </div>
+          </div>
+
+          <!-- Hub 4: New York -->
+          <div class="regional-hub-card">
+            <div class="hub-card-header">
+              <span class="hub-timezone-tag" id="timeNYC">EST · 12:42 PM</span>
+              <h3 class="hub-name">New York Litigation Center</h3>
+              <span class="hub-role">Institutional Escrow &amp; Judicial Works</span>
+            </div>
+            <div class="hub-contact-details">
+              <p><strong>Address:</strong> 60 Wall Street, 35th Floor, New York, NY 10005</p>
+              <p><strong>Direct Line:</strong> +1 (800) 555-2344 / Ext. 412</p>
+              <p><strong>Email:</strong> nyc.legal@aegisrecovery.example.com</p>
+            </div>
+            <div class="hub-action-row">
+              <a href="tel:+18005552344" class="btn btn-outline-white btn-sm">Call NYC Legal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 04 · SECURE DOCUMENT ENCLAVE & DIRECT EXECUTIVE HOTLINE                  -->
+    <!-- ========================================================================= -->
+    <section class="section secure-enclave-section" id="secureEnclave">
+      <div class="container">
+        <div class="enclave-split-grid">
+          
+          <div class="enclave-media-card">
+            <img src="assets/images/sections/contact-secure-vault.jpg" alt="Aegis 256-Bit Vault Security Interface" class="enclave-img">
+            <div class="enclave-vault-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="12" r="2"/></svg>
+              <span>AES-256 AIR-GAPPED VAULT ACTIVE</span>
+            </div>
+          </div>
+
+          <div class="enclave-hotline-block">
+            <span class="section-tag">Direct Executive Line</span>
+            <h2 class="section-title">Schedule a Fiduciary Officer Consultation</h2>
+            <p class="section-desc">Need immediate guidance on a complex multi-jurisdiction portfolio placement or bulk charge-off valuation? Speak directly with our Chief Compliance Officer.</p>
+            
+            <form class="hotline-form-box" id="hotlineForm" onsubmit="return false;">
+              <div class="form-group">
+                <label for="hotlineName" class="form-label">Full Name &amp; Title</label>
+                <input type="text" id="hotlineName" class="form-control" placeholder="e.g. Marcus Vance, Chief Risk Officer" required>
+              </div>
+              <div class="form-group">
+                <label for="hotlinePhone" class="form-label">Direct Callback Number</label>
+                <input type="tel" id="hotlinePhone" class="form-control" placeholder="+1 (800) 555-0199" required>
+              </div>
+              <div class="form-group">
+                <label for="preferredTime" class="form-label">Preferred Callback Timeframe</label>
+                <select id="preferredTime" class="form-control">
+                  <option value="immediate">Immediate (&lt; 15 Minutes)</option>
+                  <option value="morning">Tomorrow Morning (9:00 AM – 12:00 PM EST)</option>
+                  <option value="afternoon">Tomorrow Afternoon (1:00 PM – 5:00 PM EST)</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-gold btn-block" id="btnRequestCallback">
+                <span>Request Fiduciary Callback</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 05 · INTERACTIVE FREQUENTLY ASKED INQUIRIES ACCORDION GRID               -->
+    <!-- ========================================================================= -->
+    <section class="section faq-grid-section" id="faqGrid">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Knowledge Base &amp; Clarifications</span>
+          <h2 class="section-title">Frequently Asked Fiduciary Inquiries</h2>
+          <p class="section-desc">Clear, audited answers regarding our 0% upfront contingency model, Reg F 7-in-7 call limits, and escrow Wire remittance.</p>
+        </div>
+
+        <div class="faq-accordion-matrix">
+          
+          <!-- FAQ 1 -->
+          <div class="faq-item-card active">
+            <button type="button" class="faq-question-btn">
+              <span class="faq-question-text">Is the contingency percentage strictly fixed once quoted?</span>
+              <span class="faq-toggle-circle">
+                <svg class="faq-arrow-icon" viewBox="0 0 24 24"><path d="M12 16L4 8h16z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer-pane" style="display: block;">
+              <p>Yes. Once placement terms are quoted and executed in your service agreement, the contingency fee rate is locked for the life of those accounts. We never adjust rates retroactively or add unexpected percentage surcharges.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item-card">
+            <button type="button" class="faq-question-btn">
+              <span class="faq-question-text">Are there any hidden database, skip-tracing, or software charges?</span>
+              <span class="faq-toggle-circle">
+                <svg class="faq-arrow-icon" viewBox="0 0 24 24"><path d="M12 16L4 8h16z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer-pane">
+              <p>No. Aegis covers 100% of all administrative, forensic skip-tracing, legal filing, and acoustic AI compliance monitoring costs upfront. You pay strictly the agreed contingency percentage only upon successful recovery.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item-card">
+            <button type="button" class="faq-question-btn">
+              <span class="faq-question-text">What happens if an account proves completely uncollectible?</span>
+              <span class="faq-toggle-circle">
+                <svg class="faq-arrow-icon" viewBox="0 0 24 24"><path d="M12 16L4 8h16z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer-pane">
+              <p>If an account is determined to be uncollectible after exhaustive forensic skip-tracing, legal asset audit, and legal review, it is returned to you with a full audit documentation report. You owe zero fees for uncollected balances.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item-card">
+            <button type="button" class="faq-question-btn">
+              <span class="faq-question-text">When and how are recovered funds remitted to our corporate bank?</span>
+              <span class="faq-toggle-circle">
+                <svg class="faq-arrow-icon" viewBox="0 0 24 24"><path d="M12 16L4 8h16z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer-pane">
+              <p>All client funds are deposited directly into segregated FDIC-insured master escrow trust accounts. Net recovered proceeds are remitted directly to your corporate bank account via Fedwire or ACH within 48 hours, complete with full statement auditing.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item-card">
+            <button type="button" class="faq-question-btn">
+              <span class="faq-question-text">Do you offer custom contingency rates for enterprise volume ($1M+)?</span>
+              <span class="faq-toggle-circle">
+                <svg class="faq-arrow-icon" viewBox="0 0 24 24"><path d="M12 16L4 8h16z"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer-pane">
+              <p>Yes. Portfolios exceeding $1,000,000 annually receive a 2.5% to 5.0% rate reduction, dedicated admitted legal counsel oversight, and customized REST API / encrypted SFTP ingestion pipelines.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 06 · EMERGENCY CONSUMER DISPUTE & REG F RAPID HOLD PORTAL                 -->
+    <!-- ========================================================================= -->
+    <section class="section emergency-dispute-section" id="disputePortal">
+      <div class="container">
+        <div class="dispute-alert-banner">
+          <div class="dispute-banner-content">
+            <div class="dispute-alert-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div class="dispute-text">
+              <h3 class="dispute-banner-title">Are You a Consumer Requesting an Immediate Dispute Hold?</h3>
+              <p class="dispute-banner-desc">Under FDCPA § 809 and CFPB Reg F rules, you have the right to request a temporary collection pause. Click below to file an instant dispute hold ticket.</p>
+            </div>
+          </div>
+          <div class="dispute-banner-action">
+            <a href="compliance.html#disputeTerminal" class="btn btn-outline-white btn-md" style="color: #FFFFFF !important; border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.08);">
+              <span>Submit Reg F Dispute Hold Ticket</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 07 · SOVEREIGN CLIENT PLACEMENT GUARANTEE SECTION                         -->
+    <!-- ========================================================================= -->
+    <section class="section placement-guarantee-section" id="placementGuarantee">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Fiduciary Pledge</span>
+          <h2 class="section-title">The Aegis Client Placement Guarantee</h2>
+          <p class="section-desc">Three unyielding institutional promises governing every commercial placement.</p>
+        </div>
+
+        <div class="placement-guarantee-matrix">
+          <div class="guarantee-card">
+            <div class="guarantee-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <h4 class="guarantee-title">0% Upfront Financial Exposure</h4>
+            <p class="guarantee-desc">We bear 100% of all investigative, skip-tracing, litigation filing, and speech AI auditing costs. You pay zero unless we recover.</p>
+          </div>
+
+          <div class="guarantee-card">
+            <div class="guarantee-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <h4 class="guarantee-title">48-Hour FDIC Escrow Remittance</h4>
+            <p class="guarantee-desc">All recovered principal is held in insured master escrow trust accounts and remitted directly via Fedwire within 48 business hours.</p>
+          </div>
+
+          <div class="guarantee-card">
+            <div class="guarantee-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <h4 class="guarantee-title">Brand Equity Shield</h4>
+            <p class="guarantee-desc">Zero aggressive tactics. 100% Speech AI tone auditing ensures your brand reputation is protected with complete Reg F compliance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 08 · GLOBAL COMMAND CALL TO ACTION RIBBON                                 -->
+    <!-- ========================================================================= -->
+    <section class="section contact-cta-section" id="contactCta">
+      <div class="container text-center">
+        <div class="contact-cta-card">
+          <span class="cta-badge-tag">EXECUTIVE PLACEMENT PORTAL</span>
+          <h2 class="cta-card-title">Ready to Repatriate Non-Performing Assets?</h2>
+          <p class="cta-card-desc">Partner with America's foremost sovereign ethical debt recovery firm. Submit your placement portfolio or schedule a confidential fiduciary consultation today.</p>
+          <div class="cta-card-actions flex-center">
+            <a href="#intakeTerminal" class="btn btn-gold btn-lg">
+              <span>Launch Placement Terminal</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="tel:+18005552344" class="btn btn-outline-white btn-lg" style="color: #FFFFFF !important; border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.08);">
+              <span>Call Hotline: (800) 555-2344</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- SITE FOOTER                                                               -->
+  <!-- ========================================================================= -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <a href="index.html" class="nav-brand">
+            <div class="brand-emblem"><img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="28" height="28"></div>
+            <div class="brand-text"><span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span><span class="brand-subtitle">Ethical Debt Resolution</span></div>
+          </a>
+          <p class="footer-brand-desc">Aegis Recovery Partners is a licensed, bonded, and RMAI-certified sovereign capital recovery firm operating across all 50 U.S. states.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Agency</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="compliance.html">Compliance</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="recovery-process.html">Recovery Process</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Command Hubs</h4>
+          <ul class="footer-links-list">
+            <li><a href="contact.html#regionalMatrix">Denver Global HQ</a></li>
+            <li><a href="contact.html#regionalMatrix">Chicago Portfolio Ops</a></li>
+            <li><a href="contact.html#regionalMatrix">Dallas Data Intel Lab</a></li>
+            <li><a href="contact.html#regionalMatrix">NYC Judicial Center</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Contact Enclave</h4>
+          <div class="footer-contact-info">
+            <p><strong>Executive Office:</strong> 1700 Broadway, Suite 2100, Denver, CO 80290</p>
+            <p><strong>Direct Inquiries:</strong> (800) 555-AEGIS / (800) 555-2344</p>
+            <p><strong>Compliance Officer:</strong> compliance@aegisrecovery.example.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-legal-copy">&copy; 2026 Aegis Recovery Partners LLC. All rights reserved. NMLS ID #982141.</div>
+        <div class="footer-legal-links">
+          <a href="compliance.html">Privacy Policy</a>
+          <a href="compliance.html">Terms of Service</a>
+          <a href="compliance.html">FDCPA Consumer Notice</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js?v=305"></script>
+</body>
+</html>

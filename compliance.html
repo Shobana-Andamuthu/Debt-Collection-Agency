@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aegis Recovery Partners — 50-state licensing directory, CFPB Regulation F enforcement, AI speech analytics, and SOC 2 Type II certified compliance infrastructure.">
+  <meta name="keywords" content="debt collection compliance, 50 state collection license, CFPB Reg F compliance, FDCPA compliance, debt recovery surety bond, SOC 2 debt collection">
+  <title>Compliance, Licensing &amp; Legal Governance | Aegis Recovery Partners</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
+  <!-- Google Fonts: Manrope & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=106">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=106">
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="pagePreloader" style="position: fixed; inset: 0; z-index: 999999; background-color: #0A192F; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem;">
+    <div class="preloader-spinner-ring"></div>
+    <div class="preloader-brand-box">
+      <div class="preloader-text-brand">AEGIS <span class="gold-accent">RECOVERY</span></div>
+    </div>
+    <div class="preloader-bar-track"><div class="preloader-bar-fill"></div></div>
+  </div>
+
+  <!-- ==========================================================================
+       PUBLIC HEADER / NAVBAR (EXACT 7 NAVIGATION ITEMS + LOGIN BUTTON)
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Logo / Brand with Shield Emblem -->
+        <a href="index.html" class="nav-brand" aria-label="Aegis Recovery Partners Homepage">
+          <div class="brand-emblem">
+            <img src="assets/images/icons/logo.svg" alt="Aegis Logo Emblem" width="28" height="28">
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span>
+            <span class="brand-subtitle">Ethical Debt Resolution</span>
+          </div>
+        </a>
+
+        <!-- Main Navigation Menu (Clean Labels) -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item nav-dropdown" id="homeDropdown">
+            <a href="index.html" class="nav-link" id="homeDropdownToggle" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <span class="dropdown-arrow">▼</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="homeDropdownToggle">
+              <a href="index.html" class="dropdown-item">
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Home 1 — Ethical Recovery</span>
+                  <span class="dropdown-item-desc">Trust-first commercial &amp; consumer resolution</span>
+                </div>
+              </a>
+              <a href="home-2.html" class="dropdown-item">
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Home 2 — Compliance &amp; Intelligence</span>
+                  <span class="dropdown-item-desc">Editorial data-driven debt recovery</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="compliance.html" class="nav-link active" aria-current="page">Compliance &amp; Licensing</a></li>
+          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="recovery-process.html" class="nav-link">Recovery Process</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+
+        <!-- Right Controls: Theme Toggle, RTL Toggle, Login Button, Mobile Hamburger -->
+        <div class="nav-actions">
+          <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle light and dark mode" id="themeToggleBtn">
+            <span class="theme-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </span>
+          </button>
+
+          <button type="button" class="icon-btn rtl-toggle-btn" aria-label="Toggle text direction RTL/LTR" id="rtlToggleBtn">
+            <span class="dir-label" style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+          </button>
+
+          <a href="login.html" class="btn btn-gold btn-sm" id="navLoginBtn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+            <span>Login</span>
+          </a>
+
+          <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer" onclick="toggleMobileMenu(event)">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-emblem" style="width: 38px; height: 38px;">
+          <img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="24" height="24">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title" style="font-size: 1.1rem;">AEGIS <span class="gold-accent">RECOVERY</span></span>
+        </div>
+      </a>
+      <button type="button" class="icon-btn" id="drawerCloseBtn" aria-label="Close navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item has-dropdown">
+        <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+          <span>Home</span>
+          <span class="dropdown-arrow">▼</span>
+        </a>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-submenu-link">Home 1 — Ethical Recovery</a>
+          <a href="home-2.html" class="mobile-submenu-link">Home 2 — Compliance &amp; Intelligence</a>
+        </div>
+      </li>
+      <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li class="mobile-nav-item"><a href="compliance.html" class="mobile-nav-link active">Compliance &amp; Licensing</a></li>
+      <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li class="mobile-nav-item"><a href="recovery-process.html" class="mobile-nav-link">Recovery Process</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+    </ul>
+
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn btn-gold btn-sm" style="width: 100%;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+        <span>Portal Login</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT (EXACTLY 7 MEANINGFUL COMPLIANCE SECTIONS)
+       ========================================================================== -->
+  <main id="mainContent" role="main">
+
+    <!-- ==========================================================================
+         SECTION 1: HERO COMMAND SPLIT & LIVE REGULATORY HUD (MODERN ASYMMETRIC LAYOUT)
+         ========================================================================== -->
+    <section class="hero-compliance-split" id="heroCompliance" aria-label="Compliance and Legal Governance Hero">
+      <div class="container">
+        <div class="hero-compliance-grid">
+          <!-- Left Column: Title, Rationale, Actions, Micro Metrics -->
+          <div class="hero-compliance-content reveal-fade-left">
+            <nav class="page-hero-breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: 1.25rem;">
+              <a href="index.html" style="color: #94A3B8;">Home</a>
+              <span class="breadcrumb-separator" style="color: rgba(255, 255, 255, 0.4);">/</span>
+              <span class="breadcrumb-current" style="color: var(--color-accent-light);">Compliance &amp; Licensing</span>
+            </nav>
+
+            <span class="section-tag section-tag-gold" style="margin-bottom: 0.75rem; display: inline-flex;">
+              <span class="pulse-dot" style="margin-right: 0.4rem;"></span>
+              Institutional Governance Citadel
+            </span>
+
+            <h1 class="hero-compliance-title">
+              50-State Statutory Fortress &amp; <span class="gold-accent">CFPB Reg F</span> Sovereign Compliance
+            </h1>
+
+            <p class="hero-compliance-desc">
+              Zero-grievance institutional debt resolution directed by former state regulatory counsel, active 50-state statutory licensing, and automated algorithmic switchboards preventing telecommunication overreach.
+            </p>
+
+            <div class="hero-compliance-actions">
+              <a href="#stateDirectory" class="btn btn-gold">
+                <span>Verify State Licensing</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </a>
+              <a href="#disputeTerminal" class="btn btn-outline-white">
+                <span>Request Audit Binder</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+
+            <div class="hero-micro-metrics">
+              <div class="hero-micro-metric-item">
+                <span class="hero-micro-val" data-counter="100" data-suffix="%">100%</span>
+                <span class="hero-micro-label">Speech Scrutinized by AI</span>
+              </div>
+              <div class="hero-micro-metric-item">
+                <span class="hero-micro-val" data-counter="0">0</span>
+                <span class="hero-micro-label">Regulatory Sanctions (12 Yrs)</span>
+              </div>
+              <div class="hero-micro-metric-item">
+                <span class="hero-micro-val" data-counter="500" data-prefix="$" data-suffix="K">$500K</span>
+                <span class="hero-micro-label">Top Surety Bond Deposit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Real-Time Credential HUD Deck -->
+          <div class="compliance-hero-hud-card reveal-fade-right">
+            <div class="hud-radar-top">
+              <div class="hud-radar-indicator">
+                <span class="pulse-dot"></span>
+                <span>Statutory Radar: Armed</span>
+              </div>
+              <span class="hud-seal-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                NMLS &amp; Bar Verified
+              </span>
+            </div>
+
+            <div class="hud-jurisdiction-stream">
+              <div class="hud-jurisdiction-row">
+                <div>
+                  <div class="hud-state-tag">New York (NY-DCA #2049182)</div>
+                  <div class="hud-state-bond">Surety Bond: $500,000 Active</div>
+                </div>
+                <span class="hud-state-status">VERIFIED</span>
+              </div>
+
+              <div class="hud-jurisdiction-row">
+                <div>
+                  <div class="hud-state-tag">California (DFPI-CFPA #10842)</div>
+                  <div class="hud-state-bond">Surety Bond: $500,000 Active</div>
+                </div>
+                <span class="hud-state-status">VERIFIED</span>
+              </div>
+
+              <div class="hud-jurisdiction-row">
+                <div>
+                  <div class="hud-state-tag">Texas (TX-SOS #802319401)</div>
+                  <div class="hud-state-bond">Surety Bond: $250,000 Active</div>
+                </div>
+                <span class="hud-state-status">VERIFIED</span>
+              </div>
+
+              <div class="hud-jurisdiction-row">
+                <div>
+                  <div class="hud-state-tag">Florida (OFR-CCA #CCA9903112)</div>
+                  <div class="hud-state-bond">Surety Bond: $300,000 Active</div>
+                </div>
+                <span class="hud-state-status">VERIFIED</span>
+              </div>
+            </div>
+
+            <div class="hud-footer-hash">
+              <span>SHA-256: e8b9f...a029</span>
+              <span style="color: #10B981; font-weight: 700;">CFPB 7x7 Shield: ENGAGED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 2: 50-STATE LICENSING & SURETY BOND DIRECTORY (4x2 GRID)
+         ========================================================================== -->
+    <section class="section" id="stateDirectory" style="background-color: var(--bg-surface-alt);" aria-label="State Licensing Directory">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-tag section-tag-sapphire">Verifiable Credentials</span>
+          <h2 class="section-title">50-State Licensing &amp; Surety Bond Matrix</h2>
+          <p class="section-desc">
+            Aegis holds active collection agency licenses and multimillion-dollar surety bond deposits across all 50 U.S. states and federal jurisdictions.
+          </p>
+        </div>
+
+        <!-- 8-Card Balanced 4x2 Grid -->
+        <div class="state-license-grid" id="stateGrid">
+          <!-- 1. NY -->
+          <div class="state-license-card reveal-fade-up delay-100">
+            <div class="state-card-header">
+              <span class="state-code-pill">NY</span>
+              <span class="state-status-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Active</span>
+            </div>
+            <h4 class="state-name">New York</h4>
+            <div class="state-card-divider"></div>
+            <div class="state-license-body">
+              <div class="state-license-row">License: <span class="state-license-val">NY-DCA #2049182</span></div>
+              <div class="state-bond-row">Bond: <span class="state-bond-val">$500,000</span></div>
+            </div>
+          </div>
+
+          <!-- 2. CA -->
+          <div class="state-license-card reveal-fade-up delay-100">
+            <div class="state-card-header">
+              <span class="state-code-pill">CA</span>
+              <span class="state-status-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Active</span>
+            </div>
+            <h4 class="state-name">California</h4>
+            <div class="state-card-divider"></div>
+            <div class="state-license-body">
+              <div class="state-license-row">License: <span class="state-license-val">DFPI-CFPA #10842-99</span></div>
+              <div class="state-bond-row">Bond: <span class="state-bond-val">$500,000</span></div>
+            </div>
+          </div>
+
+          <!-- 3. TX -->
+          <div class="state-license-card reveal-fade-up delay-200">
+            <div class="state-card-header">
+              <span class="state-code-pill">TX</span>
+              <span class="state-status-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Active</span>
+            </div>
+            <h4 class="state-name">Texas</h4>
+            <div class="state-card-divider"></div>
+            <div class="state-license-body">
+              <div class="state-license-row">License: <span class="state-license-val">TX-SOS #802319401</span></div>
+              <div class="state-bond-row">Bond: <span class="state-bond-val">$250,000</span></div>
+            </div>
+          </div>
+
+          <!-- 4. FL -->
+          <div class="state-license-card reveal-fade-up delay-200">
+            <div class="state-card-header">
+              <span class="state-code-pill">FL</span>
+              <span class="state-status-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Active</span>
+            </div>
+            <h4 class="state-name">Florida</h4>
+            <div class="state-card-divider"></div>
+            <div class="state-license-body">
+              <div class="state-license-row">License: <span class="state-license-val">OFR-CCA #CCA9903112</span></div>
+              <div class="state-bond-row">Bond: <span class="state-bond-val">$300,000</span></div>
+            </div>
+          </div>
+
+          <!-- 5. IL -->
+          <div class="state-license-card reveal-fade-up delay-300">
+            <div class="state-card-header">
+              <span class="state-code-pill">IL</span>
+              <span class="state-status-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Active</span>
+            </div>
+            <h4 class="state-name">Illinois</h4>
+            <div class="state-card-divider"></div>
+            <div class="state-license-body">
+              <div class="state-license-row">License: <span class="state-license-val">IDFPR-CA #017.001894</span></div>
+              <div class="state-bond-row">Bond: <span class="state-bond-val">$250,000</span></div>
+            </div>
+          </div>
+
+          <!-- 6. PA -->
+          <div class="state-license-card reveal-fade-up delay-300">
+            <div class="state-card-header">
+              <span class="state-code-pill">PA</span>
+              <span class="state-status-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Active</span>
+            </div>
+            <h4 class="state-name">Pennsylvania</h4>
+            <div class="state-card-divider"></div>
+            <div class="state-license-body">
+              <div class="state-license-row">License: <span class="state-license-val">DOBS-PA #849120</span></div>
+              <div class="state-bond-row">Bond: <span class="state-bond-val">$200,000</span></div>
+            </div>
+          </div>
+
+          <!-- 7. OH -->
+          <div class="state-license-card reveal-fade-up delay-400">
+            <div class="state-card-header">
+              <span class="state-code-pill">OH</span>
+              <span class="state-status-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Active</span>
+            </div>
+            <h4 class="state-name">Ohio</h4>
+            <div class="state-card-divider"></div>
+            <div class="state-license-body">
+              <div class="state-license-row">License: <span class="state-license-val">OH-COM #994012</span></div>
+              <div class="state-bond-row">Bond: <span class="state-bond-val">$200,000</span></div>
+            </div>
+          </div>
+
+          <!-- 8. GA -->
+          <div class="state-license-card reveal-fade-up delay-400">
+            <div class="state-card-header">
+              <span class="state-code-pill">GA</span>
+              <span class="state-status-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Active</span>
+            </div>
+            <h4 class="state-name">Georgia</h4>
+            <div class="state-card-divider"></div>
+            <div class="state-license-body">
+              <div class="state-license-row">License: <span class="state-license-val">GA-SOS #GA-84190</span></div>
+              <div class="state-bond-row">Bond: <span class="state-bond-val">$250,000</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 3: CFPB REGULATION F 7X7 ARCHITECTURE (LOGIC GATES + SPLIT TERMINAL)
+         ========================================================================== -->
+    <section class="section" id="regFShield" aria-label="CFPB Regulation F Safeguards">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-tag section-tag-gold">Automated Telephony Shield</span>
+          <h2 class="section-title">CFPB Regulation F &amp; 7X7 Programmatic Switchboard</h2>
+          <p class="section-desc">
+            Regulatory compliance cannot rely on collector discretion. Aegis enforces strict programmatic controls at the switchboard level to guarantee complete alignment with CFPB 12 CFR Part 1006.
+          </p>
+        </div>
+
+        <!-- 3-Gate Flow Architecture Layout -->
+        <div class="regf-logic-gates-grid reveal-fade-up delay-100">
+          <!-- Gate 1 -->
+          <div class="regf-gate-card">
+            <span class="regf-gate-number">GATE 01</span>
+            <div class="regf-gate-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+            <h3 class="regf-gate-title">Zone-Accurate Calling Windows</h3>
+            <p class="regf-gate-desc">
+              Programmatic time-zone lookup prevents dialing outside 8:00 AM – 9:00 PM debtor local time, with automatic Daylight Savings adjustments.
+            </p>
+            <div class="regf-gate-status">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Automated Hard Lock Active</span>
+            </div>
+          </div>
+
+          <!-- Gate 2 -->
+          <div class="regf-gate-card">
+            <span class="regf-gate-number">GATE 02</span>
+            <div class="regf-gate-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="regf-gate-title">7-in-7 Frequency Capping</h3>
+            <p class="regf-gate-desc">
+              Outbound attempts are automatically throttled to a strict maximum of 7 telephone calls per debtor within any rolling 7-consecutive-day cycle.
+            </p>
+            <div class="regf-gate-status">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>0 Frequency Breaches</span>
+            </div>
+          </div>
+
+          <!-- Gate 3 -->
+          <div class="regf-gate-card">
+            <span class="regf-gate-number">GATE 03</span>
+            <div class="regf-gate-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+            </div>
+            <h3 class="regf-gate-title">Model Form Validation Notice</h3>
+            <p class="regf-gate-desc">
+              Automated generation of itemized tear-off debt dispute documentation delivered electronically with instant timestamping for legal verification.
+            </p>
+            <div class="regf-gate-status">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Model Form Compliant</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Deep Dive Visual Split -->
+        <div class="compliance-split">
+          <div class="reveal-fade-left" style="position: relative;">
+            <div class="compliance-visual-frame">
+              <img src="assets/images/sections/cfpb-compliance-terminal.webp" alt="Chief Compliance Officer reviewing CFPB Regulation F audit binder" width="600" height="480">
+            </div>
+            <div class="compliance-floating-card">
+              <div class="compliance-score" data-counter="100" data-suffix="%">100%</div>
+              <div class="compliance-score-label">CFPB Frequency Gate Audited</div>
+              <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;">0 violations across 1.4 million telecommunication attempts.</p>
+            </div>
+          </div>
+
+          <div class="reveal-fade-right">
+            <span class="section-tag section-tag-sapphire">Programmatic Enforcement</span>
+            <h3 style="font-size: 1.85rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem;">
+              Zero Human Discretion. 100% Telecommunications Precision.
+            </h3>
+            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem;">
+              Legacy agencies rely on manual checklists. Aegis embeds compliance algorithms into our core telephony switchboard, making unauthorized calls physically impossible.
+            </p>
+
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
+                <span style="font-size: 0.88rem; font-weight: 700;">Statutory 30-Day Dispute Freeze</span>
+                <span style="font-size: 0.82rem; font-weight: 800; color: var(--success);">AUTOMATED PAUSE</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
+                <span style="font-size: 0.88rem; font-weight: 700;">Mini-Miranda Disclosure Verification</span>
+                <span style="font-size: 0.82rem; font-weight: 800; color: var(--success);">100% ENFORCED</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.88rem; font-weight: 700;">Place of Employment Contact Check</span>
+                <span style="font-size: 0.82rem; font-weight: 800; color: var(--color-secondary);">PROHIBITION GATE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 4: AI SPEECH ANALYTICS (3-COLUMN ACOUSTIC STUDIO BENTO LAYOUT)
+         ========================================================================== -->
+    <section class="section" id="speechAnalytics" style="background-color: var(--bg-surface-alt);" aria-label="AI Speech Analytics Scrutiny">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-tag section-tag-sapphire">Acoustic Machine Intelligence</span>
+          <h2 class="section-title">100% Speech Sentiment &amp; Tone Auditing Console</h2>
+          <p class="section-desc">
+            Rather than sampling 2% of calls like legacy agencies, Aegis monitors 100% of dialogues with real-time acoustic neural models.
+          </p>
+        </div>
+
+        <div class="acoustic-studio-bento">
+          <!-- Column 1: Live Waveform Visualizer & Telemetry -->
+          <div class="acoustic-panel-card reveal-fade-left">
+            <span class="section-tag section-tag-gold" style="align-self: flex-start; margin-bottom: 1rem;">Acoustic Analyzer</span>
+            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">Live Audio Frequency Stream</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.25rem;">
+              Multi-band pitch and cadence neural analysis detecting tension, interruptions, and empathy markers.
+            </p>
+
+            <div class="waveform-container" aria-label="Audio frequency waveform" style="margin-bottom: 1.5rem;">
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+              <div class="waveform-bar"></div>
+            </div>
+
+            <div style="background: var(--bg-surface-alt); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-top: auto;">
+              <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Courtesy &amp; Professionalism</div>
+              <div style="font-size: 1.85rem; font-weight: 800; color: var(--success);" data-counter="99.8" data-suffix="%" data-decimals="1">99.8%</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">Acoustic Neural Benchmark Score</div>
+            </div>
+          </div>
+
+          <!-- Column 2: Central Visual Hub -->
+          <div class="acoustic-center-visual reveal-fade-up delay-100">
+            <img src="assets/images/sections/speech-analytics-ai.webp" alt="QA Director reviewing AI speech analytics waveforms" width="600" height="480">
+            <div class="acoustic-visual-overlay-card">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.82rem; font-weight: 800; color: #10B981; display: flex; align-items: center; gap: 0.4rem;">
+                  <span class="pulse-dot"></span> 100% Calls Scrutinized
+                </span>
+                <span style="font-size: 0.75rem; color: var(--color-accent); font-weight: 700;">Real-Time Transcription</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Live Transcript & Hardship Detection Feed -->
+          <div class="acoustic-panel-card reveal-fade-right">
+            <span class="section-tag section-tag-sapphire" style="align-self: flex-start; margin-bottom: 1rem;">Lexicon Guard</span>
+            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">Automated Hardship &amp; Script Telemetry</h4>
+            
+            <div class="transcript-snippet-box">
+              <strong style="color: var(--text-main); display: block; margin-bottom: 0.25rem;">Live Audio Transcript:</strong>
+              "...this is <span class="transcript-highlight">a communication from a debt collector</span>. This is an attempt to collect a debt..."
+              <div style="font-size: 0.7rem; color: var(--success); font-weight: 800; margin-top: 0.4rem;">
+                ✓ MINI-MIRANDA VERIFIED AT 00:04s
+              </div>
+            </div>
+
+            <div style="margin-top: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color);">
+                <span style="color: var(--text-muted); font-weight: 600;">Prohibited Lexicon Flag:</span>
+                <strong style="color: var(--success);">0 Breaches</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color);">
+                <span style="color: var(--text-muted); font-weight: 600;">Medical Hardship Flag:</span>
+                <strong style="color: var(--color-secondary);">Auto-Counseling</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 0.82rem;">
+                <span style="color: var(--text-muted); font-weight: 600;">Tone Escalation Alarm:</span>
+                <strong style="color: var(--success);">Dormant (Optimal)</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 5: 256-BIT FINANCIAL DATA VAULT ENCLAVE (CYBER CITADEL LAYOUT)
+         ========================================================================== -->
+    <section class="section" id="securityEnclave" aria-label="Bank Grade Data Security">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-tag section-tag-gold">Cyber Citadel</span>
+          <h2 class="section-title">Institutional Financial Data Vault Security</h2>
+          <p class="section-desc">
+            All debtor records, accounting ledgers, and transaction credentials reside within our SOC 2 Type II certified cloud enclave with immutable cryptographic audit trails.
+          </p>
+        </div>
+
+        <!-- Cyber Cipher Visualizer Banner -->
+        <div class="cyber-vault-banner reveal-fade-up delay-100">
+          <div>
+            <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-accent); font-weight: 800; margin-bottom: 0.25rem;">Live Enclave Cipher</div>
+            <h3 style="font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin: 0;">AES-256 Envelope Cryptography Active</h3>
+          </div>
+          <div class="cyber-cipher-preview">
+            CIPHER: [0x4A...F92B] | TLS 1.3 ENCRYPTED | ZERO RAW PAN STORAGE
+          </div>
+        </div>
+
+        <!-- 4-Pillar Interlocking Module Grid -->
+        <div class="security-enclave-grid">
+          <!-- Pillar 1 -->
+          <div class="security-card reveal-fade-up delay-100">
+            <div class="security-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3 class="security-card-title">AES-256 Cloud Vault</h3>
+            <p class="security-card-desc">
+              End-to-end envelope encryption protecting sensitive PII both at rest in isolated databases and in transit across TLS 1.3 tunnels.
+            </p>
+            <span class="security-cert-badge">SOC 2 Type II Certified</span>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="security-card reveal-fade-up delay-200">
+            <div class="security-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <h3 class="security-card-title">HIPAA / HITECH Enclave</h3>
+            <p class="security-card-desc">
+              Dedicated healthcare vault providing strict de-identification of patient health data (ePHI) with signed Business Associate Agreements.
+            </p>
+            <span class="security-cert-badge">HIPAA BAA Governed</span>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="security-card reveal-fade-up delay-300">
+            <div class="security-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            </div>
+            <h3 class="security-card-title">PCI-DSS Level 1 Gateway</h3>
+            <p class="security-card-desc">
+              Tokenized credit card and ACH payment gateway with zero raw cardholder storage, eliminating credential theft exposure entirely.
+            </p>
+            <span class="security-cert-badge">PCI-DSS Compliant</span>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="security-card reveal-fade-up delay-400">
+            <div class="security-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <h3 class="security-card-title">SHA-256 Audit Logs</h3>
+            <p class="security-card-desc">
+              Timestamped cryptographic logging of every collector access, dial attempt, notice dispatch, and settlement ledger remittance.
+            </p>
+            <span class="security-cert-badge">Tamper-Proof Audit Trail</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 6: 12-YEAR INDEPENDENT ANNUAL AUDIT RECORD (CONNECTED HIGHWAY STEPPER)
+         ========================================================================== -->
+    <section class="section" id="auditRecord" style="background-color: var(--bg-surface-alt);" aria-label="Independent Audit History">
+      <div class="container">
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-tag section-tag-sapphire">Verifiable Track Record</span>
+          <h2 class="section-title">12 Consecutive Years of Clean Audit Certification</h2>
+          <p class="section-desc">
+            Independent CPA forensic auditors and licensed regulatory bar examiners scrutinize our books and operations annually. We maintain a flawless sanction-free record across all jurisdictions.
+          </p>
+        </div>
+
+        <div class="audit-highway-stepper">
+          <!-- 2026 -->
+          <div class="audit-highway-node reveal-fade-up delay-100">
+            <div class="audit-node-pill">2026</div>
+            <div class="audit-year-header">
+              <span class="audit-year-title" style="font-size: 1.15rem;">BDO / RSM Review</span>
+              <span class="audit-pass-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Cleared</span>
+            </div>
+            <p class="audit-desc">Comprehensive SOC 2 Type II re-certification and CFPB Reg F algorithmic compliance examination. 0 findings.</p>
+          </div>
+
+          <!-- 2025 -->
+          <div class="audit-highway-node reveal-fade-up delay-200">
+            <div class="audit-node-pill">2025</div>
+            <div class="audit-year-header">
+              <span class="audit-year-title" style="font-size: 1.15rem;">Compliance Counsel</span>
+              <span class="audit-pass-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Cleared</span>
+            </div>
+            <p class="audit-desc">50-state statutory licensing audit and trust account reconciliation examination. Flawless pass decree.</p>
+          </div>
+
+          <!-- 2024 -->
+          <div class="audit-highway-node reveal-fade-up delay-300">
+            <div class="audit-node-pill">2024</div>
+            <div class="audit-year-header">
+              <span class="audit-year-title" style="font-size: 1.15rem;">Crowe LLP Systems</span>
+              <span class="audit-pass-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Cleared</span>
+            </div>
+            <p class="audit-desc">HIPAA/HITECH ePHI security enclave validation and AI speech sentiment transcription audit.</p>
+          </div>
+
+          <!-- 2023 -->
+          <div class="audit-highway-node reveal-fade-up delay-400">
+            <div class="audit-node-pill">2023</div>
+            <div class="audit-year-header">
+              <span class="audit-year-title" style="font-size: 1.15rem;">Regulatory Risk</span>
+              <span class="audit-pass-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Cleared</span>
+            </div>
+            <p class="audit-desc">FDCPA dispute verification protocol and consumer validation notice compliance benchmark scrub.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 7: CONSUMER RIGHTS SAFE HARBOR & COMPLIANCE TERMINAL (DUAL SOVEREIGN)
+         ========================================================================== -->
+    <section class="section" id="disputeTerminal" aria-label="Consumer Rights and Dispute Resolution">
+      <div class="container">
+        <div class="dispute-safeharbor-layout">
+          <!-- Left: 3-Step Safe Harbor Dispute Process -->
+          <div class="safeharbor-steps-box reveal-fade-left">
+            <span class="section-tag section-tag-gold" style="margin-bottom: 1rem;">Consumer Safe Harbor</span>
+            <h2 style="font-size: 1.85rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.75rem;">
+              Independent Consumer Rights Ombudsman
+            </h2>
+            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.75rem;">
+              If you wish to verify your balance, request debt validation documentation, or file a formal dispute, our Ombudsman Office reviews every inquiry under our 3-step statutory safe harbor:
+            </p>
+
+            <div class="safeharbor-steps-list">
+              <div class="safeharbor-step-item">
+                <div class="safeharbor-step-num">1</div>
+                <div>
+                  <h4 class="safeharbor-step-title">Automated 30-Day Statutory Pause</h4>
+                  <p class="safeharbor-step-desc">All outbound communications immediately lock upon receipt of dispute notice.</p>
+                </div>
+              </div>
+
+              <div class="safeharbor-step-item">
+                <div class="safeharbor-step-num">2</div>
+                <div>
+                  <h4 class="safeharbor-step-title">Itemized Creditor Accounting Verification</h4>
+                  <p class="safeharbor-step-desc">Full original agreement contracts and payment histories audited and dispatched.</p>
+                </div>
+              </div>
+
+              <div class="safeharbor-step-item">
+                <div class="safeharbor-step-num">3</div>
+                <div>
+                  <h4 class="safeharbor-step-title">Zero Adverse Bureau Reporting</h4>
+                  <p class="safeharbor-step-desc">No negative credit filings occur while an account is under active ombudsman review.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px dashed var(--border-color); font-size: 0.82rem; color: var(--text-muted);">
+              Hotline: <strong style="color: var(--text-main);">(800) 555-0199 Ext. 4</strong> | Email: <strong style="color: var(--text-main);">ombudsman@aegisrecovery.com</strong>
+            </div>
+          </div>
+
+          <!-- Right: Institutional Compliance Terminal Form -->
+          <div class="dispute-terminal-box reveal-fade-right">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+              <span class="pulse-dot"></span>
+              <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-accent); font-weight: 800;">Secure Portal</span>
+            </div>
+            <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; color: #FFFFFF;">
+              Institutional Compliance Terminal
+            </h3>
+            <p style="font-size: 0.875rem; color: #CBD5E1; margin-bottom: 1.5rem;">
+              Request state licensing certificates, surety bond binders, or SOC 2 Type II audit packages.
+            </p>
+
+            <form action="contact.html" method="GET" style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="compInquirerName" class="form-label" style="color: #F1F5F9;">Full Legal Name / Title</label>
+                <input type="text" id="compInquirerName" class="form-input" required placeholder="e.g. Sarah Jenkins, General Counsel">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="compInquirerOrg" class="form-label" style="color: #F1F5F9;">Institution / Legal Firm</label>
+                <input type="text" id="compInquirerOrg" class="form-input" required placeholder="e.g. Horizon Banking Group">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="compPackageType" class="form-label" style="color: #F1F5F9;">Documentation Requested</label>
+                <select id="compPackageType" class="form-select">
+                  <option value="50state">50-State Licensing &amp; Surety Bond Package</option>
+                  <option value="soc2">SOC 2 Type II Independent Audit Report</option>
+                  <option value="regf">CFPB Reg F Telephony Compliance Certification</option>
+                  <option value="dispute">Formal Case Dispute &amp; Debt Validation</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 0.5rem;">
+                <label for="compEmail" class="form-label" style="color: #F1F5F9;">Corporate Email Address</label>
+                <input type="email" id="compEmail" class="form-input" required placeholder="counsel@institution.com">
+              </div>
+
+              <button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center; padding: 0.85rem; font-size: 0.95rem;">
+                <span>Dispatch Compliance Package</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       PUBLIC FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <div class="brand-emblem" style="width: 40px; height: 40px;">
+              <img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="26" height="26">
+            </div>
+            <div class="brand-text">
+              <span class="brand-title" style="color: #FFFFFF;">AEGIS <span class="gold-accent">RECOVERY</span></span>
+              <span class="brand-subtitle" style="color: #8892B0;">Ethical Debt Resolution</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Aegis Recovery Partners is a licensed and bonded national debt recovery agency. We deliver transparent, compliance-mandated debt resolution with dignity and financial accountability.
+          </p>
+          <div class="footer-compliance-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>FDCPA &amp; CFPB Audited &bull; SOC 2 Type II Certified</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-column-title">Recovery Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Consumer Debt Resolution</a></li>
+            <li><a href="services.html">Commercial B2B Recovery</a></li>
+            <li><a href="services.html">Early Stage Intervention</a></li>
+            <li><a href="services.html">Legal &amp; Judgment Recovery</a></li>
+            <li><a href="pricing.html">Contingency Fee Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-column-title">Trust &amp; Governance</h4>
+          <ul class="footer-links">
+            <li><a href="compliance.html">Regulatory Compliance</a></li>
+            <li><a href="compliance.html">State Licensing Directory</a></li>
+            <li><a href="recovery-process.html">Ethical Recovery Process</a></li>
+            <li><a href="about.html">About Our Agency</a></li>
+            <li><a href="dashboard.html">Client Recovery Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-column-title">Corporate Headquarters</h4>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>1200 Financial Plaza, Suite 800, New York, NY 10005</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>(800) 555-0199</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>compliance@aegisrecovery.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="currentYear">2026</span> Aegis Recovery Partners LLC. All rights reserved. This is a communication from a debt collection agency.
+        </div>
+        <div class="footer-legal-links">
+          <a href="compliance.html">Consumer Privacy Policy</a>
+          <a href="compliance.html">Terms of Service</a>
+          <a href="compliance.html">FDCPA Consumer Notice</a>
+          <a href="compliance.html">Dispute Resolution</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Scroll back to top of page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="assets/js/main.js?v=106"></script>
+</body>
+</html>

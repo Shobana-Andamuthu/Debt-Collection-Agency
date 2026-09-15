@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aegis Recovery Partners — 5-Stage Ethical Debt Recovery Methodology. From 256-bit encrypted data scrubbing and forensic asset mapping to 100% speech AI acoustic auditing and 48-hour FDIC escrow remittance.">
+  <title>Recovery Methodology &amp; Process | Aegis Recovery Partners</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=106">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=106">
+  <script>
+    window.toggleMobileMenu = function(e) {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      }
+      var drawer = document.getElementById('mobileDrawer');
+      var overlay = document.getElementById('mobileOverlay') || document.getElementById('drawerOverlay');
+      var hamburgers = document.querySelectorAll('.hamburger-btn, #hamburgerBtn');
+      if (!drawer) return;
+
+      var isOpen = drawer.classList.contains('is-open') || drawer.classList.contains('active');
+      if (isOpen) {
+        drawer.classList.remove('is-open', 'active');
+        if (overlay) overlay.classList.remove('is-open', 'active');
+        hamburgers.forEach(function(btn) {
+          btn.classList.remove('is-active', 'active');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+        document.body.classList.remove('menu-open');
+      } else {
+        drawer.classList.add('is-open', 'active');
+        if (overlay) overlay.classList.add('is-open', 'active');
+        hamburgers.forEach(function(btn) {
+          btn.classList.add('is-active', 'active');
+          btn.setAttribute('aria-expanded', 'true');
+        });
+        document.body.classList.add('menu-open');
+      }
+
+      var dropdownTargets = drawer.querySelectorAll('.mobile-nav-item, .has-dropdown, .has-submenu, .mobile-submenu, .mobile-dropdown-toggle');
+      dropdownTargets.forEach(function(item) {
+        item.classList.remove('is-expanded', 'active', 'show', 'open');
+      });
+    };
+  </script>
+</head>
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="pagePreloader" style="position: fixed; inset: 0; z-index: 999999; background-color: #0A192F; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem;">
+    <div class="preloader-spinner-ring"></div>
+    <div class="preloader-brand-box">
+      <div class="preloader-text-brand">AEGIS <span class="gold-accent">RECOVERY</span></div>
+    </div>
+    <div class="preloader-bar-track"><div class="preloader-bar-fill"></div></div>
+  </div>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="nav-brand">
+          <div class="brand-emblem">
+            <img src="assets/images/icons/logo.svg" alt="Aegis Recovery Logo" width="28" height="28">
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span>
+            <span class="brand-subtitle">Ethical Debt Resolution</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation (7 Main Items) -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item nav-dropdown">
+            <a href="index.html" class="nav-link">
+              <span>Home</span>
+              <span class="dropdown-arrow">▼</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Home 1 — Ethical Recovery</span>
+                  <span class="dropdown-item-desc">Institutional sovereign compliance</span>
+                </div>
+              </a>
+              <a href="home-2.html" class="dropdown-item">
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Home 2 — Recovery Intelligence</span>
+                  <span class="dropdown-item-desc">Forensic data-driven collection</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="compliance.html" class="nav-link">Compliance &amp; Licensing</a></li>
+          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="recovery-process.html" class="nav-link active">Recovery Process</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+
+        <!-- Action Controls -->
+        <div class="nav-actions">
+          <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme">
+            <span class="theme-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+          </button>
+          <button type="button" class="icon-btn rtl-toggle-btn" aria-label="Toggle direction">
+            <span class="dir-label" style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+          </button>
+          <a href="login.html" class="btn btn-gold btn-sm">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+            <span>Login</span>
+          </a>
+          <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" onclick="toggleMobileMenu(event)">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-text">
+        <span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span>
+      </div>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item has-dropdown">
+        <a href="index.html" class="mobile-nav-link mobile-dropdown-toggle">
+          <span>Home</span>
+          <span class="mobile-arrow">▼</span>
+        </a>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-sublink">Home 1 — Ethical Recovery</a>
+          <a href="home-2.html" class="mobile-sublink">Home 2 — Recovery Intelligence</a>
+        </div>
+      </li>
+      <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li class="mobile-nav-item"><a href="compliance.html" class="mobile-nav-link">Compliance &amp; Licensing</a></li>
+      <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li class="mobile-nav-item"><a href="recovery-process.html" class="mobile-nav-link active">Recovery Process</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Client Dashboard</a></li>
+    </ul>
+    <div style="padding: 1.5rem; border-top: 1px solid var(--border-color);">
+      <a href="login.html" class="btn btn-gold btn-block">Client Portal Login</a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: 8 INNOVATIVE RECOVERY PROCESS LAYOUTS
+       ========================================================================== -->
+  <main id="mainContent" role="main">
+
+    <!-- ==========================================================================
+         01 · SOVEREIGN CIRCUIT HERO — INTERACTIVE 5-STAGE LIFECYCLE COCKPIT
+         ========================================================================== -->
+    <!-- ==========================================================================
+         01 · PANORAMIC PROCESS HERO WITH RADAR COCKPIT & LIVE TELEMETRY
+         ========================================================================== -->
+    <section class="panoramic-process-hero" aria-labelledby="processHeroTitle">
+      <div class="process-hero-ambient-glow"></div>
+      <div class="container">
+        <div class="process-hero-grid">
+          <!-- Left Column: Strategic Overview -->
+          <div class="process-hero-content reveal-fade-right">
+            <div class="process-hero-badge">
+              <span class="beacon-pulse-dot"></span>
+              <span>PROPRIETARY 5-STAGE ESCALATION PROTOCOL</span>
+            </div>
+            <h1 class="process-hero-headline" id="processHeroTitle">
+              A Systematic, Tiered Engine for Sovereign <span class="gold-gradient-text">Debt Liquidation</span>
+            </h1>
+            <p class="process-hero-subtext">
+              Every delinquent account progresses through an auditable, five-tier escalation staircase—engineered to maximize cash collection velocity while maintaining unimpeachable CFPB, FCRA, and SOC 2 Type II statutory compliance.
+            </p>
+            <div class="process-hero-trust-chips">
+              <div class="trust-chip">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>GLBA &amp; CFPB Reg F Hard-Lock</span>
+              </div>
+              <div class="trust-chip">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>48-Hour FDIC Trust Remittance</span>
+              </div>
+              <div class="trust-chip">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                <span>Real-Time Acoustic Coercion Filter</span>
+              </div>
+            </div>
+            <div class="process-hero-actions">
+              <a href="#orbitalStages" class="btn btn-gold btn-lg">Explore 5-Stage Orbit ↓</a>
+              <a href="contact.html" class="btn btn-outline btn-lg" style="color: #FFFFFF !important; border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.06);">Submit Commercial Placement</a>
+            </div>
+          </div>
+
+          <!-- Right Column: Live Radar Cockpit -->
+          <div class="hero-radar-cockpit reveal-fade-left">
+            <div class="cockpit-hud-header">
+              <div class="cockpit-hud-title">
+                <span class="hud-indicator"></span>
+                <span>AEGIS RECOVERY TELEMETRY CORE</span>
+              </div>
+              <span class="cockpit-status-tag">SYSTEM ACTIVE</span>
+            </div>
+
+            <!-- SVG Animated Radar Sweep -->
+            <div class="radar-scope-visual">
+              <svg class="radar-svg" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="160" cy="160" r="140" stroke="rgba(217,119,6,0.25)" stroke-width="1.5" stroke-dasharray="4 4" />
+                <circle cx="160" cy="160" r="100" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
+                <circle cx="160" cy="160" r="60" stroke="rgba(217,119,6,0.35)" stroke-width="1.5" />
+                <circle cx="160" cy="160" r="20" fill="rgba(217,119,6,0.2)" stroke="#D97706" stroke-width="2" />
+                <line x1="160" y1="20" x2="160" y2="300" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+                <line x1="20" y1="160" x2="300" y2="160" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+                <g class="radar-sweep-line-anim">
+                  <line x1="160" y1="160" x2="160" y2="20" stroke="url(#radarGradient)" stroke-width="3" />
+                  <path d="M160 160 L160 20 A140 140 0 0 1 259 61 Z" fill="url(#sweepSector)" opacity="0.45" />
+                </g>
+                <defs>
+                  <linearGradient id="radarGradient" x1="160" y1="160" x2="160" y2="20" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#D97706" stop-opacity="0" />
+                    <stop offset="1" stop-color="#F59E0B" />
+                  </linearGradient>
+                  <radialGradient id="sweepSector" cx="160" cy="160" r="140" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F59E0B" stop-opacity="0.3" />
+                    <stop offset="1" stop-color="#D97706" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <!-- Real-time Stats Grid -->
+            <div class="cockpit-stats-matrix">
+              <div class="cockpit-stat-item">
+                <span class="stat-num" style="color: #FFFFFF !important; text-shadow: 0 0 14px rgba(245,158,11,0.7); font-weight: 800;">99.8%</span>
+                <span class="stat-lbl" style="color: #CBD5E1 !important; font-weight: 700;">CFPB Score</span>
+              </div>
+              <div class="cockpit-stat-item">
+                <span class="stat-num" style="color: #FFFFFF !important; text-shadow: 0 0 14px rgba(245,158,11,0.7); font-weight: 800;">&lt;24h</span>
+                <span class="stat-lbl" style="color: #CBD5E1 !important; font-weight: 700;">Scrub SLA</span>
+              </div>
+              <div class="cockpit-stat-item">
+                <span class="stat-num" style="color: #FFFFFF !important; text-shadow: 0 0 14px rgba(245,158,11,0.7); font-weight: 800;">48h</span>
+                <span class="stat-lbl" style="color: #CBD5E1 !important; font-weight: 700;">Payout</span>
+              </div>
+              <div class="cockpit-stat-item">
+                <span class="stat-num" style="color: #FFFFFF !important; text-shadow: 0 0 14px rgba(245,158,11,0.7); font-weight: 800;">100%</span>
+                <span class="stat-lbl" style="color: #CBD5E1 !important; font-weight: 700;">FDIC Escrow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         02 · ROTATING ORBITAL 5-STAGE RECOVERY SYSTEM
+         ========================================================================== -->
+    <section class="section" id="orbitalStages" aria-label="Interactive 5-Stage Circular Recovery System">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag">Interactive Orbit System</span>
+          <h2 class="section-title">The 5-Stage Sovereign Recovery Orbit</h2>
+          <p class="section-desc">
+            Click on any rotating stage circle below to inspect the forensic workflow, statutory SLA turnaround, and regulatory firewalls guarding each recovery phase.
+          </p>
+        </div>
+
+        <div class="orbital-section-arena" style="display: block !important; max-width: 860px !important; margin: 0 auto !important;">
+          
+          <!-- Clean 5-Stage Direct Interactive Selector Bar (Replaces Circle Animation) -->
+          <div class="stage-selector-bar" style="display: flex; gap: 0.65rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2.25rem;">
+            <button type="button" class="btn stage-pill-btn active" data-stage="1">01. Data Scrubbing</button>
+            <button type="button" class="btn stage-pill-btn" data-stage="2">02. Forensic Trace</button>
+            <button type="button" class="btn stage-pill-btn" data-stage="3">03. Speech AI</button>
+            <button type="button" class="btn stage-pill-btn" data-stage="4">04. Legal Counsel</button>
+            <button type="button" class="btn stage-pill-btn" data-stage="5">05. FDIC Escrow</button>
+          </div>
+
+          <!-- Interactive Stage Inspection HUD Card -->
+          <div class="orbital-stage-inspector reveal-fade-up" id="stageInspectorCard" style="max-width: 100% !important;">
+            <div class="inspector-header-tags">
+              <span class="inspector-stage-tag badge-coral" id="inspectorStageBadge">Stage 01 · Ingest Firewall</span>
+              <span class="inspector-sla-chip" id="inspectorSLAChip">SLA: 24h Turnaround</span>
+              <span class="inspector-reg-pill" id="inspectorRegPill">GLBA &amp; SOC 2 Type II</span>
+            </div>
+
+            <h3 class="inspector-headline" id="inspectorHeadline">Multi-Registry Automated Data Scrubbing &amp; Ingest</h3>
+            <p class="inspector-narrative" id="inspectorNarrative">
+              Prior to any contact, portfolio files pass through automated compliance gatekeepers to purge prohibited debtor states and litigation triggers in real-time.
+            </p>
+
+            <div class="inspector-check-grid" id="inspectorCheckGrid">
+              <div class="inspector-check-item">
+                <span class="inspector-check-icon">✓</span>
+                <span class="inspector-check-text">PACER Federal Bankruptcy Automatic Cross-Check</span>
+              </div>
+              <div class="inspector-check-item">
+                <span class="inspector-check-icon">✓</span>
+                <span class="inspector-check-text">SSA Master Death File instantaneous scrub</span>
+              </div>
+              <div class="inspector-check-item">
+                <span class="inspector-check-icon">✓</span>
+                <span class="inspector-check-text">Active-duty Servicemembers Civil Relief Act (SCRA) check</span>
+              </div>
+            </div>
+
+            <div class="inspector-controls-row">
+              <div class="orbit-nav-btn-group">
+                <button type="button" class="orbit-nav-btn" id="orbitPrevBtn" aria-label="Previous Stage">◀</button>
+                <button type="button" class="orbit-nav-btn" id="orbitNextBtn" aria-label="Next Stage">▶</button>
+              </div>
+              <a href="contact.html" class="btn btn-gold btn-sm">Place Accounts for this Stage →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         03 · FORENSIC DATA SCRUBBING CONSOLE (LIVE SIMULATION WITH TOGGLES)
+         ========================================================================== -->
+    <section class="section" id="dataScrubbing" style="background-color: var(--bg-surface-alt);" aria-label="Forensic Data Scrubbing">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag section-tag-sapphire">Interactive Terminal Simulation</span>
+          <h2 class="section-title">Automated Compliance Firewall &amp; Batch Data Scrubbing</h2>
+          <p class="section-desc">
+            Toggle our automated regulatory filters below to simulate how Aegis screens 1,000+ delinquent debtor records in milliseconds before outreach begins.
+          </p>
+        </div>
+
+        <div class="scrub-terminal-console reveal-fade-up">
+          <!-- Terminal Topbar -->
+          <div class="scrub-console-topbar">
+            <div class="scrub-traffic-lights">
+              <span class="traffic-dot dot-red"></span>
+              <span class="traffic-dot dot-yellow"></span>
+              <span class="traffic-dot dot-green"></span>
+            </div>
+            <span style="font-size: 0.8rem; color: #94A3B8; font-family: monospace;">aegis-scrub-engine-v4.2 // 256-BIT SSL ENCRYPTED</span>
+            <span class="badge badge-gold" style="font-size: 0.72rem;">LIVE FIREWALL ACTIVE</span>
+          </div>
+
+          <!-- Dual Pane Grid -->
+          <div class="scrub-console-grid">
+            <!-- Left: Filter Toggles -->
+            <div class="scrub-control-pane">
+              <span style="font-size: 0.85rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.05em;">
+                Active Verification Filters
+              </span>
+
+              <div class="scrub-filter-toggle active">
+                <div>
+                  <span style="font-weight: 700; font-size: 0.95rem; display: block;">PACER Bankruptcy Auto-Check</span>
+                  <small style="color: #94A3B8; font-size: 0.75rem;">Purges Chapter 7/11/13 active stays</small>
+                </div>
+                <div class="scrub-toggle-switch"></div>
+              </div>
+
+              <div class="scrub-filter-toggle active">
+                <div>
+                  <span style="font-weight: 700; font-size: 0.95rem; display: block;">SSA Deceased Registry</span>
+                  <small style="color: #94A3B8; font-size: 0.75rem;">Immediate probate protocol routing</small>
+                </div>
+                <div class="scrub-toggle-switch"></div>
+              </div>
+
+              <div class="scrub-filter-toggle active">
+                <div>
+                  <span style="font-weight: 700; font-size: 0.95rem; display: block;">Litigious Debtor Registry</span>
+                  <small style="color: #94A3B8; font-size: 0.75rem;">Filters serial FDCPA/TCPA plaintiffs</small>
+                </div>
+                <div class="scrub-toggle-switch"></div>
+              </div>
+
+              <div class="scrub-filter-toggle active">
+                <div>
+                  <span style="font-weight: 700; font-size: 0.95rem; display: block;">Military SCRA Registry</span>
+                  <small style="color: #94A3B8; font-size: 0.75rem;">Enforces active-duty deployment protections</small>
+                </div>
+                <div class="scrub-toggle-switch"></div>
+              </div>
+
+              <div class="scrub-filter-toggle active">
+                <div>
+                  <span style="font-weight: 700; font-size: 0.95rem; display: block;">Telephony DNC &amp; Carrier Scrub</span>
+                  <small style="color: #94A3B8; font-size: 0.75rem;">Reassigned number database lookup</small>
+                </div>
+                <div class="scrub-toggle-switch"></div>
+              </div>
+            </div>
+
+            <!-- Right: Real-Time Telemetry Monitor -->
+            <div class="scrub-monitor-pane">
+              <div class="scrub-stats-ribbon">
+                <div class="scrub-stat-pod">
+                  <div class="scrub-stat-digit" data-scrub-passed>842 Accounts</div>
+                  <div class="scrub-stat-name">Clean File Yield</div>
+                </div>
+                <div class="scrub-stat-pod">
+                  <div class="scrub-stat-digit" style="color: #10B981;" data-scrub-accuracy>99.8%</div>
+                  <div class="scrub-stat-name">Audit Accuracy</div>
+                </div>
+                <div class="scrub-stat-pod">
+                  <div class="scrub-stat-digit" style="color: #60A5FA;">142ms</div>
+                  <div class="scrub-stat-name">Scrub Velocity</div>
+                </div>
+              </div>
+
+              <span style="font-size: 0.8rem; font-weight: 700; color: #94A3B8; text-transform: uppercase; margin-bottom: 0.65rem;">
+                Live Audit Activity Stream:
+              </span>
+              <div class="scrub-feed-logs">
+                <div>[13:40:12] BATCH INGEST: 1,000 corporate records loaded via SFTP.</div>
+                <div>[13:40:12] PACER CHECK: 42 active Chapter 11 filings detected &amp; routed to Legal Proof-of-Claim.</div>
+                <div>[13:40:13] SSA CHECK: 14 deceased records routed to estate probate recovery division.</div>
+                <div>[13:40:13] TCPA SCRUB: 102 invalid / reassigned mobile lines flagged &amp; scrubbed.</div>
+                <div>[13:40:14] SCRA AUDIT: 0 active military deployments detected.</div>
+                <div style="color: var(--color-accent);">[13:40:14] CERTIFICATION: 842 verified accounts cleared for Ethical Mediation Stage.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         04 · ACOUSTIC AI & CFPB REG F SOUNDSTAGE VISUALIZER
+         ========================================================================== -->
+    <section class="section" id="acousticSoundstage" aria-label="Speech AI Soundstage">
+      <div class="container">
+        <div class="soundstage-arena reveal-fade-up">
+          <div>
+            <span class="section-tag section-tag-gold" style="margin-bottom: 0.85rem;">Speech AI Governance</span>
+            <h2 class="section-title" style="font-size: 2.35rem; margin-bottom: 1.25rem;">
+              100% Speech AI Acoustic Tone Auditing
+            </h2>
+            <p class="section-desc" style="margin-bottom: 1.5rem;">
+              Unlike legacy agencies that randomly sample 1% of recordings, Aegis executes automated acoustic speech analysis on <b>every single outbound second</b>.
+            </p>
+            <ul class="helix-check-list" style="margin-bottom: 2rem;">
+              <li class="helix-check-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Instant decibel pitch analysis detecting conversational escalation</li>
+              <li class="helix-check-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-time Mini-Miranda compliance disclosure verification</li>
+              <li class="helix-check-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Automated immediate supervisor call takeover upon any compliance deviation</li>
+            </ul>
+            <a href="compliance.html" class="btn btn-sapphire">Review CFPB Reg F Armor</a>
+          </div>
+
+          <!-- Live Audio Waveform Box -->
+          <div class="soundstage-visualizer-box">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+              <span style="font-size: 0.85rem; font-weight: 800; color: var(--color-accent);">ACOUSTIC TELEMETRY</span>
+              <span style="font-size: 0.72rem; background: rgba(16, 185, 129, 0.2); border: 1px solid #10B981; color: #10B981; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); font-weight: 700;">
+                LIVE STREAM LOCKED
+              </span>
+            </div>
+
+            <!-- Dynamic Animated Waveform Bars -->
+            <div class="waveform-display-bar">
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+            </div>
+
+            <div class="soundstage-metrics-row">
+              <div>
+                <div class="sound-meter-val">99.4%</div>
+                <div class="sound-meter-lbl">Empathy Score</div>
+              </div>
+              <div>
+                <div class="sound-meter-val">0.00%</div>
+                <div class="sound-meter-lbl">Coercion Index</div>
+              </div>
+              <div>
+                <div class="sound-meter-val" style="color: var(--color-accent);">100%</div>
+                <div class="sound-meter-lbl">Calls Audited</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         05 · PRE-LITIGATION & SEGREGATED ESCROW CLEARANCE TIMELINE
+         ========================================================================== -->
+    <section class="section" id="escrowRemittance" style="background-color: var(--bg-surface-alt);" aria-label="Escrow Remittance Pipeline">
+      <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+          <div class="reveal-fade-right">
+            <figure class="hero-image-frame" style="border-radius: var(--radius-2xl); overflow: hidden; border: 1.5px solid var(--border-gold); box-shadow: var(--shadow-2xl); position: relative;">
+              <img src="assets/images/sections/process-wire-escrow.jpg" alt="Institutional Wire Escrow Settlement Room" style="width: 100%; height: 440px; object-fit: cover;">
+              <div style="position: absolute; bottom: 1.25rem; left: 1.25rem; right: 1.25rem; background: rgba(10, 25, 47, 0.92); backdrop-filter: blur(12px); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                  <span class="beacon-pulse-dot"></span>
+                  <span style="font-size: 0.82rem; font-weight: 800; color: #FFFFFF; font-family: var(--font-heading);">FDIC-INSURED ESCROW VAULT</span>
+                </div>
+                <span style="font-size: 0.72rem; font-weight: 800; color: #10B981; background: rgba(16, 185, 129, 0.15); padding: 0.2rem 0.6rem; border-radius: 9999px;">AUDIT VERIFIED</span>
+              </div>
+            </figure>
+          </div>
+
+          <div class="reveal-fade-left">
+            <span class="section-tag section-tag-sapphire">48-Hour FDIC Clearance</span>
+            <h2 class="section-title">Strictly Segregated Client Escrow Remittance</h2>
+            <p class="section-desc">
+              Debtor funds are never comingled with agency operational capital. Collected settlements are held in dedicated, FDIC-insured client trust accounts at top-tier U.S. institutional banks.
+            </p>
+
+            <div class="escrow-cards-timeline">
+              <div class="escrow-step-item">
+                <div class="escrow-step-badge">01</div>
+                <div>
+                  <h4 class="escrow-step-title">Debtor Settlement Clearance</h4>
+                  <p class="escrow-step-desc">Funds clear debtor bank via certified cashier check, automated ACH, or wire into FDIC escrow.</p>
+                </div>
+              </div>
+
+              <div class="escrow-step-item">
+                <div class="escrow-step-badge">02</div>
+                <div>
+                  <h4 class="escrow-step-title">Automated Electronic Reconciliation</h4>
+                  <p class="escrow-step-desc">The settlement docket is audited against your contractual contingency schedule in your client recovery dashboard.</p>
+                </div>
+              </div>
+
+              <div class="escrow-step-item">
+                <div class="escrow-step-badge">03</div>
+                <div>
+                  <h4 class="escrow-step-title">48-Hour Fedwire Remittance</h4>
+                  <p class="escrow-step-desc">Net client proceeds are wired directly to your corporate operating account with zero disbursement delays.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         06 · INTERACTIVE DEBT LIQUIDATION SCENARIO SIMULATOR
+         ========================================================================== -->
+    <section class="section" id="scenarioSimulator" aria-label="Scenario Simulator">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag">Interactive Simulation</span>
+          <h2 class="section-title">Explore Industry-Specific Recovery Timelines</h2>
+          <p class="section-desc">
+            Select a portfolio archetype to inspect the exact day-by-day escalation trajectory, statutory milestones, and projected net cash yield.
+          </p>
+        </div>
+
+        <div class="scenario-sim-box reveal-fade-up">
+          <!-- Scenario Nav Tabs -->
+          <div class="scenario-nav-tabs">
+            <button type="button" class="scenario-tab-btn active" data-scenario-target="scenarioCommercial">
+              <div class="scenario-tab-title">Commercial Supply Chain</div>
+              <div class="scenario-tab-sub">$85,000 Aged Invoices (Aging 120d)</div>
+            </button>
+            <button type="button" class="scenario-tab-btn" data-scenario-target="scenarioHealthcare">
+              <div class="scenario-tab-title">Healthcare Hospital System</div>
+              <div class="scenario-tab-sub">$320,000 Patient AR (IRS 501r)</div>
+            </button>
+            <button type="button" class="scenario-tab-btn" data-scenario-target="scenarioFintech">
+              <div class="scenario-tab-title">Fintech Term Lending Pool</div>
+              <div class="scenario-tab-sub">$1,200,000 Charged-Off Pool</div>
+            </button>
+          </div>
+
+          <!-- Scenario 1: Commercial -->
+          <div class="scenario-pane active" id="scenarioCommercial">
+            <div class="scenario-timeline-track">
+              <div class="scenario-action-node">
+                <div class="action-day-badge">Day 01</div>
+                <div>
+                  <div class="action-text-main">SFTP Ingest &amp; UCC-1 Priority Title Scrub</div>
+                  <div class="action-text-desc">Verified $85,000 unpaid invoice against debtor corporate filings and cross-checked open merchant liens.</div>
+                </div>
+              </div>
+              <div class="scenario-action-node">
+                <div class="action-day-badge">Day 06</div>
+                <div>
+                  <div class="action-text-main">Executive Mediation &amp; Vendor Dispute Settlement</div>
+                  <div class="action-text-desc">Direct conference call with debtor CFO. Resolved delivery timestamp discrepancy amicably.</div>
+                </div>
+              </div>
+              <div class="scenario-action-node">
+                <div class="action-day-badge">Day 19</div>
+                <div>
+                  <div class="action-text-main">Full $85,000 Liquidation &amp; Fedwire Remittance</div>
+                  <div class="action-text-desc">100% principal cleared into escrow. $71,400 net funds wired to client within 48 hours.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="scenario-yield-card">
+              <span style="font-size: 0.8rem; color: #CBD5E1; font-weight: 700; text-transform: uppercase;">Net Cash Recovered</span>
+              <div class="scenario-cash-big">$71,400</div>
+              <div style="font-size: 0.85rem; color: #E2E8F0; margin-bottom: 1.5rem;">
+                Liquidation Velocity: <b>19 Days Total</b><br>Contingency Fee: 16% ($13,600)
+              </div>
+              <a href="contact.html" class="btn btn-gold btn-block">Liquidate Similar Portfolio</a>
+            </div>
+          </div>
+
+          <!-- Scenario 2: Healthcare -->
+          <div class="scenario-pane" id="scenarioHealthcare">
+            <div class="scenario-timeline-track">
+              <div class="scenario-action-node">
+                <div class="action-day-badge">Day 01</div>
+                <div>
+                  <div class="action-text-main">IRS 501(r) &amp; Financial Assistance Scrub</div>
+                  <div class="action-text-desc">Screened 240 patient accounts for charity care eligibility and insurance balance billing errors.</div>
+                </div>
+              </div>
+              <div class="scenario-action-node">
+                <div class="action-day-badge">Day 12</div>
+                <div>
+                  <div class="action-text-main">Empathetic Counselor Plan Structuring</div>
+                  <div class="action-text-desc">Enrolled 182 patients in zero-interest structured monthly payment commitments. Zero grievances.</div>
+                </div>
+              </div>
+              <div class="scenario-action-node">
+                <div class="action-day-badge">Day 30</div>
+                <div>
+                  <div class="action-text-main">Monthly Escrow Distribution to Hospital Network</div>
+                  <div class="action-text-desc">Cleared $272,000 into FDIC trust. Remitted $231,200 net operating cash to healthcare CFO.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="scenario-yield-card">
+              <span style="font-size: 0.8rem; color: #CBD5E1; font-weight: 700; text-transform: uppercase;">Net Cash Recovered</span>
+              <div class="scenario-cash-big">$231,200</div>
+              <div style="font-size: 0.85rem; color: #E2E8F0; margin-bottom: 1.5rem;">
+                Grievance Rate: <b>0.00% Zero Violations</b><br>Contingency Fee: 15% ($40,800)
+              </div>
+              <a href="contact.html" class="btn btn-gold btn-block">Liquidate Similar Portfolio</a>
+            </div>
+          </div>
+
+          <!-- Scenario 3: Fintech -->
+          <div class="scenario-pane" id="scenarioFintech">
+            <div class="scenario-timeline-track">
+              <div class="scenario-action-node">
+                <div class="action-day-badge">Day 01</div>
+                <div>
+                  <div class="action-text-main">Automated REST API Batch Ingest</div>
+                  <div class="action-text-desc">1,400 charged-off digital consumer notes ingested with automated bank account verification.</div>
+                </div>
+              </div>
+              <div class="scenario-action-node">
+                <div class="action-day-badge">Day 18</div>
+                <div>
+                  <div class="action-text-main">Multi-Channel Digital Settlement Portal</div>
+                  <div class="action-text-desc">720 borrowers executed self-service discounted payoff agreements via secure online portal.</div>
+                </div>
+              </div>
+              <div class="scenario-action-node">
+                <div class="action-day-badge">Day 45</div>
+                <div>
+                  <div class="action-text-main">Tiered Cash Liquidation Wire</div>
+                  <div class="action-text-desc">Recovered $580,000 cumulative cash. Wired $510,400 net cash to fintech treasury account.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="scenario-yield-card">
+              <span style="font-size: 0.8rem; color: #CBD5E1; font-weight: 700; text-transform: uppercase;">Net Cash Recovered</span>
+              <div class="scenario-cash-big">$510,400</div>
+              <div style="font-size: 0.85rem; color: #E2E8F0; margin-bottom: 1.5rem;">
+                Settlement Rate: <b>48.3% File Resolution</b><br>Contingency Fee: 12% ($69,600)
+              </div>
+              <a href="contact.html" class="btn btn-gold btn-block">Liquidate Similar Portfolio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         07 · 4-QUADRANT INSTITUTIONAL SLA & FIDUCIARY COMMITMENTS
+         ========================================================================== -->
+    <section class="section" id="slaGuarantees" style="background-color: var(--bg-surface-alt);" aria-label="Institutional SLAs">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag section-tag-sapphire">Contractual SLAs</span>
+          <h2 class="section-title">Four Ironclad Guarantees Built Into Every Placement</h2>
+          <p class="section-desc">
+            Our Master Services Agreement legally binds our team to uncompromising turnaround times and audit-ready indemnification.
+          </p>
+        </div>
+
+        <div class="sla-quadrant-grid reveal-fade-up">
+          <article class="sla-quad-card">
+            <div class="sla-big-num">24h</div>
+            <h3 class="sla-card-title">Initial File Scrub SLA</h3>
+            <p class="sla-card-desc">Every placed debtor file is cross-referenced against all 5 federal and state regulatory databases within 24 hours of ingest.</p>
+          </article>
+
+          <article class="sla-quad-card">
+            <div class="sla-big-num">48h</div>
+            <h3 class="sla-card-title">FDIC Escrow Remittance</h3>
+            <p class="sla-card-desc">Settled funds are remitted to your corporate operating account via Fedwire within 48 hours of bank clearance.</p>
+          </article>
+
+          <article class="sla-quad-card">
+            <div class="sla-big-num" style="color: #10B981;">100%</div>
+            <h3 class="sla-card-title">Speech AI Call Auditing</h3>
+            <p class="sla-card-desc">Every single outbound interaction is recorded and AI-analyzed for CFPB Reg F tone, empathy, and statutory adherence.</p>
+          </article>
+
+          <article class="sla-quad-card">
+            <div class="sla-big-num" style="color: #10B981;">$0.00</div>
+            <h3 class="sla-card-title">Uncollectible File Cost</h3>
+            <p class="sla-card-desc">If an account cannot be liquidated, you owe nothing. Zero onboarding, skip-tracing, or platform maintenance fees.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         08 · HIGH-SECURITY CONVERSION INTAKE VAULT
+         ========================================================================== -->
+    <section class="section" id="processVault" aria-label="Secure Placement Vault">
+      <div class="container">
+        <div class="intake-vault-arena reveal-fade-up">
+          <div>
+            <span class="section-tag section-tag-gold" style="margin-bottom: 0.75rem;">Instant Placement Vault</span>
+            <h2 class="section-title" style="color: #FFFFFF; font-size: 2.35rem; margin-bottom: 1.25rem;">
+              Initiate Your Portfolio Ingest Under Fiduciary Indemnity
+            </h2>
+            <p class="section-desc" style="color: #CBD5E1; margin-bottom: 2rem;">
+              Upload your delinquent commercial file parameters to receive a certified recovery yield assessment and contingency rate schedule within 4 business hours.
+            </p>
+
+            <div class="vault-features-list">
+              <div class="vault-feature-item">
+                <div class="vault-feature-icon">✓</div>
+                <span>256-Bit TLS / AES Encrypted Batch File Ingest</span>
+              </div>
+              <div class="vault-feature-item">
+                <div class="vault-feature-icon">✓</div>
+                <span>$5,000,000 Statutory Surety Bond Indemnification</span>
+              </div>
+              <div class="vault-feature-item">
+                <div class="vault-feature-icon">✓</div>
+                <span>Direct Access to Licensed Creditor Rights Legal Counsel</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- High-Security Intake Form -->
+          <div class="intake-form-box" style="background: rgba(17, 34, 64, 0.95); border: 1px solid var(--border-gold); border-radius: var(--radius-xl); padding: 2.5rem; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);">
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #FFFFFF; margin-bottom: 1.5rem; text-align: center;">
+              Encrypted Placement Request
+            </h3>
+            <form action="contact.html" method="GET" class="intake-form">
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <label for="vaultCompany" class="form-label" style="color: #CBD5E1; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; display: block;">Creditor / Company Name</label>
+                <input type="text" id="vaultCompany" name="company" class="form-control" placeholder="e.g. Acme Health Corp" required style="width: 100%; padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid rgba(197, 160, 89, 0.4); background: rgba(10, 25, 47, 0.8); color: #FFFFFF;">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <label for="vaultAmount" class="form-label" style="color: #CBD5E1; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; display: block;">Total Portfolio Face Value</label>
+                <input type="text" id="vaultAmount" name="amount" class="form-control" placeholder="e.g. $150,000" required style="width: 100%; padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid rgba(197, 160, 89, 0.4); background: rgba(10, 25, 47, 0.8); color: #FFFFFF;">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label for="vaultEmail" class="form-label" style="color: #CBD5E1; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem; display: block;">Executive Contact Email</label>
+                <input type="email" id="vaultEmail" name="email" class="form-control" placeholder="cfo@company.com" required style="width: 100%; padding: 0.85rem 1rem; border-radius: var(--radius-md); border: 1px solid rgba(197, 160, 89, 0.4); background: rgba(10, 25, 47, 0.8); color: #FFFFFF;">
+              </div>
+
+              <button type="submit" class="btn btn-gold btn-block btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Submit to Sovereign Vault</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER — HIGH CONTRAST 4-COLUMN SOVEREIGN CITADEL GRID
+       ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Credentials -->
+        <div class="footer-col footer-col-brand">
+          <div class="footer-brand">
+            <div class="brand-emblem">
+              <img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="28" height="28">
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span>
+              <span class="brand-subtitle">Ethical Debt Resolution</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Sovereign accounts receivable management, commercial debt recovery, and 50-state compliance infrastructure for enterprise creditors nationwide.
+          </p>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>100 Wall Street, Suite 2400, New York, NY 10005</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>1-800-555-AEGIS (2344) • Direct: +1 (212) 555-0199</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Practice Areas -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Practice Areas</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#commercial">Commercial B2B Recovery</a></li>
+            <li><a href="services.html#healthcare">Healthcare Patient AR</a></li>
+            <li><a href="services.html#banking">Fintech &amp; Bank Lending</a></li>
+            <li><a href="services.html#litigation">Legal Forwarding</a></li>
+            <li><a href="services.html#skiptrace">Forensic Asset Mapping</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Institutional Hub -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Institutional Hub</h4>
+          <ul class="footer-links">
+            <li><a href="compliance.html">Compliance &amp; Licensing</a></li>
+            <li><a href="pricing.html">Contingency Fee Schedules</a></li>
+            <li><a href="recovery-process.html">Recovery Methodology</a></li>
+            <li><a href="about.html">About Aegis Partners</a></li>
+            <li><a href="dashboard.html">Client Recovery Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Regulatory Governance -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Regulatory Governance</h4>
+          <ul class="footer-links">
+            <li><a href="compliance.html#stateDirectory">50-State Licensing Matrix</a></li>
+            <li><a href="compliance.html#rule7x7">CFPB Reg F 7X7 Hard-Lock</a></li>
+            <li><a href="compliance.html#acoustic">100% Speech AI Auditing</a></li>
+            <li><a href="compliance.html#disputeTerminal">Consumer Dispute Portal</a></li>
+            <li><a href="contact.html">Institutional RFP Intake</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Aegis Recovery Partners LLC. All rights reserved. Registered across all 50 U.S. states.
+        </div>
+        <div class="footer-legal-links">
+          <a href="compliance.html">Regulatory Armor</a>
+          <a href="pricing.html">Contingency Terms</a>
+          <a href="contact.html">Direct Inquiries</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="assets/js/main.js?v=106"></script>
+</body>
+</html>

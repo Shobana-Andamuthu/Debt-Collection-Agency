@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aegis Recovery Partners — Corporate Client Onboarding Request.">
+  <title>Client Onboarding | Aegis Recovery Partners</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh; background: var(--bg-body);">
+
+  <!-- PAGE PRELOADER -->
+  <div id="pagePreloader" style="position: fixed; inset: 0; z-index: 999999; background-color: #0A192F; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem;">
+    <div class="preloader-spinner-ring"></div>
+    <div class="preloader-brand-box">
+      <div class="preloader-text-brand">AEGIS <span class="gold-accent">RECOVERY</span></div>
+    </div>
+    <div class="preloader-bar-track"><div class="preloader-bar-fill"></div></div>
+  </div>
+
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 2.5rem 1rem;">
+    <div style="background: var(--bg-surface); max-width: 960px; width: 100%; border-radius: var(--radius-2xl); border: 1px solid var(--border-color); box-shadow: var(--shadow-xl); overflow: hidden; display: grid; grid-template-columns: 1fr 1fr;" class="visual-split-row">
+      <!-- Left Visual Hero Panel -->
+      <div class="visual-media-frame" style="border-radius: 0; height: 100%; min-height: 480px; position: relative;">
+        <img src="assets/images/sections/register-onboard-bg.jpg" alt="Aegis Intake Command Desk" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="visual-hero-overlay" style="background: linear-gradient(180deg, rgba(15,23,42,0.4) 0%, rgba(15,23,42,0.92) 100%);"></div>
+        
+        <!-- Brand Emblem inside Card -->
+        <a href="index.html" class="nav-brand" style="position: absolute; top: 24px; left: 24px; z-index: 10;">
+          <div class="brand-emblem"><img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="28" height="28"></div>
+          <div class="brand-text"><span class="brand-title" style="color: #FFFFFF !important;">AEGIS <span class="gold-accent">RECOVERY</span></span></div>
+        </a>
+
+        <div class="floating-metric-badge" style="bottom: 30px; left: 24px; right: 24px;">
+          <div class="floating-badge-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div>
+            <div class="floating-badge-value">24-Hour Placement SLA</div>
+            <div class="floating-badge-label">Zero Upfront Contingency</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Form Panel -->
+      <div style="padding: 2.5rem 2.25rem; display: flex; flex-direction: column; justify-content: center; position: relative;">
+        <!-- Top Actions -->
+        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem; margin-bottom: 1.25rem;">
+          <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme"><span class="theme-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span></button>
+          <button type="button" class="icon-btn rtl-toggle-btn" aria-label="Toggle direction"><span class="dir-label" style="font-size: 0.75rem; font-weight: 700;">RTL</span></button>
+          <a href="index.html" class="btn btn-outline-white btn-sm" style="font-size: 0.78rem; padding: 0.4rem 0.85rem; border-color: var(--border-color); color: var(--text-main);">Home</a>
+        </div>
+
+        <div style="margin-bottom: 1.75rem;">
+          <span class="section-tag">Corporate Placement</span>
+          <h2 style="font-size: 1.75rem; margin-top: 0.5rem; margin-bottom: 0.35rem; color: var(--text-main);">Enterprise Onboarding</h2>
+          <p style="font-size: 0.875rem; color: var(--text-muted); margin: 0;">Initiate ethical debt recovery representation for your enterprise.</p>
+        </div>
+
+        <form action="dashboard.html" method="get">
+          <div style="margin-bottom: 1.25rem;">
+            <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main);" for="regCompany">Organization / Company Name</label>
+            <input type="text" id="regCompany" required placeholder="Acme Financial Corp" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
+          </div>
+          <div style="margin-bottom: 1.25rem;">
+            <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main);" for="regEmail">Corporate Work Email</label>
+            <input type="email" id="regEmail" required placeholder="finance@company.com" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
+          </div>
+          <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.85rem; font-size: 0.95rem;">Submit Placement Application</button>
+        </form>
+
+        <div style="margin-top: 1.75rem; text-align: center; font-size: 0.875rem; color: var(--text-muted);">
+          Already have portal access? <a href="login.html" style="color: var(--color-accent); font-weight: 700;">Sign In Here</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+  <script src="assets/js/main.js?v=303"></script>
+</body>
+</html>

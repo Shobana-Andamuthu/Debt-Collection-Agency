@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aegis Recovery Partners — Transparent 100% Contingency Pricing & Fee Schedules. Zero upfront retainers, zero hidden onboarding costs, and 48-hour FDIC escrow remittance.">
+  <title>Pricing &amp; Rates | Aegis Recovery Partners</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=106">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=106">
+  <script>
+    window.toggleMobileMenu = function(e) {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      }
+      var drawer = document.getElementById('mobileDrawer');
+      var overlay = document.getElementById('mobileOverlay') || document.getElementById('drawerOverlay');
+      var hamburgers = document.querySelectorAll('.hamburger-btn, #hamburgerBtn');
+      if (!drawer) return;
+
+      var isOpen = drawer.classList.contains('is-open') || drawer.classList.contains('active');
+      if (isOpen) {
+        drawer.classList.remove('is-open', 'active');
+        if (overlay) overlay.classList.remove('is-open', 'active');
+        hamburgers.forEach(function(btn) {
+          btn.classList.remove('is-active', 'active');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+        document.body.classList.remove('menu-open');
+      } else {
+        drawer.classList.add('is-open', 'active');
+        if (overlay) overlay.classList.add('is-open', 'active');
+        hamburgers.forEach(function(btn) {
+          btn.classList.add('is-active', 'active');
+          btn.setAttribute('aria-expanded', 'true');
+        });
+        document.body.classList.add('menu-open');
+      }
+
+      var dropdownTargets = drawer.querySelectorAll('.mobile-nav-item, .has-dropdown, .has-submenu, .mobile-submenu, .mobile-dropdown-toggle');
+      dropdownTargets.forEach(function(item) {
+        item.classList.remove('is-expanded', 'active', 'show', 'open');
+      });
+    };
+  </script>
+</head>
+<body>
+
+  <!-- PAGE PRELOADER -->
+  <div id="pagePreloader" style="position: fixed; inset: 0; z-index: 999999; background-color: #0A192F; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem;">
+    <div class="preloader-spinner-ring"></div>
+    <div class="preloader-brand-box">
+      <div class="preloader-text-brand">AEGIS <span class="gold-accent">RECOVERY</span></div>
+    </div>
+    <div class="preloader-bar-track"><div class="preloader-bar-fill"></div></div>
+  </div>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="nav-brand">
+          <div class="brand-emblem">
+            <img src="assets/images/icons/logo.svg" alt="Aegis Recovery Logo" width="28" height="28">
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span>
+            <span class="brand-subtitle">Ethical Debt Resolution</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation (7 Main Items) -->
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item nav-dropdown">
+            <a href="index.html" class="nav-link">
+              <span>Home</span>
+              <span class="dropdown-arrow">▼</span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="index.html" class="dropdown-item">
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Home 1 — Ethical Recovery</span>
+                  <span class="dropdown-item-desc">Institutional sovereign compliance</span>
+                </div>
+              </a>
+              <a href="home-2.html" class="dropdown-item">
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-title">Home 2 — Recovery Intelligence</span>
+                  <span class="dropdown-item-desc">Forensic data-driven collection</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="compliance.html" class="nav-link">Compliance &amp; Licensing</a></li>
+          <li class="nav-item"><a href="pricing.html" class="nav-link active">Pricing</a></li>
+          <li class="nav-item"><a href="recovery-process.html" class="nav-link">Recovery Process</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+
+        <!-- Action Controls -->
+        <div class="nav-actions">
+          <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme">
+            <span class="theme-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+          </button>
+          <button type="button" class="icon-btn rtl-toggle-btn" aria-label="Toggle direction">
+            <span class="dir-label" style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+          </button>
+          <a href="login.html" class="btn btn-gold btn-sm">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+            <span>Login</span>
+          </a>
+          <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" onclick="toggleMobileMenu(event)">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-text">
+        <span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span>
+      </div>
+      <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item has-dropdown">
+        <a href="index.html" class="mobile-nav-link mobile-dropdown-toggle">
+          <span>Home</span>
+          <span class="mobile-arrow">▼</span>
+        </a>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-submenu-link">Home 1 — Ethical Recovery</a>
+          <a href="home-2.html" class="mobile-submenu-link">Home 2 — Recovery Intelligence</a>
+        </div>
+      </li>
+      <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li class="mobile-nav-item"><a href="compliance.html" class="mobile-nav-link">Compliance &amp; Licensing</a></li>
+      <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link active">Pricing</a></li>
+      <li class="mobile-nav-item"><a href="recovery-process.html" class="mobile-nav-link">Recovery Process</a></li>
+      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link">Client Dashboard</a></li>
+    </ul>
+    <div style="padding: 1.5rem; border-top: 1px solid var(--border-color);">
+      <a href="login.html" class="btn btn-gold btn-block">Client Portal Login</a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: 7 EXACT MEANINGFUL PRICING SECTIONS
+       ========================================================================== -->
+  <main id="mainContent" role="main">
+
+    <!-- ==========================================================================
+         01 · PAGE HERO — WORKING SEGMENTED DELINQUENCY RATE PICKER
+         ========================================================================== -->
+    <section class="ph-picker-hero" aria-labelledby="pricing-hero-title">
+      <div class="container">
+        <div class="ph-picker-inner reveal-fade-up">
+          <ul class="ph-crumbs">
+            <li><a href="index.html">Home</a></li>
+            <li><span>/</span></li>
+            <li style="color: var(--color-accent); font-weight: 700;">Pricing Guide</li>
+          </ul>
+
+          <div style="margin-bottom: 2rem;">
+            <span class="section-tag section-tag-gold" style="margin-bottom: 0.85rem;">Published Contingency Rates · No Upfront Retainers</span>
+            <h1 class="ph-title" id="pricing-hero-title">
+              Pick the Delinquency Bracket You Have,<br>and the Rate is the Rate.
+            </h1>
+            <p class="ph-lede">
+              Every figure includes Tier-1 forensic skip-tracing, corporate asset mapping, 100% speech AI acoustic auditing, and 48-hour FDIC segregated escrow remittance.
+            </p>
+          </div>
+
+          <!-- The Interactive Segmented Bracket Picker -->
+          <div class="cd-picker-box">
+            <fieldset style="border: 0; padding: 0; margin: 0;">
+              <legend class="cd-picker-legend">How delinquent is your creditor portfolio?</legend>
+              <div class="cd-picker-row" data-picker-row>
+                <label class="cd-picker-opt">
+                  <input type="radio" name="bracketRate" value="30-60d" data-rate="14%" data-desc="Early-Stage Trade Receivables • Automated Gentle Invoicing Reminders &amp; Resolution" checked>
+                  <span>30–60d<small>Early Stage</small></span>
+                </label>
+                <label class="cd-picker-opt">
+                  <input type="radio" name="bracketRate" value="61-120d" data-rate="18%" data-desc="Mid-Stage Commercial Portfolios • Direct Mediation &amp; Vendor Dispute Settlement">
+                  <span>61–120d<small>Mid Market</small></span>
+                </label>
+                <label class="cd-picker-opt">
+                  <input type="radio" name="bracketRate" value="121-180d" data-rate="22%" data-desc="Aged Corporate Invoices • Intensive Forensic Asset Mapping &amp; Officer Skip-Tracing">
+                  <span>121–180d<small>Aged Files</small></span>
+                </label>
+                <label class="cd-picker-opt">
+                  <input type="radio" name="bracketRate" value="181-365d" data-rate="26%" data-desc="Pre-Litigation Negotiation • Admitted Creditor Rights Attorney Formal Demand Letters">
+                  <span>181–365d<small>Pre-Legal</small></span>
+                </label>
+                <label class="cd-picker-opt">
+                  <input type="radio" name="bracketRate" value="365d+" data-rate="30%" data-desc="Post-Judgment Enforcement • Bank Subpoenas, Real Property UCC Liens &amp; Asset Seizures">
+                  <span>365d+<small>Judgment</small></span>
+                </label>
+                <label class="cd-picker-opt">
+                  <input type="radio" name="bracketRate" value="healthcare" data-rate="15%" data-desc="Healthcare &amp; Hospital Systems • IRS 501(r) FAP Guardrails &amp; Empathetic Patient Plans">
+                  <span>HIPAA<small>Healthcare</small></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="cd-picker-out">
+              <div>
+                <span class="cd-picker-price" data-picker-price aria-live="polite">14%</span>
+                <span style="font-size: 0.85rem; color: #CBD5E1; margin-left: 0.35rem; font-weight: 700;">of recovered funds</span>
+              </div>
+              <span class="cd-picker-what" data-picker-what>Early-Stage Trade Receivables • Automated Gentle Invoicing Reminders &amp; Resolution</span>
+            </div>
+
+            <p class="cd-picker-note">
+              ✓ Zero Upfront Retainer • Zero Onboarding Surcharges • If an account is not liquidated, you pay $0.00.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         02 · THE CALIBRATED STAGE RATE GRID (WITH HORIZONTAL PROGRESS FILL BARS)
+         ========================================================================== -->
+    <section class="section" id="stageGrid" aria-label="Delinquency Stages">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag">By Delinquency Stage</span>
+          <h2 class="section-title">Six Calibrated Ways Delinquent Capital is Structured</h2>
+          <p class="section-desc">
+            One fiduciary agency, admitted creditor rights attorneys, one transparent contingency figure. The meter indicates the investigative intensity required.
+          </p>
+        </div>
+
+        <div class="pcards-matrix">
+          <!-- Stage 1 -->
+          <article class="pcard-item reveal-fade-up">
+            <div class="pcard-fraction">30–60d</div>
+            <div class="pcard-stage-title">Early-Stage Commercial Trade</div>
+            <span class="pcard-bar" aria-hidden="true"><i style="width: 18%;"></i></span>
+            <p class="pcard-desc">First-placement aged vendor billing, supply chain invoices, and friendly dispute resolution reminders.</p>
+            <div class="pcard-price">14% <small style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">Contingency</small></div>
+          </article>
+
+          <!-- Stage 2 -->
+          <article class="pcard-item reveal-fade-up">
+            <div class="pcard-fraction">61–120d</div>
+            <div class="pcard-stage-title">Mid-Market Corporate Receivables</div>
+            <span class="pcard-bar" aria-hidden="true"><i style="width: 36%;"></i></span>
+            <p class="pcard-desc">Unpaid freight billing, supplier contracts, and active commercial mediation with corporate debtors.</p>
+            <div class="pcard-price">18% <small style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">Contingency</small></div>
+          </article>
+
+          <!-- Stage 3 -->
+          <article class="pcard-item reveal-fade-up">
+            <div class="pcard-fraction">121–180d</div>
+            <div class="pcard-stage-title">Forensic Skip-Trace Investigation</div>
+            <span class="pcard-bar" aria-hidden="true"><i style="width: 55%;"></i></span>
+            <p class="pcard-desc">Deep hidden corporate asset searches, beneficial owner identification, and cross-state entity tracking.</p>
+            <div class="pcard-price">22% <small style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">Contingency</small></div>
+          </article>
+
+          <!-- Stage 4 -->
+          <article class="pcard-item reveal-fade-up">
+            <div class="pcard-fraction">181–365d</div>
+            <div class="pcard-stage-title">Pre-Litigation Attorney Forwarding</div>
+            <span class="pcard-bar" aria-hidden="true"><i style="width: 75%;"></i></span>
+            <p class="pcard-desc">Formal attorney demand letters, structured promissory note executions, and settlement agreements.</p>
+            <div class="pcard-price">26% <small style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">Contingency</small></div>
+          </article>
+
+          <!-- Stage 5 -->
+          <article class="pcard-item reveal-fade-up">
+            <div class="pcard-fraction">365d+</div>
+            <div class="pcard-stage-title">Judgment Enforcement &amp; Levies</div>
+            <span class="pcard-bar" aria-hidden="true"><i style="width: 90%;"></i></span>
+            <p class="pcard-desc">Post-judgment court dockets, debtor bank account subpoenas, UCC-1 lien filings, and sheriff levies.</p>
+            <div class="pcard-price">30% <small style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">Contingency</small></div>
+          </article>
+
+          <!-- Stage 6 -->
+          <article class="pcard-item reveal-fade-up">
+            <div class="pcard-fraction">HIPAA</div>
+            <div class="pcard-stage-title">Healthcare &amp; Patient Arrears</div>
+            <span class="pcard-bar" aria-hidden="true"><i style="width: 28%;"></i></span>
+            <p class="pcard-desc">IRS 501(r) compliance, empathetic financial assistance counseling, and zero-grievance patient experience.</p>
+            <div class="pcard-price">15% <small style="font-size: 0.75rem; color: var(--text-muted); font-weight: 400;">Contingency</small></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         03 · SOVEREIGN FEE BLUEPRINT & DISCLOSURE MATRIX (NON-CARD TERMINAL LAYOUT)
+         ========================================================================== -->
+    <section class="section" id="feeBlueprint" style="background-color: var(--bg-surface-alt);" aria-label="Fee Ledger Blueprint">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag section-tag-sapphire">Transparent Fee Disclosure</span>
+          <h2 class="section-title">Institutional Fee Blueprint &amp; Zero-Cost Absorbency Matrix</h2>
+          <p class="section-desc">
+            A comprehensive line-by-line breakdown of Aegis sovereign contingency policies, statutory pass-through items, and strictly guaranteed $0 cost shields.
+          </p>
+        </div>
+
+        <!-- Filter Pill Controls -->
+        <div class="blueprint-filter-bar reveal-fade-up">
+          <button type="button" class="blueprint-pill-btn active" data-filter="all">All Fee Items (9)</button>
+          <button type="button" class="blueprint-pill-btn" data-filter="guaranteed">Strict $0 Guarantee Shield (5)</button>
+          <button type="button" class="blueprint-pill-btn" data-filter="statutory">Statutory Pass-Throughs (4)</button>
+        </div>
+
+        <!-- Unified Non-Card Terminal Matrix -->
+        <div class="sovereign-blueprint-terminal reveal-fade-up">
+          <div class="blueprint-terminal-head">
+            <span>Service &amp; Regulatory Metric</span>
+            <span>Fee Policy Category</span>
+            <span style="text-align: right;">Contracted Rate</span>
+          </div>
+
+          <div class="blueprint-stream-rows">
+            <!-- Row 1 -->
+            <div class="blueprint-stream-row" data-category="guaranteed">
+              <div class="blueprint-item-main">
+                <span class="blueprint-item-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Upfront Retainer &amp; Client Onboarding
+                </span>
+                <span class="blueprint-item-desc">Initial file ingest, legal review, and corporate debtor portfolio data mapping.</span>
+              </div>
+              <div>
+                <span class="blueprint-policy-badge badge-guarantee-zero">✓ 100% Absorbed</span>
+              </div>
+              <div class="blueprint-fee-figure fee-zero-figure">$0.00</div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="blueprint-stream-row" data-category="guaranteed">
+              <div class="blueprint-item-main">
+                <span class="blueprint-item-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Forensic Skip-Tracing &amp; Asset Investigation
+                </span>
+                <span class="blueprint-item-desc">Tier-1 commercial database searches, phone records, and corporate officer cross-referencing.</span>
+              </div>
+              <div>
+                <span class="blueprint-policy-badge badge-guarantee-zero">✓ Included Free</span>
+              </div>
+              <div class="blueprint-fee-figure fee-zero-figure">$0.00</div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="blueprint-stream-row" data-category="statutory">
+              <div class="blueprint-item-main">
+                <span class="blueprint-item-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  State Court Docket &amp; Legal Filing Fees
+                </span>
+                <span class="blueprint-item-desc">Statutory municipal court filing fees advanced by Aegis during formal legal action.</span>
+              </div>
+              <div>
+                <span class="blueprint-policy-badge badge-statutory-cost">Statutory Pass-Through</span>
+              </div>
+              <div class="blueprint-fee-figure" style="font-size: 1rem;">At Court Cost</div>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="blueprint-stream-row" data-category="guaranteed">
+              <div class="blueprint-item-main">
+                <span class="blueprint-item-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  100% Speech AI Acoustic Tone Auditing
+                </span>
+                <span class="blueprint-item-desc">CFPB Reg F real-time acoustic coercion checks on 100% of outbound audio interactions.</span>
+              </div>
+              <div>
+                <span class="blueprint-policy-badge badge-guarantee-zero">✓ Zero Surcharge</span>
+              </div>
+              <div class="blueprint-fee-figure fee-zero-figure">$0.00</div>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="blueprint-stream-row" data-category="statutory">
+              <div class="blueprint-item-main">
+                <span class="blueprint-item-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  Forensic Real Property Title &amp; UCC Search
+                </span>
+                <span class="blueprint-item-desc">County recorder title search for high-value debtor real estate encumbrance.</span>
+              </div>
+              <div>
+                <span class="blueprint-policy-badge badge-statutory-cost">Optional Discovery</span>
+              </div>
+              <div class="blueprint-fee-figure" style="font-size: 1rem;">$150 / tract</div>
+            </div>
+
+            <!-- Row 6 -->
+            <div class="blueprint-stream-row" data-category="guaranteed">
+              <div class="blueprint-item-main">
+                <span class="blueprint-item-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Monthly Platform Access &amp; API Integration
+                </span>
+                <span class="blueprint-item-desc">24/7 client recovery dashboard, automated REST webhook streams, and SOC 2 security.</span>
+              </div>
+              <div>
+                <span class="blueprint-policy-badge badge-guarantee-zero">✓ Included Free</span>
+              </div>
+              <div class="blueprint-fee-figure fee-zero-figure">$0.00</div>
+            </div>
+
+            <!-- Row 7 -->
+            <div class="blueprint-stream-row" data-category="statutory">
+              <div class="blueprint-item-main">
+                <span class="blueprint-item-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  Sheriff Process Service &amp; Writs of Execution
+                </span>
+                <span class="blueprint-item-desc">Official county sheriff delivery fee for legal summons, subpoenas, and bank levies.</span>
+              </div>
+              <div>
+                <span class="blueprint-policy-badge badge-statutory-cost">Statutory Pass-Through</span>
+              </div>
+              <div class="blueprint-fee-figure" style="font-size: 1rem;">Statutory Fee</div>
+            </div>
+
+            <!-- Row 8 -->
+            <div class="blueprint-stream-row" data-category="statutory">
+              <div class="blueprint-item-main">
+                <span class="blueprint-item-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  Hague Convention Foreign Debtor Forwarding
+                </span>
+                <span class="blueprint-item-desc">Cross-border process service and international corporate collections arbitration.</span>
+              </div>
+              <div>
+                <span class="blueprint-policy-badge badge-statutory-cost">International Treaty</span>
+              </div>
+              <div class="blueprint-fee-figure" style="font-size: 1rem;">Custom Treaty</div>
+            </div>
+
+            <!-- Row 9 -->
+            <div class="blueprint-stream-row" data-category="guaranteed">
+              <div class="blueprint-item-main">
+                <span class="blueprint-item-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Uncollectible Inactive File Closure Fee
+                </span>
+                <span class="blueprint-item-desc">If an account cannot be liquidated, you owe nothing. Certified bad-debt tax write-off provided.</span>
+              </div>
+              <div>
+                <span class="blueprint-policy-badge badge-guarantee-zero">✓ Zero Client Loss</span>
+              </div>
+              <div class="blueprint-fee-figure fee-zero-figure">$0.00</div>
+            </div>
+          </div>
+
+          <!-- Bottom Sovereign Seal & Fiduciary Stamp -->
+          <div class="blueprint-terminal-foot">
+            <div class="blueprint-foot-seal">
+              <div class="blueprint-seal-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <span><b>100% Contingency Promise:</b> If no funds are recovered and cleared into FDIC trust, your total fee is $0.00.</span>
+            </div>
+            <a href="contact.html#rateLock" class="btn btn-gold btn-sm">Request Fiduciary Fee Schedule</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         04 · QUESTIONS ABOUT THE MONEY — INTERACTIVE ACCORDION
+         ========================================================================== -->
+    <section class="section" id="faq" aria-label="Pricing Frequently Asked Questions">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag">On the Price</span>
+          <h2 class="section-title">What CFOs &amp; Institutional Creditors Check Before Booking</h2>
+          <p class="section-desc">
+            All figures appear on the transparent settlement remittance docket afterwards, so none of it is ever a surprise.
+          </p>
+        </div>
+
+        <div class="pricing-faq-arena reveal-fade-up">
+          <!-- FAQ 1 -->
+          <div class="pricing-acc-card is-active">
+            <button type="button" class="pricing-acc-btn" aria-expanded="true">
+              <span>Is the contingency percentage strictly fixed once quoted?</span>
+              <span class="pricing-acc-icon">▼</span>
+            </button>
+            <div class="pricing-acc-content">
+              <p>
+                Yes, bound in writing by your Master Services Agreement against the delinquency bracket you placed. The contingency rate can only move downwards in your favor as your cumulative annual placement volume unlocks tiered discounts. It never increases after work begins.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="pricing-acc-card">
+            <button type="button" class="pricing-acc-btn" aria-expanded="false">
+              <span>Are there any hidden database, skip-tracing, or software charges?</span>
+              <span class="pricing-acc-icon">▼</span>
+            </button>
+            <div class="pricing-acc-content">
+              <p>
+                No. We carry 100% of all investigative, telephone, credit bureau reporting, and 100% speech AI acoustic auditing costs. You will never see an ancillary line item on your settlement statements for administrative overhead.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="pricing-acc-card">
+            <button type="button" class="pricing-acc-btn" aria-expanded="false">
+              <span>What happens if an account proves completely uncollectible?</span>
+              <span class="pricing-acc-icon">▼</span>
+            </button>
+            <div class="pricing-acc-content">
+              <p>
+                You pay $0.00. We bear the entire loss of staff time, skip-trace fees, and operational costs. We also provide certified uncollectibility reports for corporate bad-debt tax write-offs upon request.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="pricing-acc-card">
+            <button type="button" class="pricing-acc-btn" aria-expanded="false">
+              <span>When and how are recovered funds remitted to our corporate bank?</span>
+              <span class="pricing-acc-icon">▼</span>
+            </button>
+            <div class="pricing-acc-content">
+              <p>
+                All recovered debtor funds are deposited directly into our segregated, FDIC-insured client trust accounts. Within 48 hours of bank clearance, funds are remitted directly to your bank account via automated Fedwire or ACH, accompanied by an audited electronic reconciliation ledger.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="pricing-acc-card">
+            <button type="button" class="pricing-acc-btn" aria-expanded="false">
+              <span>Do you offer custom contingency rates for enterprise volume ($1M+)?</span>
+              <span class="pricing-acc-icon">▼</span>
+            </button>
+            <div class="pricing-acc-content">
+              <p>
+                Yes. Portfolios exceeding $1,000,000 annually receive a 2.5% to 5.0% rate reduction, dedicated admitted legal counsel oversight, and customized REST API / encrypted SFTP ingestion pipelines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         05 · SPECIALIZED PORTFOLIOS BENTO MATRIX (BY INDUSTRY VERTICAL)
+         ========================================================================== -->
+    <section class="section" id="verticals" style="background-color: var(--bg-surface-alt);" aria-label="Specialized Industry Portfolios">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag section-tag-sapphire">By Industry Vertical</span>
+          <h2 class="section-title">Calibrated Contingency Schedules for Specialized Sectors</h2>
+          <p class="section-desc">
+            Tailored legal workflows, regulatory guardrails, and asset recovery methodologies calibrated to your industry vertical.
+          </p>
+        </div>
+
+        <div class="mods-bento-grid reveal-fade-up">
+          <article class="mod-bento-card">
+            <div class="mod-big-figure">14%</div>
+            <b>Healthcare &amp; Hospital Systems</b>
+            <p>IRS 501(r) compliance, compassionate financial counseling, and 100% speech AI tone monitoring ensuring zero patient grievances.</p>
+          </article>
+
+          <article class="mod-bento-card">
+            <div class="mod-big-figure">18%</div>
+            <b>Commercial Freight &amp; Trade Credit</b>
+            <p>Bill of lading verification, supply chain vendor dispute mediation, and direct commercial credit reporting to Dun &amp; Bradstreet.</p>
+          </article>
+
+          <article class="mod-bento-card">
+            <div class="mod-big-figure">16%</div>
+            <b>SaaS &amp; Tech Subscriptions</b>
+            <p>High-velocity churned enterprise contract recovery, recurring billing disputes, and automated webhook financial reconciliation.</p>
+          </article>
+
+          <article class="mod-bento-card">
+            <div class="mod-big-figure">20%</div>
+            <b>Equipment Leasing &amp; Secured Assets</b>
+            <p>UCC-1 lien filings, commercial collateral recovery mediation, and repossession arbitration across all 50 states.</p>
+          </article>
+
+          <article class="mod-bento-card">
+            <div class="mod-big-figure">28%</div>
+            <b>Judicial Enforcement &amp; Seizures</b>
+            <p>Post-judgment bank levies, real estate encumbrances, and writ of execution filings through licensed creditor rights attorneys.</p>
+          </article>
+
+          <article class="mod-bento-card">
+            <div class="mod-big-figure">12%</div>
+            <b>Regional Bank &amp; Fintech Lending</b>
+            <p>High-volume institutional debt liquidation, automated batch SFTP file ingest, and SOC 2 Type II certified security infrastructure.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         06 · VISUAL CASE PROOF: TWIN PLATES ("ONE PLACEMENT, BOTH ENDS")
+         ========================================================================== -->
+    <section class="section" id="caseProof" aria-label="Visual Case Proof">
+      <div class="container">
+        <div class="section-header reveal-fade-up">
+          <span class="section-tag">One Placement, Both Ends</span>
+          <h2 class="section-title">This is What a $850,000 Portfolio Recovery Looks Like</h2>
+          <p class="section-desc">
+            A mid-market healthcare supplier placed 42 delinquent commercial accounts on June 12. Full resolution and cash payout achieved on July 18.
+          </p>
+        </div>
+
+        <div class="case-twin-plates reveal-fade-up">
+          <!-- Plate 1: Placement Arrival -->
+          <figure class="twin-plate-frame">
+            <img src="assets/images/sections/pricing-portfolio-audit.jpg" alt="Delinquent Portfolio Placement Audit" loading="lazy">
+            <figcaption class="twin-plate-tag">June 12 · $850,000 Placed (Aging 140 Days)</figcaption>
+          </figure>
+
+          <!-- Middle Metric Pillar -->
+          <div class="twin-plate-mid-metric">
+            <div class="twin-metric-val">$612,000</div>
+            <div class="twin-metric-label">Net Client Cash Remitted</div>
+            <div style="font-size: 0.72rem; color: var(--color-accent); margin-top: 0.5rem; font-weight: 700;">48h FDIC Escrow Wire</div>
+          </div>
+
+          <!-- Plate 2: Clearance -->
+          <figure class="twin-plate-frame">
+            <img src="assets/images/sections/pricing-corporate-citadel.jpg" alt="Commercial Debt Recovery Negotiation & Resolution" loading="lazy">
+            <figcaption class="twin-plate-tag">July 18 · 100% Settled &amp; Closed</figcaption>
+          </figure>
+        </div>
+
+        <!-- Case Resolution Telemetry Ribbon -->
+        <div class="case-telemetry-ribbon reveal-fade-up">
+          <div class="telemetry-chips-row">
+            <div class="telemetry-chip">
+              <div class="telemetry-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <span>36 Days Liquidation Velocity</span>
+            </div>
+            <div class="telemetry-chip">
+              <div class="telemetry-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+              <span>0 CFPB Consumer Complaints</span>
+            </div>
+            <div class="telemetry-chip">
+              <div class="telemetry-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 3l9 7H3l9-7z"/></svg></div>
+              <span>$612,000 Direct Fedwire Remitted</span>
+            </div>
+          </div>
+          <div class="telemetry-discount-badge">
+            ✓ Tier-3 Enterprise Volume Discount Unlocked
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         07 · CLOSING STACKED MEDIA HUB & RATE LOCK
+         ========================================================================== -->
+    <section class="section" id="rateLock" aria-label="Rate Lock and Contact">
+      <div class="container">
+        <div class="pricing-divert-hub reveal-fade-up">
+          <!-- Stacked Images Frame -->
+          <div class="stacked-media-frame">
+            <div class="stacked-photo-primary">
+              <img src="assets/images/sections/pricing-contract-signing.jpg" alt="Institutional Contingency Agreement Signing">
+            </div>
+            <div class="stacked-photo-secondary">
+              <img src="assets/images/sections/pricing-escrow-ledger.jpg" alt="FDIC Trust Account Escrow Remittance">
+            </div>
+          </div>
+
+          <!-- Conversion Pitch & Buttons -->
+          <div class="divert-cta-content">
+            <span class="section-tag section-tag-gold" style="margin-bottom: 0.5rem;">Lock Your Contingency Schedule</span>
+            <h2 class="section-title">
+              Submit Your Portfolio Parameters and Receive a Certified Rate in 4 Hours
+            </h2>
+            <p class="section-desc" style="color: #CBD5E1 !important;">
+              If you would rather speak directly with our Senior Creditor Rights Director, our compliance board is on the line Monday through Friday from 08:00 to 18:00 EST.
+            </p>
+
+            <div class="divert-cta-actions">
+              <a href="contact.html#rateLock" class="btn btn-gold btn-lg">
+                <span>Submit Portfolio Details</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="tel:+18005552344" class="btn btn-outline btn-lg" style="color: #FFFFFF; border-color: rgba(197, 160, 89, 0.5);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>Call 1-800-555-AEGIS</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+          <div class="footer-brand">
+            <div class="brand-emblem"><img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="28" height="28"></div>
+            <div class="brand-text">
+              <span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span>
+              <span class="brand-subtitle">Ethical Debt Resolution</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Sovereign accounts receivable management, commercial debt recovery, and 50-state compliance infrastructure for enterprise creditors nationwide.
+          </p>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>100 Wall Street, Suite 2400, New York, NY 10005</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>1-800-555-AEGIS (2344) • Direct: +1 (212) 555-0199</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Practice Areas</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#commercial">Commercial B2B Recovery</a></li>
+            <li><a href="services.html#healthcare">Healthcare Patient AR</a></li>
+            <li><a href="services.html#banking">Fintech &amp; Bank Lending</a></li>
+            <li><a href="services.html#litigation">Legal Forwarding</a></li>
+            <li><a href="services.html#skiptrace">Forensic Asset Mapping</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Institutional Hub</h4>
+          <ul class="footer-links">
+            <li><a href="compliance.html">Compliance &amp; Licensing</a></li>
+            <li><a href="pricing.html">Contingency Fee Schedules</a></li>
+            <li><a href="recovery-process.html">Recovery Methodology</a></li>
+            <li><a href="about.html">About Aegis Partners</a></li>
+            <li><a href="dashboard.html">Client Recovery Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Regulatory Governance</h4>
+          <ul class="footer-links">
+            <li><a href="compliance.html#stateDirectory">50-State Licensing Matrix</a></li>
+            <li><a href="compliance.html#rule7x7">CFPB Reg F 7X7 Hard-Lock</a></li>
+            <li><a href="compliance.html#acoustic">100% Speech AI Auditing</a></li>
+            <li><a href="compliance.html#disputeTerminal">Consumer Dispute Portal</a></li>
+            <li><a href="contact.html">Institutional RFP Intake</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Aegis Recovery Partners LLC. All rights reserved. Registered across all 50 U.S. states.
+        </div>
+        <div class="footer-legal-links">
+          <a href="compliance.html">Regulatory Armor</a>
+          <a href="pricing.html">Contingency Terms</a>
+          <a href="contact.html">Direct Inquiries</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="assets/js/main.js?v=106"></script>
+</body>
+</html>

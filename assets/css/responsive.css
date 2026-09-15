@@ -1,0 +1,2343 @@
+/* ==========================================================================
+   AEGIS RECOVERY PARTNERS — RESPONSIVE STYLESHEET
+   Template 3: Ethical Debt Recovery Agency
+   ========================================================================== */
+
+/* ==========================================================================
+   DESKTOP VIEWPORTS (1281px and above) — SHOW FULL NAV & HIDE HAMBURGER
+   ========================================================================== */
+@media (min-width: 1281px) {
+  .hamburger-btn, #hamburgerBtn {
+    display: none !important;
+  }
+
+  .site-header .container,
+  .container {
+    width: 100% !important;
+    max-width: var(--container-max-width, 1280px) !important;
+    padding-inline: var(--container-padding, 1.5rem) !important;
+    margin-inline: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .navbar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.45rem !important;
+  }
+
+  .nav-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
+    padding: 0.45rem 0.65rem !important;
+    font-size: 0.88rem !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* ==========================================================================
+   IPAD, TABLET & MOBILE VIEWPORTS (1280px and below) — SHOW HAMBURGER MENU ICON
+   ========================================================================== */
+@media (max-width: 1280px) {
+  :root {
+    --container-padding: 1.25rem;
+  }
+
+  .navbar {
+    justify-content: space-between !important;
+  }
+
+  /* Remove Public Navbar Text Headings on iPad / Tablet */
+  .nav-menu {
+    display: none !important;
+  }
+
+  /* Show Mobile Hamburger Menu Icon for iPad / Tablet */
+  .hamburger-btn, #hamburgerBtn {
+    display: flex !important;
+  }
+
+  /* Section Layout Adjustments for iPad / Tablet */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-stats-row {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  .hero-floating-badge {
+    position: static;
+    margin-top: 1rem;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .services-matrix {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .workflow-timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .workflow-timeline::before {
+    display: none;
+  }
+
+  .compliance-split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .compliance-floating-card {
+    position: static;
+    margin-top: 1rem;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cta-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .cta-placement-box {
+    padding: 3rem 2rem;
+  }
+
+  /* Home 2 Tablet Overrides */
+  .panoramic-bottom-ribbon {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .verticals-tab-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tab-pane-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .vertical-tab-pane {
+    padding: 2rem 1.5rem;
+  }
+
+  .comparison-arena {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .connected-pipeline-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .council-spotlight-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .executive-spotlight-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .featured-director-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .calculator-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .calculator-box {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .studio-cta-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .studio-cta-box {
+    padding: 3rem 2rem;
+  }
+
+  /* Services Deep-Dive & Intake CTA on Tablet */
+  .service-deepdive-row {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .service-deepdive-row.reversed {
+    direction: ltr;
+  }
+
+  .intake-cta-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .intake-cta-card {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .home-services-cockpit {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .services-matrix {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  /* Home 1 Section 5 & 6 Tablet */
+  .home-compliance-bento {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .compliance-bento-center {
+    min-height: 380px;
+  }
+
+  .home-performance-arena {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* Compliance Page Tablet Overrides */
+  .hero-compliance-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-compliance-title {
+    font-size: 2.25rem;
+  }
+
+  .regf-logic-gates-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .acoustic-studio-bento {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .cyber-vault-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .audit-highway-stepper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .audit-highway-stepper::before {
+    display: none;
+  }
+
+  .dispute-safeharbor-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .state-license-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .security-enclave-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* Home 2 Council Pavilion Tablet */
+  .council-governance-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .council-panoramic-hud {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  /* Footer Layout on Tablet */
+  .footer-top,
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-brand,
+  .footer-brand-col {
+    max-width: 100%;
+    grid-column: 1 / -1;
+  }
+
+  /* Dashboard Layout */
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .dashboard-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 1.25rem;
+  }
+
+  .sidebar-client-card {
+    display: none;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    gap: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sidebar-link {
+    white-space: nowrap;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .dashboard-main {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   MOBILE PHONES (< 768px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  html, body, #mainContent, main, .site-wrapper {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  :root {
+    --container-padding: 1rem;
+  }
+
+  .section {
+    padding-block: 4rem;
+  }
+
+  .section-sm {
+    padding-block: 2.75rem;
+  }
+
+  .section-lg {
+    padding-block: 5rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-desc {
+    font-size: 1rem;
+  }
+
+  .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.6rem;
+  }
+
+  .brand-emblem {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-section {
+    padding: 4rem 0 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .hero-description {
+    font-size: 1.02rem;
+  }
+
+  .hero-stats-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    text-align: center;
+  }
+
+  .hero-image-frame img {
+    height: 320px;
+  }
+
+  .principles-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cockpit-track-header,
+  .cockpit-track-body,
+  .cockpit-track-footer {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .cockpit-hud-matrix {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .service-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .service-badge {
+    position: static;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+  }
+
+  .workflow-timeline {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .compliance-visual-frame img {
+    height: 300px;
+  }
+
+  .home-compliance-bento {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .compliance-bento-center {
+    min-height: 280px;
+  }
+
+  .home-performance-arena {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .performance-visual-card img {
+    height: 300px;
+  }
+
+  .performance-stats-overlay {
+    position: static;
+    margin-top: 1rem;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .analytics-bars-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .testimonial-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .cta-placement-box {
+    padding: 2.25rem 1.25rem;
+  }
+
+  .cta-form {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Home 2 Mobile Overrides */
+  .hero-panoramic-section {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .hero-panoramic-badge {
+    font-size: clamp(0.68rem, 3vw, 0.78rem) !important;
+    padding: 0.4rem 0.85rem !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .hero-panoramic-title {
+    font-size: clamp(1.6rem, 5.5vw, 2.2rem) !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .panoramic-deck-container {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .panoramic-deck-image {
+    height: 220px !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .panoramic-hud-overlay {
+    padding: 1rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hud-top-row {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    align-items: stretch !important;
+    width: 100% !important;
+  }
+
+  .hud-pod {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .panoramic-bottom-ribbon {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+    padding: 1rem 0.85rem !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .ribbon-metric-item {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .verticals-tab-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .vertical-tab-pane {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .pipeline-card-node {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pipeline-stream::before {
+    display: none;
+  }
+
+  .featured-director-card {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-director-img {
+    height: 280px;
+    min-height: 280px;
+  }
+
+  .secondary-exec-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .calculator-box {
+    padding: 1.5rem 0.85rem !important;
+  }
+
+  .calc-output-card {
+    padding: 1.25rem 0.85rem !important;
+    gap: 1.15rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .calc-options-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .calc-output-hero-val {
+    font-size: clamp(1.65rem, 5.5vw, 2rem) !important;
+  }
+
+  .calc-breakdown-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.2rem !important;
+    padding-bottom: 0.45rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    width: 100% !important;
+  }
+
+  .calc-breakdown-label {
+    font-size: 0.78rem !important;
+    color: #94A3B8 !important;
+  }
+
+  .calc-breakdown-val {
+    font-size: 0.88rem !important;
+  }
+
+  .calc-output-card .btn,
+  .calc-output-card .btn-gold,
+  .btn-gold.btn-block {
+    white-space: normal !important;
+    word-break: break-word !important;
+    text-align: center !important;
+    padding: 0.75rem 0.85rem !important;
+    font-size: 0.86rem !important;
+    line-height: 1.35 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .studio-cta-box {
+    padding: 2.5rem 1.25rem;
+  }
+
+  /* Services & Inner Page Mobile */
+  .page-hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .service-deepdive-img-frame img {
+    height: 280px;
+  }
+
+  .service-deepdive-stat-badge {
+    position: static;
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+
+  .faq-header {
+    padding: 1.15rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .faq-body {
+    font-size: 0.875rem;
+    padding: 0 1.25rem;
+  }
+
+  .faq-item.is-active .faq-body {
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  .btn-lg {
+    padding: 0.85rem 1.6rem;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+
+  /* Compliance Page Mobile */
+  .hero-compliance-split {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .hero-compliance-title {
+    font-size: 1.95rem;
+  }
+
+  .hero-micro-metrics {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .compliance-hero-hud-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .hud-radar-top {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .state-license-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .regf-logic-gates-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .compliance-split {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .acoustic-studio-bento {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .acoustic-panel-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .security-enclave-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .audit-highway-stepper {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .dispute-safeharbor-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .safeharbor-steps-box,
+  .dispute-terminal-box {
+    padding: 1.75rem 1.25rem;
+  }
+
+  /* Footer on Mobile */
+  .footer-top,
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .footer-legal-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* Dashboard Adjustments */
+  .dashboard-header {
+    padding-inline: 1rem;
+    height: 64px;
+  }
+
+  .dashboard-brand {
+    font-size: 1rem;
+  }
+
+  .dashboard-portal-tag {
+    display: none;
+  }
+
+  .dashboard-actions {
+    gap: 0.45rem;
+  }
+
+  .btn-back-site span {
+    display: none;
+  }
+
+  .btn-back-site {
+    padding: 0.45rem;
+  }
+
+  .dashboard-main {
+    padding: 1.25rem 1rem;
+  }
+
+  .dashboard-page-title {
+    font-size: 1.35rem;
+  }
+}
+
+/* ==========================================================================
+   VERY SMALL DEVICES (320px - 375px)
+   ========================================================================== */
+@media (max-width: 375px) {
+  :root {
+    --container-padding: 0.875rem;
+  }
+
+  .brand-title {
+    font-size: 0.95rem;
+  }
+
+  .mobile-drawer {
+    width: 275px;
+  }
+}
+
+/* ==========================================================================
+   PHASE 5: PRICING & RATES RESPONSIVE STYLES (pricing.html)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .pricing-horizon-hero {
+    padding: 7rem 0 4rem 0;
+  }
+
+  .pricing-horizon-header .section-title {
+    font-size: 2.35rem;
+  }
+
+  .pricing-dock-pillars {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .pricing-dock-item {
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    padding: 0.75rem 0.5rem;
+  }
+
+  .pricing-dock-item:last-child,
+  .pricing-dock-item:nth-last-child(2) {
+    border-bottom: none;
+  }
+
+  .pricing-equal-matrix {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .deck-selectors-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .deck-stage-radios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .deck-results-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .volume-vault-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .fiduciary-security-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .pricing-intake-banner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing-horizon-hero {
+    padding: 5.5rem 0 3rem 0;
+  }
+
+  .pricing-horizon-header .section-title {
+    font-size: 1.85rem;
+  }
+
+  .pricing-horizon-dock {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .pricing-dock-pillars {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .pricing-dock-item {
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  [dir="rtl"] .pricing-dock-item {
+    text-align: center;
+  }
+
+  .pricing-dock-item:last-child {
+    border-bottom: none;
+  }
+
+  .equal-tier-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .deck-control-stage,
+  .deck-output-stage {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .deck-stage-radios {
+    grid-template-columns: 1fr;
+  }
+
+  .deck-results-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .volume-vault-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fiduciary-security-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-intake-banner {
+    padding: 2rem 1.25rem;
+  }
+
+  .intake-banner-title {
+    font-size: 1.75rem;
+  }
+
+  .intake-counsel-badge {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intake-form-box {
+    padding: 1.5rem 1.25rem;
+  }
+
+  /* Footer Mobile */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem;
+  }
+}
+
+/* Reference Layouts Tablet & Mobile */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .cd-picker-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pcards-matrix {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dual-ledger-arena {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mods-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .case-twin-plates {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .pricing-divert-hub {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+
+  .stacked-media-frame {
+    height: 320px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cd-picker-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cd-picker-box {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .pcards-matrix {
+    grid-template-columns: 1fr;
+  }
+
+  .mods-bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blueprint-terminal-head {
+    display: none; /* Hide header on mobile in favor of stacked rows */
+  }
+
+  .blueprint-stream-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.25rem 1rem;
+    align-items: flex-start;
+  }
+
+  .blueprint-fee-figure {
+    text-align: left;
+    margin-top: 0.25rem;
+  }
+
+  [dir="rtl"] .blueprint-fee-figure {
+    text-align: right;
+  }
+
+  .blueprint-terminal-foot {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem 1rem;
+  }
+
+  .blueprint-terminal-foot .btn {
+    width: 100%;
+  }
+
+  .stacked-media-frame {
+    height: 260px;
+  }
+
+  .pricing-divert-hub {
+    padding: 2rem 1.25rem;
+  }
+
+  /* Phase 7 Mobile Styles */
+  .circuit-track-bar {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .circuit-track-bar::before {
+    display: none;
+  }
+
+  .circuit-hud-display {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .hud-metric-cell {
+    border-left: none;
+    border-top: 1px solid rgba(197, 160, 89, 0.25);
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  .escalation-helix-stream::before {
+    left: 24px;
+    transform: none;
+  }
+
+  .helix-stage-row {
+    grid-template-columns: 48px 1fr !important;
+    gap: 1rem;
+  }
+
+  .helix-card-left, .helix-card-right {
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  [dir="rtl"] .helix-card-left, [dir="rtl"] .helix-card-right {
+    text-align: right !important;
+  }
+
+  .helix-card-left .helix-meta-tags,
+  .helix-card-left .helix-check-item {
+    justify-content: flex-start !important;
+  }
+
+  .helix-pivot-badge {
+    width: 48px;
+    height: 48px;
+    font-size: 0.9rem;
+  }
+
+  .scrub-console-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .scrub-stats-ribbon {
+    grid-template-columns: 1fr !important;
+  }
+
+  .soundstage-arena {
+    grid-template-columns: 1fr !important;
+    padding: 2rem 1.25rem !important;
+    gap: 2rem;
+  }
+
+  .scenario-nav-tabs {
+    grid-template-columns: 1fr !important;
+  }
+
+  .scenario-pane.active {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+
+  .sla-quadrant-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .intake-vault-arena {
+    grid-template-columns: 1fr !important;
+    padding: 2rem 1.25rem !important;
+    gap: 2.5rem;
+  }
+}
+
+/* Phase 7 Tablet Styles (1024px) */
+@media (max-width: 1024px) {
+  .circuit-track-bar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .helix-stage-row {
+    grid-template-columns: 1fr 80px 1fr;
+  }
+
+  .soundstage-arena {
+    grid-template-columns: 1fr;
+  }
+
+  .sla-quadrant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Testimonials & Case Telemetry Tablet & Mobile */
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem;
+  }
+  
+  .testimonial-quote {
+    min-height: auto;
+  }
+
+  .case-telemetry-ribbon {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .telemetry-chips-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+}
+
+/* Panoramic Process Hero & Orbital Stages Responsive */
+@media (max-width: 1024px) {
+  .process-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-radar-cockpit {
+    max-width: 580px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
+  .orbital-section-arena {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .orbital-system-container {
+    width: 480px;
+    height: 480px;
+  }
+
+  .orbital-center-hub {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orbit-satellite-node {
+    width: 96px;
+    height: 96px;
+  }
+
+  .orbit-node-1 { top: 4px; left: calc(50% - 48px); }
+  .orbit-node-2 { top: 120px; right: 4px; }
+  .orbit-node-3 { bottom: 46px; right: 46px; }
+  .orbit-node-4 { bottom: 46px; left: 46px; }
+  .orbit-node-5 { top: 120px; left: 4px; }
+
+  .orbital-stage-inspector {
+    max-width: 680px;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .panoramic-process-hero {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .process-hero-headline {
+    font-size: 2.1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .process-hero-trust-chips {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .trust-chip {
+    justify-content: center;
+  }
+
+  .radar-scope-visual {
+    height: 220px;
+  }
+
+  .cockpit-stats-matrix {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .orbital-section-arena {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .orbital-system-wrapper {
+    padding: 0.5rem 0;
+  }
+
+  .orbital-system-container {
+    width: 330px;
+    height: 330px;
+  }
+
+  .orbital-center-hub {
+    width: 130px;
+    height: 130px;
+    padding: 0.65rem;
+  }
+
+  .hub-stage-indicator {
+    font-size: 0.62rem;
+    padding: 0.12rem 0.45rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .hub-stage-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .hub-stage-sla {
+    font-size: 0.65rem;
+  }
+
+  .orbit-satellite-node {
+    width: 68px;
+    height: 68px;
+    padding: 0.25rem;
+  }
+
+  .orbit-node-badge {
+    font-size: 0.65rem;
+    margin-bottom: 1px;
+  }
+
+  .orbit-node-title {
+    font-size: 0.55rem;
+    line-height: 1.1;
+  }
+
+  .orbit-node-1 { top: 2px; left: calc(50% - 34px); }
+  .orbit-node-2 { top: 82px; right: 2px; }
+  .orbit-node-3 { bottom: 28px; right: 28px; }
+  .orbit-node-4 { bottom: 28px; left: 28px; }
+  .orbit-node-5 { top: 82px; left: 2px; }
+
+  .orbital-stage-inspector {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .inspector-headline {
+    font-size: 1.3rem;
+  }
+
+  .inspector-controls-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  .orbit-nav-btn-group {
+    justify-content: center;
+  }
+
+  .orbit-pause-toggle {
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   PHASE 8: ABOUT US PAGE RESPONSIVE STYLES (about.html)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .citadel-media-frame {
+    max-height: 420px;
+  }
+
+  .about-chronometer-hud {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chrono-hud-cell {
+    border-right: none;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+  }
+
+  .chrono-hud-cell:nth-child(2n) {
+    border-right: none;
+  }
+
+  .chrono-hud-cell:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  .timeline-year-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .timeline-content-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .governance-pillars-matrix {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .leadership-feature-header {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .leadership-dossier-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .command-room-arena {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .consumer-charter-split {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .accreditations-ribbon-showcase {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-citadel-hero {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .about-hero-title {
+    font-size: 2.15rem;
+  }
+
+  .about-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .citadel-media-frame {
+    height: 280px;
+  }
+
+  .citadel-floating-seal {
+    bottom: 15px;
+    right: 15px;
+    left: 15px;
+    justify-content: center;
+  }
+
+  .about-chronometer-hud {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .chrono-hud-cell {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2) !important;
+    padding: 1rem 0.5rem;
+  }
+
+  .chrono-hud-cell:last-child {
+    border-bottom: none !important;
+  }
+
+  .timeline-year-nav {
+    gap: 0.5rem;
+  }
+
+  .year-nav-btn {
+    padding: 0.75rem 1rem;
+  }
+
+  .timeline-content-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .timeline-phase-title {
+    font-size: 1.4rem;
+  }
+
+  .timeline-stat-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .governance-pillars-matrix {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .leadership-dossier-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .command-hubs-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .command-telemetry-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .display-panel-media {
+    height: 220px;
+  }
+
+  .charter-image-frame {
+    height: 280px;
+  }
+
+  .accreditations-ribbon-showcase {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .about-cta-card {
+    padding: 2.25rem 1.25rem;
+  }
+
+  .about-cta-title {
+    font-size: 1.65rem;
+  }
+
+  .about-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ==========================================================================
+   PHASE 9: CONTACT & PLACEMENT PORTAL RESPONSIVE STYLES (contact.html)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .contact-hero-grid,
+  .enclave-split-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .regional-hubs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .placement-guarantee-matrix {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero-title {
+    font-size: 2rem;
+  }
+
+  .contact-priority-chips {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-quick-telemetry {
+    grid-template-columns: 1fr;
+  }
+
+  .wizard-steps-header {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0.25rem !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    padding: 0 0.15rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .wizard-step-node {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0.2rem !important;
+    width: 100% !important;
+  }
+
+  .wizard-step-node .step-num {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 0.7rem !important;
+    margin: 0 auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  .wizard-step-node .step-title {
+    font-size: 0.58rem !important;
+    line-height: 1.15 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  .wizard-step-line {
+    display: none !important;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .estimate-metrics-grid,
+  .regional-hubs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dispute-alert-banner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .dispute-banner-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-hero-grid,
+  .timeline-content-card,
+  .bento-card-body-grid,
+  .bento-cards-subgrid,
+  .enclave-split-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-quick-telemetry {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive rules for Visual Redesign & About Page elements */
+@media (max-width: 1023px) {
+  .roadmap-connected-flow {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .roadmap-flow-arrow {
+    right: 50% !important;
+    bottom: -16px !important;
+    top: auto !important;
+    transform: translateX(50%) rotate(90deg) !important;
+  }
+
+
+  .visual-split-row {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .visual-split-row.reverse > :first-child {
+    order: 1;
+  }
+
+  .visual-split-row.reverse > :last-child {
+    order: 2;
+  }
+
+  .stats-counter-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .floating-metric-badge {
+    position: static;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .stats-counter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fullbleed-cta-section {
+    padding: 4rem 1rem;
+  }
+
+  .stat-number-display {
+    font-size: 2rem;
+  }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   MASTER COMPREHENSIVE RESPONSIVE & MOBILE OVERFLOW PROTECTIONS (320px - 1440px)
+   ========================================================================== */
+
+/* 1. Global Viewport & Container Safety */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/* 2. Header Navbar Responsive Scaling (< 991px & < 576px) */
+@media (max-width: 991px) {
+  .nav-actions #navLoginBtn,
+  .nav-actions .btn-gold,
+  .header-actions .btn-gold {
+    display: none !important;
+  }
+  .mobile-drawer-footer .btn-gold {
+    display: inline-flex !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-actions .btn-back-site {
+    display: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-subtitle,
+  .dashboard-portal-tag {
+    display: none !important;
+  }
+
+  .brand-title {
+    font-size: 1.05rem !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .brand-emblem {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .nav-actions,
+  .dashboard-actions {
+    gap: 0.35rem !important;
+  }
+
+  .icon-btn {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 0 !important;
+  }
+}
+
+/* 3. Section Badges, Pills & SLA Notice Bars (< 576px) */
+@media (max-width: 576px) {
+  .section-tag,
+  .section-badge,
+  .hero-live-sla-badge,
+  .sla-badge,
+  .top-notice-bar {
+    font-size: 0.68rem !important;
+    padding: 0.35rem 0.65rem !important;
+    letter-spacing: 0.02em !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+    display: inline-block !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* 4. Interactive Delinquency Rate Picker (< 576px) */
+@media (max-width: 576px) {
+  .cd-picker-box,
+  .ph-picker-inner {
+    padding: 1.25rem 0.85rem !important;
+  }
+
+  .cd-picker-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+
+  .cd-picker-opt span {
+    padding: 0.6rem 0.35rem !important;
+    font-size: 0.92rem !important;
+  }
+
+  .cd-picker-opt span small {
+    font-size: 0.65rem !important;
+  }
+
+  .cd-picker-out {
+    padding: 0.85rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  .cd-picker-price {
+    font-size: 1.75rem !important;
+  }
+
+  .cd-picker-what {
+    font-size: 0.82rem !important;
+  }
+}
+
+/* 5. Mobile Layout & Typography Clamp Protection (320px - 767px) */
+@media (max-width: 767px) {
+  .container,
+  .container-narrow,
+  .hero-content,
+  .hero-grid,
+  .section,
+  main {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  h1, h2, h3,
+  .hero-title,
+  .hero-panoramic-title,
+  .section-title,
+  .page-hero-title,
+  .contact-hero-title,
+  .ph-title {
+    font-size: clamp(1.45rem, 5.2vw, 2.1rem) !important;
+    line-height: 1.25 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+
+  .hero-description,
+  .section-desc,
+  .contact-hero-lead,
+  .page-hero-subtitle,
+  .ph-lede {
+    font-size: clamp(0.88rem, 3.6vw, 1.02rem) !important;
+    line-height: 1.6 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+
+  .hero-cta-group,
+  .cta-actions,
+  .divert-cta-actions,
+  .contact-priority-chips {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+  }
+
+  .hero-cta-group .btn,
+  .cta-actions .btn,
+  .divert-cta-actions .btn,
+  .priority-chip {
+    width: 100% !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .back-to-top,
+  .back-to-top-btn {
+    bottom: 1.15rem !important;
+    right: 1.15rem !important;
+    width: 44px !important;
+    height: 44px !important;
+    z-index: 999999 !important;
+  }
+
+  /* Grid Column Single Stack Protection */
+  .pcards-matrix,
+  .mods-bento-grid,
+  .case-twin-plates,
+  .pricing-divert-hub,
+  .sovereign-blueprint-terminal,
+  .blueprint-filter-bar,
+  .dual-ledger-arena,
+  .audit-highway-stepper,
+  .state-license-grid,
+  .security-enclave-grid,
+  .principles-grid,
+  .services-matrix,
+  .workflow-timeline,
+  .testimonials-grid,
+  .stats-counter-grid,
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ==========================================================================
+   ULTIMATE ZERO HORIZONTAL SCROLL OVERFLOW ENGINE
+   ========================================================================== */
+
+html,
+body,
+#mainContent,
+main,
+section,
+header,
+footer,
+.section,
+.hero-section,
+.page-hero,
+.site-header,
+.site-footer,
+.dashboard-layout,
+.ph-picker-hero,
+.ph-picker-inner,
+.cd-picker-box,
+.pricing-divert-hub,
+.pricing-horizon-hero,
+.pricing-dock-pillars,
+.intake-vault-arena,
+.contact-hero-section {
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+html, body {
+  overflow-x: hidden !important;
+  position: relative !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* PERMANENT FIXED STICKY NAVBAR LOCK ENGINE (NEVER HIDES ON SCROLL) */
+.site-header,
+.dashboard-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  z-index: 99999 !important;
+  transform: none !important;
+}
+
+body {
+  padding-top: 74px !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 64px !important;
+  }
+}
+
+*, *::before, *::after {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+img, svg, video, iframe, canvas {
+  max-width: 100% !important;
+  height: auto;
+}
+
+.ph-crumbs,
+.breadcrumbs,
+ul.ph-crumbs {
+  max-width: 100% !important;
+  flex-wrap: wrap !important;
+  word-break: break-word !important;
+  white-space: normal !important;
+}
+
+/* Specific breakpoint protections for small devices (< 576px & < 375px) */
+@media (max-width: 576px) {
+  .cd-picker-box {
+    padding: 1.15rem 0.75rem !important;
+    border-radius: var(--radius-xl) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .cd-picker-legend {
+    font-size: 0.98rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .cd-picker-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.4rem !important;
+    width: 100% !important;
+  }
+
+  .cd-picker-opt span {
+    padding: 0.5rem 0.25rem !important;
+    font-size: 0.85rem !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+  }
+
+  .cd-picker-opt span small {
+    font-size: 0.62rem !important;
+    margin-top: 0.15rem !important;
+  }
+
+  .cd-picker-out {
+    padding: 0.85rem 0.75rem !important;
+    gap: 0.4rem !important;
+    width: 100% !important;
+  }
+
+  .cd-picker-price {
+    font-size: 1.6rem !important;
+  }
+
+  .cd-picker-what {
+    font-size: 0.78rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .pricing-dock-pillars {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  :root {
+    --container-padding: 0.75rem !important;
+  }
+
+  .container,
+  .container-narrow {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  .cd-picker-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.35rem !important;
+  }
+
+  .cd-picker-opt span {
+    font-size: 0.8rem !important;
+    padding: 0.45rem 0.2rem !important;
+  }
+}
+
+/* Command Center & Hub Display Mobile Layout Protection (< 991px & < 576px) */
+@media (max-width: 991px) {
+  .command-display-panel {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .display-panel-content {
+    padding: 1.5rem 1.25rem !important;
+  }
+
+  .command-hub-title {
+    font-size: clamp(1.35rem, 4.8vw, 1.85rem) !important;
+    word-break: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    line-height: 1.25 !important;
+    hyphens: none !important;
+  }
+
+  .command-hub-desc {
+    font-size: clamp(0.85rem, 3.4vw, 0.95rem) !important;
+    word-break: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    line-height: 1.6 !important;
+  }
+
+  .command-telemetry-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .command-telemetry-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+  }
+}
+
+/* ==========================================================================
+   GLOBAL RESPONSIVE FIXES ENGINE (NAVBAR ICON VISIBILITY, STAGES & ORBITS)
+   ========================================================================== */
+
+/* 1. NAVBAR MENU ICON VISIBILITY ENGINE (GOLD IN DARK MODE, SOLID NAVY IN LIGHT MODE) */
+.hamburger-btn {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 4px !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 6px !important;
+  border-radius: var(--radius-md) !important;
+  background-color: rgba(245, 158, 11, 0.2) !important;
+  border: 1.5px solid #F59E0B !important;
+  color: #F59E0B !important;
+  z-index: 1000000 !important;
+  box-sizing: border-box !important;
+}
+
+.hamburger-line {
+  display: block !important;
+  width: 20px !important;
+  height: 2.5px !important;
+  background-color: #F59E0B !important;
+  border-radius: 2px !important;
+  flex-shrink: 0 !important;
+}
+
+[data-theme="light"] .hamburger-btn,
+.site-header[data-theme="light"] .hamburger-btn,
+header[data-theme="light"] .hamburger-btn,
+.dashboard-header[data-theme="light"] .hamburger-btn {
+  background-color: #0F172A !important;
+  border-color: #0F172A !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] .hamburger-line,
+[data-theme="light"] .hamburger-btn .hamburger-line,
+.site-header[data-theme="light"] .hamburger-line,
+.dashboard-header[data-theme="light"] .hamburger-line {
+  background-color: #FFFFFF !important;
+}
+
+/* FORENSIC MINI LEDGER CONTRAST & RESPONSIVE STACKING (Screenshot 1) */
+.forensic-ledger-key {
+  color: #1E293B !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="dark"] .forensic-ledger-key {
+  color: #E2E8F0 !important;
+}
+
+@media (max-width: 576px) {
+  .forensic-ledger-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.25rem !important;
+    padding: 0.65rem 0 !important;
+  }
+  .forensic-ledger-val {
+    align-self: flex-start !important;
+    margin-left: 1.35rem !important;
+    text-align: left !important;
+  }
+}
+
+/* 2. 4-STAGE LEGAL PIPELINE TRACKER GRID (Screenshot 1) */
+@media (max-width: 768px) {
+  .legal-pipeline-tracker {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+    padding: 1.25rem 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .legal-pipeline-tracker {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+    padding: 1rem 0.85rem !important;
+  }
+  .legal-stage-name {
+    font-size: 0.95rem !important;
+  }
+  .legal-stage-desc {
+    font-size: 0.8rem !important;
+  }
+}
+
+/* 3. ROTATING ORBITAL STAGE SYSTEM & CENTER HUB (Screenshot 2) */
+@media (max-width: 576px) {
+  .orbital-system-container {
+    width: 290px !important;
+    height: 290px !important;
+    margin: 0 auto !important;
+    overflow: visible !important;
+  }
+
+  .orbital-center-hub {
+    width: 125px !important;
+    height: 125px !important;
+    padding: 0.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .hub-stage-title {
+    font-size: 0.85rem !important;
+    line-height: 1.15 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+
+  .hub-stage-indicator {
+    font-size: 0.58rem !important;
+    padding: 0.1rem 0.35rem !important;
+  }
+
+  .hub-stage-sla {
+    font-size: 0.65rem !important;
+  }
+
+  .orbit-satellite-node {
+    width: 68px !important;
+    height: 68px !important;
+  }
+
+  .orbit-node-badge {
+    font-size: 0.65rem !important;
+  }
+
+  .orbit-node-title {
+    font-size: 0.58rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .orbit-node-1 { top: -2px !important; left: calc(50% - 34px) !important; }
+  .orbit-node-2 { top: 75px !important; right: -8px !important; }
+  .orbit-node-3 { bottom: 15px !important; right: 20px !important; }
+  .orbit-node-4 { bottom: 15px !important; left: 20px !important; }
+  .orbit-node-5 { top: 75px !important; left: -8px !important; }
+}
+
+/* 4. SCENARIO TIMELINE BADGES & CARD OVERLAP (Screenshot 3) */
+@media (max-width: 576px) {
+  .scenario-action-node {
+    flex-direction: column !important;
+    gap: 0.35rem !important;
+  }
+
+  .action-day-badge {
+    display: inline-block !important;
+    align-self: flex-start !important;
+    padding: 0.2rem 0.5rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .scenario-yield-card {
+    padding: 1.5rem 1.25rem !important;
+  }
+}
+
+/* 5. STEPPER TRACKER BAR & FLOATING BACK TO TOP BUTTON (Screenshot 4) */
+@media (max-width: 600px) {
+  .stepper-node span:last-child {
+    font-size: 0.62rem !important;
+    text-align: center !important;
+    max-width: 70px !important;
+    line-height: 1.1 !important;
+  }
+
+  .stepper-track-line {
+    left: 10% !important;
+    right: 10% !important;
+  }
+
+  .back-to-top,
+  .back-to-top-btn {
+    bottom: 12px !important;
+    right: 12px !important;
+    width: 38px !important;
+    height: 38px !important;
+    z-index: 9999 !important;
+    opacity: 0.82 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+  }
+}
+
+
+
+

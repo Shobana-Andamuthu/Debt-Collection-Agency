@@ -2347,6 +2347,74 @@ header[data-theme="light"] .hamburger-btn,
   }
 }
 
+/* ==========================================================================
+   LOGIN & REGISTER MOBILE FULL SCREEN IMAGE & LAYOUT (NO WHITE SPACE GAPS)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .auth-main-wrapper {
+    padding: 0 !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    min-height: auto !important;
+  }
+
+  .auth-card-container,
+  .visual-split-row.auth-card-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin-bottom: 0 !important;
+  }
+
+  .auth-card-container .visual-media-frame {
+    width: 100% !important;
+    height: 220px !important;
+    min-height: 220px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    position: relative !important;
+  }
+
+  .auth-card-container .visual-media-frame img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .auth-card-container .floating-metric-badge {
+    position: absolute !important;
+    bottom: 16px !important;
+    left: 16px !important;
+    right: 16px !important;
+    margin-top: 0 !important;
+    padding: 0.5rem 0.85rem !important;
+    background: rgba(15, 23, 42, 0.75) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: var(--radius-lg, 12px) !important;
+    width: auto !important;
+    justify-content: flex-start !important;
+    z-index: 5 !important;
+  }
+
+  .auth-card-container > div:last-child {
+    padding: 1.75rem 1.25rem 2.5rem 1.25rem !important;
+  }
+}
+
+/* Force remove top padding for auth pages */
+body.auth-page-body {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+
+
 
 
 

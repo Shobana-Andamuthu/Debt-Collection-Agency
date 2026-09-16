@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body style="display: flex; flex-direction: column; min-height: 100vh; background: var(--bg-body);">
+<body class="auth-page-body" style="min-height: 100vh; margin: 0; padding-top: 0 !important; background: var(--bg-surface); font-family: var(--font-primary, sans-serif);">
 
   <!-- PAGE PRELOADER -->
   <div id="pagePreloader" style="position: fixed; inset: 0; z-index: 999999; background-color: #0A192F; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem;">
@@ -20,63 +20,88 @@
     <div class="preloader-bar-track"><div class="preloader-bar-fill"></div></div>
   </div>
 
-  <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 2.5rem 1rem;">
-    <div style="background: var(--bg-surface); max-width: 960px; width: 100%; border-radius: var(--radius-2xl); border: 1px solid var(--border-color); box-shadow: var(--shadow-xl); overflow: hidden;" class="visual-split-row">
-      <!-- Left Visual Hero Panel -->
-      <div class="visual-media-frame" style="border-radius: 0; height: 100%; min-height: 480px; position: relative;">
-        <img src="assets/images/sections/register-onboard-bg.jpg" alt="Aegis Intake Command Desk" style="width: 100%; height: 100%; object-fit: cover;">
-        <div class="visual-hero-overlay" style="background: linear-gradient(180deg, rgba(15,23,42,0.4) 0%, rgba(15,23,42,0.92) 100%);"></div>
-        
-        <!-- Brand Emblem inside Card -->
-        <a href="index.html" class="nav-brand" style="position: absolute; top: 24px; left: 24px; z-index: 10;">
+  <div class="auth-page-wrapper">
+    <!-- Left Hero Visual Column -->
+    <div class="auth-left-hero">
+      <img src="assets/images/sections/register-onboard-bg.jpg" alt="Aegis Intake Command Desk" class="hero-bg-img">
+      <div class="hero-overlay"></div>
+      
+      <!-- Top Bar: Logo + Actions -->
+      <div class="hero-top-bar">
+        <a href="index.html" class="nav-brand hero-top-brand">
           <div class="brand-emblem"><img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="28" height="28"></div>
           <div class="brand-text"><span class="brand-title" style="color: #FFFFFF !important;">AEGIS <span class="gold-accent">RECOVERY</span></span></div>
         </a>
-
-        <div class="floating-metric-badge" style="bottom: 30px; left: 24px; right: 24px;">
-          <div class="floating-badge-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          </div>
-          <div>
-            <div class="floating-badge-value">24-Hour Placement SLA</div>
-            <div class="floating-badge-label">Zero Upfront Contingency</div>
-          </div>
+        <div class="auth-quick-actions">
+          <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme"><span class="theme-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span></button>
+          <button type="button" class="icon-btn rtl-toggle-btn" aria-label="Toggle direction"><span class="dir-label" style="font-size: 0.75rem; font-weight: 700;">RTL</span></button>
         </div>
       </div>
 
-      <!-- Right Form Panel -->
-      <div style="padding: 2.5rem 2.25rem; display: flex; flex-direction: column; justify-content: center; position: relative;">
-        <!-- Top Actions -->
-        <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem; margin-bottom: 1.25rem;">
-          <button type="button" class="icon-btn theme-toggle-btn" aria-label="Toggle theme"><span class="theme-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span></button>
-          <button type="button" class="icon-btn rtl-toggle-btn" aria-label="Toggle direction"><span class="dir-label" style="font-size: 0.75rem; font-weight: 700;">RTL</span></button>
-          <a href="index.html" class="btn btn-outline-gold btn-sm" style="font-size: 0.78rem; padding: 0.4rem 0.85rem;">Home</a>
+      <!-- Hero Main Content -->
+      <div class="hero-content-body">
+        <div class="hero-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          24-Hour Placement SLA Guarantee
         </div>
+        <h1 class="hero-headline">Institutional grade debt recovery representation.</h1>
+        <p class="hero-desc">Initiate ethical claims placement with zero upfront costs, fully encrypted telemetry, and dedicated legal counsel oversight.</p>
+      </div>
+    </div>
 
-        <div style="margin-bottom: 1.75rem;">
-          <span class="section-tag">Corporate Placement</span>
-          <h2 style="font-size: 1.75rem; margin-top: 0.5rem; margin-bottom: 0.35rem; color: var(--text-main);">Enterprise Onboarding</h2>
-          <p style="font-size: 0.875rem; color: var(--text-muted); margin: 0;">Initiate ethical debt recovery representation for your enterprise.</p>
+    <!-- Right Form Panel -->
+    <div class="auth-right-panel">
+      <!-- Main Form Body -->
+      <div class="auth-right-body">
+        <div style="margin-bottom: 2rem;">
+          <span class="section-tag" style="font-size: 0.82rem; letter-spacing: 0.08em; font-weight: 700;">— CORPORATE ONBOARDING</span>
+          <h2 style="font-size: 2.1rem; font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.4rem; color: var(--text-main); letter-spacing: -0.02em;">Request Access.</h2>
+          <p style="font-size: 0.92rem; color: var(--text-muted); margin: 0; line-height: 1.5;">Initiate ethical debt recovery representation for your enterprise.</p>
         </div>
 
         <form action="dashboard.html" method="get">
-          <div style="margin-bottom: 1.25rem;">
+          <div style="margin-bottom: 1.35rem;">
             <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main);" for="regCompany">Organization / Company Name</label>
-            <input type="text" id="regCompany" required placeholder="Acme Financial Corp" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
+            <input type="text" id="regCompany" required placeholder="Acme Financial Corp" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main); font-size: 0.95rem;">
           </div>
-          <div style="margin-bottom: 1.25rem;">
+          <div style="margin-bottom: 1.35rem;">
             <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main);" for="regEmail">Corporate Work Email</label>
-            <input type="email" id="regEmail" required placeholder="finance@company.com" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
+            <input type="email" id="regEmail" required placeholder="finance@company.com" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main); font-size: 0.95rem;">
           </div>
-          <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.85rem; font-size: 0.95rem;">Submit Placement Application</button>
+          <div style="margin-bottom: 1.75rem;">
+            <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main);" for="regVolume">Estimated Portfolio Placement</label>
+            <select id="regVolume" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main); font-size: 0.95rem;">
+              <option value="50k">$50,000 – $250,000</option>
+              <option value="250k">$250,000 – $1,000,000</option>
+              <option value="1m">$1,000,000+</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.95rem; font-size: 1rem; font-weight: 700; border-radius: var(--radius-md); box-shadow: 0 4px 18px rgba(197, 160, 89, 0.28);">Submit Placement Application</button>
         </form>
 
-        <div style="margin-top: 1.75rem; text-align: center; font-size: 0.875rem; color: var(--text-muted);">
-          Already have portal access? <a href="login.html" style="color: var(--color-accent); font-weight: 700;">Sign In Here</a>
+        <div style="margin-top: 2rem; text-align: center; font-size: 0.9rem; color: var(--text-muted);">
+          Already have portal access? <a href="login.html" style="color: var(--color-accent); font-weight: 700; text-decoration: none;">Sign In Here</a>
+        </div>
+      </div>
+
+      <!-- Trust Badges Footer -->
+      <div class="auth-trust-badges">
+        <div class="auth-trust-badge-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          256-Bit SSL Encrypted
+        </div>
+        <div class="auth-trust-badge-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          SOC 2 Type II
+        </div>
+        <div class="auth-trust-badge-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          FCRA Compliant
         </div>
       </div>
     </div>
-  </main>
+  </div>
+
   <!-- Floating Back to Top Button -->
   <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">

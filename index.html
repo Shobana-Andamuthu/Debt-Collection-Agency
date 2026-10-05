@@ -70,31 +70,47 @@
     }
 
     .hero-stats-pod {
-      background: rgba(15, 23, 42, 0.75) !important;
+      background: rgba(255, 255, 255, 0.92) !important;
       backdrop-filter: blur(8px) !important;
-      border: 1px solid rgba(197, 160, 89, 0.3) !important;
+      border: 1.5px solid rgba(197, 160, 89, 0.35) !important;
       border-radius: 14px !important;
       padding: 0.85rem 0.75rem !important;
       text-align: center !important;
       overflow: hidden !important;
       box-sizing: border-box !important;
       max-width: 100% !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    [data-theme="dark"] .hero-stats-pod {
+      background: rgba(15, 23, 42, 0.8) !important;
+      border-color: rgba(197, 160, 89, 0.3) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
     }
 
     .hero-stat-number {
-      color: #C5A059 !important;
+      color: #0A192F !important;
       line-height: 1.1 !important;
+      font-weight: 800 !important;
       font-size: clamp(1.2rem, 4.5vw, 1.75rem) !important;
       word-break: keep-all !important;
       overflow-wrap: normal !important;
       max-width: 100% !important;
     }
 
+    [data-theme="dark"] .hero-stat-number {
+      color: #DFBA73 !important;
+    }
+
     .hero-stat-label {
       font-size: 0.75rem !important;
       font-weight: 700 !important;
-      color: #E2E8F0 !important;
+      color: #475569 !important;
       margin-top: 0.25rem !important;
+    }
+
+    [data-theme="dark"] .hero-stat-label {
+      color: #CBD5E1 !important;
     }
 
     /* Stats Counter Strip Below Hero */
@@ -169,6 +185,37 @@
         grid-template-columns: 1fr !important;
         gap: 1rem !important;
       }
+    }
+
+    /* High contrast styling for CTA assessment form subtitle */
+    .cta-form-desc,
+    .cta-form p,
+    .cta-placement-box .cta-form p,
+    .cta-placement-box .cta-form-desc,
+    html[data-theme="light"] .cta-placement-box .cta-form p,
+    html[data-theme="light"] .cta-placement-box .cta-form-desc,
+    html[data-theme="light"] .cta-form-desc,
+    html[data-theme="light"] .cta-form p {
+      color: #0F172A !important;
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      margin-bottom: 1.5rem !important;
+      line-height: 1.5 !important;
+    }
+
+    [data-theme="dark"] .cta-form-desc,
+    [data-theme="dark"] .cta-form p,
+    [data-theme="dark"] .cta-placement-box .cta-form p,
+    [data-theme="dark"] .cta-placement-box .cta-form-desc,
+    html[data-theme="dark"] .cta-form-desc,
+    html[data-theme="dark"] .cta-form p,
+    html[data-theme="dark"] .cta-placement-box .cta-form p,
+    html[data-theme="dark"] .cta-placement-box .cta-form-desc {
+      color: #F8FAFC !important;
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      margin-bottom: 1.5rem !important;
+      line-height: 1.5 !important;
     }
   </style>
 </head>
@@ -486,91 +533,75 @@
         </div>
 
         <div class="principles-grid">
-          <!-- Pillar 1 -->
+          <!-- Pillar 1: Dignity-First Mediation -->
           <div class="principle-card reveal-fade-up delay-100">
-            <div class="principle-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
+            <div class="principle-card-thumb">
+              <img src="assets/images/sections/principle-dignity.jpg" alt="Dignity-First Ethical Mediation" loading="lazy" width="400" height="260">
+              <span class="principle-card-badge">Empathetic</span>
             </div>
-            <h3 class="principle-card-title">Dignity-First Mediation</h3>
-            <p class="principle-card-desc">
-              Every consumer and corporate debtor is treated with professional respect. We structure flexible settlement
-              pathways that enable genuine financial rehabilitation.
-            </p>
-            <div class="principle-footer">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Zero-Harassment Guarantee</span>
+            <div class="principle-card-body">
+              <h3 class="principle-card-title">Dignity-First Mediation</h3>
+              <p class="principle-card-desc">Professional, respectful negotiations structuring sustainable repayment plans.</p>
+              <div class="principle-footer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Zero-Harassment Guarantee</span>
+              </div>
             </div>
           </div>
 
-          <!-- Pillar 2 -->
+          <!-- Pillar 2: 100% Audit-Ready -->
           <div class="principle-card reveal-fade-up delay-200">
-            <div class="principle-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-              </svg>
+            <div class="principle-card-thumb">
+              <img src="assets/images/sections/principle-audit.jpg" alt="100% Audit-Ready Compliance Trail" loading="lazy" width="400" height="260">
+              <span class="principle-card-badge">Verified</span>
             </div>
-            <h3 class="principle-card-title">100% Audit-Ready</h3>
-            <p class="principle-card-desc">
-              Complete digital call recording, timestamped written notices, and dispute verification trails ensuring
-              full FDCPA, TCPA, and CFPB compliance.
-            </p>
-            <div class="principle-footer">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Comprehensive Audit Logs</span>
+            <div class="principle-card-body">
+              <h3 class="principle-card-title">100% Audit-Ready</h3>
+              <p class="principle-card-desc">Timestamped digital verification trails ensuring strict CFPB and FDCPA adherence.</p>
+              <div class="principle-footer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Comprehensive Audit Logs</span>
+              </div>
             </div>
           </div>
 
-          <!-- Pillar 3 -->
+          <!-- Pillar 3: Bank-Grade Security -->
           <div class="principle-card reveal-fade-up delay-300">
-            <div class="principle-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-              </svg>
+            <div class="principle-card-thumb">
+              <img src="assets/images/sections/principle-security.jpg" alt="Bank-Grade Data Security Vault" loading="lazy" width="400" height="260">
+              <span class="principle-card-badge">AES-256</span>
             </div>
-            <h3 class="principle-card-title">Bank-Grade Data Security</h3>
-            <p class="principle-card-desc">
-              All financial records, account files, and debtor identifiers are protected under 256-bit encryption with
-              continuous SOC 2 Type II monitoring.
-            </p>
-            <div class="principle-footer">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>HIPAA &amp; GLBA Compliant</span>
+            <div class="principle-card-body">
+              <h3 class="principle-card-title">Bank-Grade Data Security</h3>
+              <p class="principle-card-desc">256-bit encryption safeguards sensitive consumer and institutional financial records.</p>
+              <div class="principle-footer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>HIPAA &amp; GLBA Compliant</span>
+              </div>
             </div>
           </div>
 
-          <!-- Pillar 4 -->
+          <!-- Pillar 4: Transparent Remittance -->
           <div class="principle-card reveal-fade-up delay-400">
-            <div class="principle-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                <line x1="12" y1="1" x2="12" y2="23"></line>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-              </svg>
+            <div class="principle-card-thumb">
+              <img src="assets/images/sections/principle-remittance.jpg" alt="Transparent Remittance and Payouts" loading="lazy" width="400" height="260">
+              <span class="principle-card-badge">Instant ACH</span>
             </div>
-            <h3 class="principle-card-title">Transparent Remittance</h3>
-            <p class="principle-card-desc">
-              Direct automated ACH disbursements with detailed gross-to-net reconciliation reports accessible 24/7
-              inside the client management dashboard.
-            </p>
-            <div class="principle-footer">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Fast 48-Hour Payouts</span>
+            <div class="principle-card-body">
+              <h3 class="principle-card-title">Transparent Remittance</h3>
+              <p class="principle-card-desc">Automated ACH disbursements with clear real-time gross-to-net ledger reports.</p>
+              <div class="principle-footer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Fast 48-Hour Payouts</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1027,7 +1058,7 @@
             <!-- Right Assessment Intake Form -->
             <div class="cta-form">
               <h3 class="cta-form-title">Request Confidential Portfolio Audit</h3>
-              <p class="cta-form-desc">Get customized recovery projections within 24 hours.</p>
+              <p class="cta-form-desc" style="font-weight: 700; font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5;">Get customized recovery projections within 24 hours.</p>
 
               <form action="dashboard.html" method="get">
                 <div class="form-group">
@@ -1057,7 +1088,7 @@
                   <label class="form-label" for="workEmail">Executive Work Email</label>
                   <input type="email" id="workEmail" class="form-input" required placeholder="executive@company.com">
                 </div>
-                <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.85rem; font-size: 1rem;">
+                <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.9rem 1rem; font-size: clamp(0.9rem, 3.5vw, 1rem); line-height: 1.35; white-space: normal; text-align: center;">
                   Request Free Recovery Analysis
                 </button>
               </form>

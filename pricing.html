@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Aegis Recovery Partners — Transparent 100% Contingency Pricing & Fee Schedules. Zero upfront retainers, zero hidden onboarding costs, and 48-hour FDIC escrow remittance.">
   <title>Pricing &amp; Rates | Aegis Recovery Partners</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/favicon.svg">
+
   <link rel="stylesheet" href="assets/css/style.css?v=106">
   <link rel="stylesheet" href="assets/css/responsive.css?v=106">
   <script>
@@ -43,6 +47,67 @@
       });
     };
   </script>
+  <style>
+    /* Section 7 Rate Lock CTA Buttons */
+    .divert-cta-actions .btn-gold {
+      height: 52px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.65rem !important;
+      padding: 0 2rem !important;
+      font-size: 1rem !important;
+      font-weight: 800 !important;
+      border-radius: 12px !important;
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%) !important;
+      color: #0A192F !important;
+      border: 1px solid rgba(255, 255, 255, 0.35) !important;
+      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35) !important;
+      transition: all 0.3s ease !important;
+      text-decoration: none !important;
+    }
+    .divert-cta-actions .btn-gold span {
+      color: #0A192F !important;
+      font-weight: 800 !important;
+    }
+    .divert-cta-actions .btn-gold:hover {
+      background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 12px 32px rgba(245, 158, 11, 0.5) !important;
+    }
+    .divert-cta-actions .btn-outline {
+      height: 52px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.65rem !important;
+      padding: 0 1.85rem !important;
+      font-size: 1rem !important;
+      font-weight: 700 !important;
+      border-radius: 12px !important;
+      background: rgba(255, 255, 255, 0.12) !important;
+      color: #FFFFFF !important;
+      border: 1.5px solid rgba(245, 158, 11, 0.65) !important;
+      backdrop-filter: blur(8px) !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+      transition: all 0.3s ease !important;
+      text-decoration: none !important;
+    }
+    .divert-cta-actions .btn-outline span {
+      color: #FFFFFF !important;
+      font-weight: 700 !important;
+    }
+    .divert-cta-actions .btn-outline:hover {
+      background: #F59E0B !important;
+      color: #0A192F !important;
+      border-color: #F59E0B !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4) !important;
+    }
+    .divert-cta-actions .btn-outline:hover span {
+      color: #0A192F !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -130,9 +195,14 @@
   <div class="mobile-overlay" id="mobileOverlay"></div>
   <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
     <div class="mobile-drawer-header">
-      <div class="brand-text">
-        <span class="brand-title">AEGIS <span class="gold-accent">RECOVERY</span></span>
-      </div>
+      <a href="index.html" class="nav-brand">
+        <div class="brand-emblem" style="width: 38px; height: 38px;">
+          <img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="24" height="24">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title" style="font-size: 1.1rem;">AEGIS <span class="gold-accent">RECOVERY</span></span>
+        </div>
+      </a>
       <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
     </div>
     <ul class="mobile-nav-list">
@@ -165,80 +235,91 @@
   <main id="mainContent" role="main">
 
     <!-- ==========================================================================
-         01 · PAGE HERO — WORKING SEGMENTED DELINQUENCY RATE PICKER
+         01 · PAGE HERO — MASTER PRICING STANDARD
          ========================================================================== -->
-    <section class="ph-picker-hero" aria-labelledby="pricing-hero-title">
+    <section class="page-hero" aria-labelledby="pricing-hero-title">
       <div class="container">
-        <div class="ph-picker-inner reveal-fade-up">
-          <ul class="ph-crumbs">
-            <li><a href="index.html">Home</a></li>
-            <li><span>/</span></li>
-            <li style="color: var(--color-accent); font-weight: 700;">Pricing Guide</li>
-          </ul>
-
-          <div style="margin-bottom: 2rem;">
-            <span class="section-tag section-tag-gold" style="margin-bottom: 0.85rem;">Published Contingency Rates · No Upfront Retainers</span>
-            <h1 class="ph-title" id="pricing-hero-title">
-              Pick the Delinquency Bracket You Have,<br>and the Rate is the Rate.
-            </h1>
-            <p class="ph-lede">
-              Every figure includes Tier-1 forensic skip-tracing, corporate asset mapping, 100% speech AI acoustic auditing, and 48-hour FDIC segregated escrow remittance.
-            </p>
-          </div>
-
-          <!-- The Interactive Segmented Bracket Picker -->
-          <div class="cd-picker-box">
-            <fieldset style="border: 0; padding: 0; margin: 0;">
-              <legend class="cd-picker-legend">How delinquent is your creditor portfolio?</legend>
-              <div class="cd-picker-row" data-picker-row>
-                <label class="cd-picker-opt">
-                  <input type="radio" name="bracketRate" value="30-60d" data-rate="14%" data-desc="Early-Stage Trade Receivables • Automated Gentle Invoicing Reminders &amp; Resolution" checked>
-                  <span>30–60d<small>Early Stage</small></span>
-                </label>
-                <label class="cd-picker-opt">
-                  <input type="radio" name="bracketRate" value="61-120d" data-rate="18%" data-desc="Mid-Stage Commercial Portfolios • Direct Mediation &amp; Vendor Dispute Settlement">
-                  <span>61–120d<small>Mid Market</small></span>
-                </label>
-                <label class="cd-picker-opt">
-                  <input type="radio" name="bracketRate" value="121-180d" data-rate="22%" data-desc="Aged Corporate Invoices • Intensive Forensic Asset Mapping &amp; Officer Skip-Tracing">
-                  <span>121–180d<small>Aged Files</small></span>
-                </label>
-                <label class="cd-picker-opt">
-                  <input type="radio" name="bracketRate" value="181-365d" data-rate="26%" data-desc="Pre-Litigation Negotiation • Admitted Creditor Rights Attorney Formal Demand Letters">
-                  <span>181–365d<small>Pre-Legal</small></span>
-                </label>
-                <label class="cd-picker-opt">
-                  <input type="radio" name="bracketRate" value="365d+" data-rate="30%" data-desc="Post-Judgment Enforcement • Bank Subpoenas, Real Property UCC Liens &amp; Asset Seizures">
-                  <span>365d+<small>Judgment</small></span>
-                </label>
-                <label class="cd-picker-opt">
-                  <input type="radio" name="bracketRate" value="healthcare" data-rate="15%" data-desc="Healthcare &amp; Hospital Systems • IRS 501(r) FAP Guardrails &amp; Empathetic Patient Plans">
-                  <span>HIPAA<small>Healthcare</small></span>
-                </label>
-              </div>
-            </fieldset>
-
-            <div class="cd-picker-out">
-              <div>
-                <span class="cd-picker-price" data-picker-price aria-live="polite">14%</span>
-                <span style="font-size: 0.85rem; color: #CBD5E1; margin-left: 0.35rem; font-weight: 700;">of recovered funds</span>
-              </div>
-              <span class="cd-picker-what" data-picker-what>Early-Stage Trade Receivables • Automated Gentle Invoicing Reminders &amp; Resolution</span>
+        <div class="page-hero-content reveal-fade-up">
+          <nav class="page-hero-breadcrumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current">Pricing Guide</span>
+          </nav>
+          <span class="section-tag section-tag-gold">Published Contingency Rates · No Upfront Retainers</span>
+          <h1 class="page-hero-title" id="pricing-hero-title">
+            Published Contingency Rates by Delinquency Bracket
+          </h1>
+          <p class="page-hero-lead">
+            Transparent contingency pricing with Tier-1 forensic skip-tracing, corporate asset mapping, 100% speech AI acoustic auditing, and 48-hour FDIC segregated escrow remittance.
+          </p>
+          <div class="hero-badges-row">
+            <div class="hero-badge-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <span>Zero Upfront Retainers</span>
             </div>
-
-            <p class="cd-picker-note">
-              ✓ Zero Upfront Retainer • Zero Onboarding Surcharges • If an account is not liquidated, you pay $0.00.
-            </p>
+            <div class="hero-badge-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>Tier-1 Forensic Tracing</span>
+            </div>
+            <div class="hero-badge-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>FDIC Segregated Escrow</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==========================================================================
-         02 · THE CALIBRATED STAGE RATE GRID (WITH HORIZONTAL PROGRESS FILL BARS)
+         02 · THE CALIBRATED STAGE RATE GRID (WITH INTERACTIVE BRACKET PICKER)
          ========================================================================== -->
     <section class="section" id="stageGrid" aria-label="Delinquency Stages">
       <div class="container">
+        <!-- Interactive Segmented Bracket Picker -->
+        <div class="cd-picker-box reveal-fade-up" style="margin-bottom: 3.5rem;">
+          <fieldset style="border: 0; padding: 0; margin: 0;">
+            <legend class="cd-picker-legend">How delinquent is your creditor portfolio?</legend>
+            <div class="cd-picker-row" data-picker-row>
+              <label class="cd-picker-opt">
+                <input type="radio" name="bracketRate" value="30-60d" data-rate="14%" data-desc="Early-Stage Trade Receivables • Automated Gentle Invoicing Reminders &amp; Resolution" checked>
+                <span>30–60d<small>Early Stage</small></span>
+              </label>
+              <label class="cd-picker-opt">
+                <input type="radio" name="bracketRate" value="61-120d" data-rate="18%" data-desc="Mid-Stage Commercial Portfolios • Direct Mediation &amp; Vendor Dispute Settlement">
+                <span>61–120d<small>Mid Market</small></span>
+              </label>
+              <label class="cd-picker-opt">
+                <input type="radio" name="bracketRate" value="121-180d" data-rate="22%" data-desc="Aged Corporate Invoices • Intensive Forensic Asset Mapping &amp; Officer Skip-Tracing">
+                <span>121–180d<small>Aged Files</small></span>
+              </label>
+              <label class="cd-picker-opt">
+                <input type="radio" name="bracketRate" value="181-365d" data-rate="26%" data-desc="Pre-Litigation Negotiation • Admitted Creditor Rights Attorney Formal Demand Letters">
+                <span>181–365d<small>Pre-Legal</small></span>
+              </label>
+              <label class="cd-picker-opt">
+                <input type="radio" name="bracketRate" value="365d+" data-rate="30%" data-desc="Post-Judgment Enforcement • Bank Subpoenas, Real Property UCC Liens &amp; Asset Seizures">
+                <span>365d+<small>Judgment</small></span>
+              </label>
+              <label class="cd-picker-opt">
+                <input type="radio" name="bracketRate" value="healthcare" data-rate="15%" data-desc="Healthcare &amp; Hospital Systems • IRS 501(r) FAP Guardrails &amp; Empathetic Patient Plans">
+                <span>HIPAA<small>Healthcare</small></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="cd-picker-out">
+            <div>
+              <span class="cd-picker-price" data-picker-price aria-live="polite">14%</span>
+              <span style="font-size: 0.85rem; color: #CBD5E1; margin-left: 0.35rem; font-weight: 700;">of recovered funds</span>
+            </div>
+            <span class="cd-picker-what" data-picker-what>Early-Stage Trade Receivables • Automated Gentle Invoicing Reminders &amp; Resolution</span>
+          </div>
+
+          <p class="cd-picker-note">
+            ✓ Zero Upfront Retainer • Zero Onboarding Surcharges • If an account is not liquidated, you pay $0.00.
+          </p>
+        </div>
+
         <div class="section-header reveal-fade-up">
           <span class="section-tag">By Delinquency Stage</span>
           <h2 class="section-title">Six Calibrated Ways Delinquent Capital is Structured</h2>

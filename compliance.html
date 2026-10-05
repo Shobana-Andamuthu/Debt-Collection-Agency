@@ -18,6 +18,462 @@
   <!-- Core CSS -->
   <link rel="stylesheet" href="assets/css/style.css?v=106">
   <link rel="stylesheet" href="assets/css/responsive.css?v=106">
+
+  <style>
+    /* Section 3: CFPB Reg F Logic Gate Cards with Visual Headers */
+    .regf-logic-gates-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 1.5rem !important;
+      align-items: stretch !important;
+      margin-bottom: 3.5rem !important;
+    }
+    .regf-gate-card {
+      background: var(--bg-surface) !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: 20px !important;
+      padding: 0 !important;
+      position: relative !important;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      overflow: hidden !important;
+      height: 100% !important;
+    }
+    .regf-gate-card:hover {
+      transform: translateY(-6px) !important;
+      border-color: var(--border-gold) !important;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12) !important;
+    }
+    .regf-gate-thumb {
+      position: relative !important;
+      width: 100% !important;
+      height: 180px !important;
+      overflow: hidden !important;
+      background: #0A192F !important;
+    }
+    .regf-gate-thumb img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+      transition: transform 0.4s ease !important;
+    }
+    .regf-gate-card:hover .regf-gate-thumb img {
+      transform: scale(1.06) !important;
+    }
+    .regf-gate-number {
+      position: absolute !important;
+      top: 0.85rem !important;
+      right: 0.85rem !important;
+      font-size: 0.72rem !important;
+      font-weight: 800 !important;
+      color: #F59E0B !important;
+      background: rgba(10, 25, 47, 0.94) !important;
+      border: 1.5px solid #F59E0B !important;
+      padding: 0.28rem 0.75rem !important;
+      border-radius: 9999px !important;
+      letter-spacing: 0.06em !important;
+      z-index: 5 !important;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8) !important;
+    }
+    .regf-gate-body {
+      padding: 1.5rem 1.35rem 1.35rem !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 1 !important;
+    }
+    .regf-gate-title {
+      font-size: 1.15rem !important;
+      font-weight: 800 !important;
+      color: var(--text-main) !important;
+      margin: 0 0 0.6rem 0 !important;
+      line-height: 1.25 !important;
+    }
+    .regf-gate-desc {
+      font-size: 0.85rem !important;
+      color: var(--text-body) !important;
+      line-height: 1.5 !important;
+      margin: 0 0 1.25rem 0 !important;
+      flex: 1 !important;
+    }
+    .regf-gate-status {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.45rem !important;
+      font-size: 0.78rem !important;
+      font-weight: 700 !important;
+      color: #059669 !important;
+      background: rgba(16, 185, 129, 0.08) !important;
+      border: 1px solid rgba(16, 185, 129, 0.25) !important;
+      padding: 0.45rem 0.85rem !important;
+      border-radius: 8px !important;
+      margin-top: auto !important;
+    }
+    [data-theme="dark"] .regf-gate-status {
+      color: #34D399 !important;
+      background: rgba(16, 185, 129, 0.15) !important;
+      border-color: rgba(52, 211, 153, 0.3) !important;
+    }
+
+    /* Section 5: Security Enclave Cards with Generated Visuals */
+    .security-enclave-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 1.5rem !important;
+      align-items: stretch !important;
+    }
+    .security-card {
+      background: var(--bg-surface) !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: 20px !important;
+      padding: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      overflow: hidden !important;
+      height: 100% !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease !important;
+    }
+    .security-card:hover {
+      transform: translateY(-6px) !important;
+      border-color: var(--border-gold) !important;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12) !important;
+    }
+    .security-card-thumb {
+      position: relative !important;
+      width: 100% !important;
+      height: 170px !important;
+      overflow: hidden !important;
+      background: #0A192F !important;
+    }
+    .security-card-thumb img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+      transition: transform 0.4s ease !important;
+    }
+    .security-card:hover .security-card-thumb img {
+      transform: scale(1.06) !important;
+    }
+    .security-card-badge {
+      position: absolute !important;
+      top: 0.85rem !important;
+      right: 0.85rem !important;
+      font-size: 0.72rem !important;
+      font-weight: 800 !important;
+      color: #F59E0B !important;
+      background: rgba(10, 25, 47, 0.94) !important;
+      border: 1.5px solid #F59E0B !important;
+      padding: 0.28rem 0.75rem !important;
+      border-radius: 9999px !important;
+      letter-spacing: 0.06em !important;
+      z-index: 5 !important;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.8) !important;
+    }
+    .security-card-body {
+      padding: 1.4rem 1.25rem 1.25rem !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 1 !important;
+    }
+    .security-card-title {
+      font-size: 1.15rem !important;
+      font-weight: 800 !important;
+      color: var(--text-main) !important;
+      margin: 0 0 0.6rem 0 !important;
+      line-height: 1.25 !important;
+    }
+    .security-card-desc {
+      font-size: 0.85rem !important;
+      color: var(--text-body) !important;
+      line-height: 1.5 !important;
+      margin: 0 0 1.25rem 0 !important;
+      flex: 1 !important;
+    }
+    .security-cert-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      padding: 0.45rem 0.75rem !important;
+      font-size: 0.76rem !important;
+      font-weight: 700 !important;
+      color: var(--color-secondary) !important;
+      background: rgba(37, 99, 235, 0.08) !important;
+      border: 1px solid rgba(37, 99, 235, 0.22) !important;
+      border-radius: 8px !important;
+      margin-top: auto !important;
+      text-align: center !important;
+      white-space: nowrap !important;
+    }
+
+    /* Section 6: 12-Year Connected Audit Highway Stepper & Green Badges */
+    .audit-highway-stepper {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 1.5rem !important;
+      position: relative !important;
+      align-items: stretch !important;
+    }
+    .audit-highway-node {
+      background: var(--bg-surface) !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: 20px !important;
+      padding: 1.5rem 1.35rem !important;
+      position: relative !important;
+      z-index: 2 !important;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .audit-highway-node:hover {
+      transform: translateY(-6px) !important;
+      border-color: var(--border-gold) !important;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12) !important;
+    }
+    .audit-node-top {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      margin-bottom: 1.15rem !important;
+      width: 100% !important;
+    }
+    .audit-node-pill {
+      width: 48px !important;
+      height: 48px !important;
+      border-radius: 9999px !important;
+      background: var(--color-sapphire-gradient) !important;
+      color: var(--color-accent) !important;
+      border: 2.5px solid var(--bg-surface) !important;
+      box-shadow: 0 0 0 2px var(--color-accent) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-family: var(--font-heading) !important;
+      font-weight: 800 !important;
+      font-size: 0.85rem !important;
+      margin: 0 !important;
+      flex-shrink: 0 !important;
+    }
+    .audit-pass-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.35rem !important;
+      font-size: 0.75rem !important;
+      font-weight: 800 !important;
+      color: #059669 !important;
+      background: rgba(16, 185, 129, 0.12) !important;
+      border: 1px solid rgba(16, 185, 129, 0.3) !important;
+      padding: 0.35rem 0.75rem !important;
+      border-radius: 9999px !important;
+      white-space: nowrap !important;
+    }
+    [data-theme="dark"] .audit-pass-badge {
+      color: #34D399 !important;
+      background: rgba(16, 185, 129, 0.18) !important;
+      border-color: rgba(52, 211, 153, 0.35) !important;
+    }
+    .audit-year-title {
+      font-family: var(--font-heading) !important;
+      font-size: 1.15rem !important;
+      font-weight: 800 !important;
+      color: var(--text-main) !important;
+      margin: 0 0 0.55rem 0 !important;
+      line-height: 1.25 !important;
+    }
+    .audit-desc {
+      font-size: 0.84rem !important;
+      color: var(--text-body) !important;
+      line-height: 1.55 !important;
+      margin: 0 !important;
+      flex: 1 !important;
+    }
+
+    /* Section 7: Institutional Compliance Terminal Centered Form */
+    .dispute-terminal-box {
+      background: radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.22) 0%, transparent 60%),
+                  radial-gradient(circle at 10% 80%, rgba(197, 160, 89, 0.15) 0%, transparent 50%),
+                  linear-gradient(135deg, #0A192F 0%, #112240 50%, #060D1A 100%) !important;
+      border: 1px solid var(--border-gold) !important;
+      border-radius: 24px !important;
+      padding: 2.5rem 2.25rem !important;
+      box-sizing: border-box !important;
+      width: 100% !important;
+      max-width: 620px !important;
+      margin: 0 auto !important;
+      box-shadow: 0 20px 40px -10px rgba(10, 25, 47, 0.45) !important;
+    }
+    /* Section 7: Institutional Compliance Terminal Submit Button (Signature Theme Gold Gradient) */
+    .dispute-terminal-box .btn-theme-cta,
+    .dispute-terminal-box .btn-gold {
+      height: 52px !important;
+      width: 100% !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.6rem !important;
+      font-size: 1rem !important;
+      font-weight: 800 !important;
+      border-radius: 12px !important;
+      padding: 0 1.5rem !important;
+      box-sizing: border-box !important;
+      white-space: nowrap !important;
+      cursor: pointer !important;
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%) !important;
+      color: #0A192F !important;
+      border: 1px solid rgba(255, 255, 255, 0.35) !important;
+      box-shadow: 0 8px 24px rgba(245, 158, 11, 0.35) !important;
+      transition: all 0.3s ease !important;
+    }
+    .dispute-terminal-box .btn-theme-cta span,
+    .dispute-terminal-box .btn-gold span {
+      color: #0A192F !important;
+      font-weight: 800 !important;
+    }
+    .dispute-terminal-box .btn-theme-cta:hover,
+    .dispute-terminal-box .btn-gold:hover {
+      background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 12px 30px rgba(245, 158, 11, 0.5) !important;
+      border-color: rgba(255, 255, 255, 0.6) !important;
+    }
+
+    /* Section 8: Compliance Page CTA Ribbon Above Footer */
+    .compliance-cta-section {
+      padding: 4rem 0 !important;
+      background: var(--bg-surface-alt) !important;
+    }
+    .compliance-cta-card {
+      background: radial-gradient(circle at 50% 25%, #1E3A8A 0%, #0A192F 70%, #060D1A 100%) !important;
+      border: 1.5px solid rgba(197, 160, 89, 0.45) !important;
+      border-radius: 24px !important;
+      padding: 3.75rem 2rem !important;
+      color: #FFFFFF !important;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4) !important;
+      text-align: center !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+    .compliance-cta-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, #C5A059, #DFBA73, transparent);
+    }
+    .btn-compliance-theme {
+      height: 52px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.65rem !important;
+      padding: 0 2rem !important;
+      font-size: 1rem !important;
+      font-weight: 800 !important;
+      border-radius: 12px !important;
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%) !important;
+      color: #0A192F !important;
+      border: 1px solid rgba(255, 255, 255, 0.35) !important;
+      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35) !important;
+      transition: all 0.3s ease !important;
+      text-decoration: none !important;
+      cursor: pointer !important;
+    }
+    .btn-compliance-theme span {
+      color: #0A192F !important;
+      font-weight: 800 !important;
+    }
+    .btn-compliance-theme:hover {
+      background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 12px 32px rgba(245, 158, 11, 0.5) !important;
+      border-color: rgba(255, 255, 255, 0.6) !important;
+    }
+    .btn-compliance-outline {
+      height: 52px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.65rem !important;
+      padding: 0 1.85rem !important;
+      font-size: 1rem !important;
+      font-weight: 700 !important;
+      border-radius: 12px !important;
+      background: rgba(255, 255, 255, 0.12) !important;
+      color: #FFFFFF !important;
+      border: 1.5px solid rgba(197, 160, 89, 0.65) !important;
+      backdrop-filter: blur(8px) !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+      transition: all 0.3s ease !important;
+      text-decoration: none !important;
+    }
+    .btn-compliance-outline span {
+      color: #FFFFFF !important;
+      font-weight: 700 !important;
+    }
+    .btn-compliance-outline:hover {
+      background: #F59E0B !important;
+      color: #0A192F !important;
+      border-color: #F59E0B !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4) !important;
+    }
+    .btn-compliance-outline:hover span {
+      color: #0A192F !important;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1100px) and (min-width: 769px) {
+      .regf-logic-gates-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+      }
+      .security-enclave-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+      }
+      .audit-highway-stepper {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+      }
+      .audit-highway-stepper::before {
+        display: none !important;
+      }
+      .dispute-safeharbor-layout {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .regf-logic-gates-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+      .security-enclave-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+      .audit-highway-stepper {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+      .audit-highway-stepper::before {
+        display: none !important;
+      }
+      .dispute-safeharbor-layout {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+      .dispute-terminal-box {
+        padding: 1.75rem 1.25rem !important;
+      }
+    }
+  </style>
+</head>
 <body>
 
   <!-- PAGE PRELOADER -->
@@ -164,110 +620,33 @@
   <main id="mainContent" role="main">
 
     <!-- ==========================================================================
-         SECTION 1: HERO COMMAND SPLIT & LIVE REGULATORY HUD (MODERN ASYMMETRIC LAYOUT)
+         SECTION 1: PAGE HERO (IDENTICAL MASTER REFERENCE HEIGHT)
          ========================================================================== -->
-    <section class="hero-compliance-split" id="heroCompliance" aria-label="Compliance and Legal Governance Hero">
-      <div class="container">
-        <div class="hero-compliance-grid">
-          <!-- Left Column: Title, Rationale, Actions, Micro Metrics -->
-          <div class="hero-compliance-content reveal-fade-left">
-            <nav class="page-hero-breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: 1.25rem;">
-              <a href="index.html" style="color: #94A3B8;">Home</a>
-              <span class="breadcrumb-separator" style="color: rgba(255, 255, 255, 0.4);">/</span>
-              <span class="breadcrumb-current" style="color: var(--color-accent-light);">Compliance &amp; Licensing</span>
-            </nav>
+    <section class="page-hero" aria-label="Compliance and Legal Governance Hero">
+      <div class="container reveal-fade-up">
+        <nav class="page-hero-breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">Compliance &amp; Licensing</span>
+        </nav>
 
-            <span class="section-tag section-tag-gold" style="margin-bottom: 0.75rem; display: inline-flex;">
-              <span class="pulse-dot" style="margin-right: 0.4rem;"></span>
-              Institutional Governance Citadel
-            </span>
+        <h1 class="page-hero-title">50-State Statutory Fortress &amp; Sovereign Compliance</h1>
+        <p class="page-hero-desc">
+          Zero-grievance institutional debt resolution directed by former state regulatory counsel, active 50-state statutory licensing, and automated compliance switchboards.
+        </p>
 
-            <h1 class="hero-compliance-title">
-              50-State Statutory Fortress &amp; <span class="gold-accent">CFPB Reg F</span> Sovereign Compliance
-            </h1>
-
-            <p class="hero-compliance-desc">
-              Zero-grievance institutional debt resolution directed by former state regulatory counsel, active 50-state statutory licensing, and automated algorithmic switchboards preventing telecommunication overreach.
-            </p>
-
-            <div class="hero-compliance-actions">
-              <a href="#stateDirectory" class="btn btn-gold">
-                <span>Verify State Licensing</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              </a>
-              <a href="#disputeTerminal" class="btn btn-outline-white">
-                <span>Request Audit Binder</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-
-            <div class="hero-micro-metrics">
-              <div class="hero-micro-metric-item">
-                <span class="hero-micro-val" data-counter="100" data-suffix="%">100%</span>
-                <span class="hero-micro-label">Speech Scrutinized by AI</span>
-              </div>
-              <div class="hero-micro-metric-item">
-                <span class="hero-micro-val" data-counter="0">0</span>
-                <span class="hero-micro-label">Regulatory Sanctions (12 Yrs)</span>
-              </div>
-              <div class="hero-micro-metric-item">
-                <span class="hero-micro-val" data-counter="500" data-prefix="$" data-suffix="K">$500K</span>
-                <span class="hero-micro-label">Top Surety Bond Deposit</span>
-              </div>
-            </div>
+        <div class="page-hero-badges">
+          <div class="page-hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>CFPB Reg F Audited</span>
           </div>
-
-          <!-- Right Column: Interactive Real-Time Credential HUD Deck -->
-          <div class="compliance-hero-hud-card reveal-fade-right">
-            <div class="hud-radar-top">
-              <div class="hud-radar-indicator">
-                <span class="pulse-dot"></span>
-                <span>Statutory Radar: Armed</span>
-              </div>
-              <span class="hud-seal-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                NMLS &amp; Bar Verified
-              </span>
-            </div>
-
-            <div class="hud-jurisdiction-stream">
-              <div class="hud-jurisdiction-row">
-                <div>
-                  <div class="hud-state-tag">New York (NY-DCA #2049182)</div>
-                  <div class="hud-state-bond">Surety Bond: $500,000 Active</div>
-                </div>
-                <span class="hud-state-status">VERIFIED</span>
-              </div>
-
-              <div class="hud-jurisdiction-row">
-                <div>
-                  <div class="hud-state-tag">California (DFPI-CFPA #10842)</div>
-                  <div class="hud-state-bond">Surety Bond: $500,000 Active</div>
-                </div>
-                <span class="hud-state-status">VERIFIED</span>
-              </div>
-
-              <div class="hud-jurisdiction-row">
-                <div>
-                  <div class="hud-state-tag">Texas (TX-SOS #802319401)</div>
-                  <div class="hud-state-bond">Surety Bond: $250,000 Active</div>
-                </div>
-                <span class="hud-state-status">VERIFIED</span>
-              </div>
-
-              <div class="hud-jurisdiction-row">
-                <div>
-                  <div class="hud-state-tag">Florida (OFR-CCA #CCA9903112)</div>
-                  <div class="hud-state-bond">Surety Bond: $300,000 Active</div>
-                </div>
-                <span class="hud-state-status">VERIFIED</span>
-              </div>
-            </div>
-
-            <div class="hud-footer-hash">
-              <span>SHA-256: e8b9f...a029</span>
-              <span style="color: #10B981; font-weight: 700;">CFPB 7x7 Shield: ENGAGED</span>
-            </div>
+          <div class="page-hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <span>NMLS &amp; Bar Verified</span>
+          </div>
+          <div class="page-hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>50-State Master Bond</span>
           </div>
         </div>
       </div>
@@ -422,49 +801,55 @@
         <div class="regf-logic-gates-grid reveal-fade-up delay-100">
           <!-- Gate 1 -->
           <div class="regf-gate-card">
-            <span class="regf-gate-number">GATE 01</span>
-            <div class="regf-gate-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <div class="regf-gate-thumb">
+              <img src="assets/images/sections/regf-gate-calling.jpg" alt="Zone-Accurate Calling Windows Telephony Safeguard" loading="lazy" width="400" height="200">
+              <span class="regf-gate-number">GATE 01</span>
             </div>
-            <h3 class="regf-gate-title">Zone-Accurate Calling Windows</h3>
-            <p class="regf-gate-desc">
-              Programmatic time-zone lookup prevents dialing outside 8:00 AM – 9:00 PM debtor local time, with automatic Daylight Savings adjustments.
-            </p>
-            <div class="regf-gate-status">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Automated Hard Lock Active</span>
+            <div class="regf-gate-body">
+              <h3 class="regf-gate-title">Zone-Accurate Calling Windows</h3>
+              <p class="regf-gate-desc">
+                Programmatic time-zone lookup prevents dialing outside 8:00 AM – 9:00 PM debtor local time, with automatic Daylight Savings adjustments.
+              </p>
+              <div class="regf-gate-status">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Automated Hard Lock Active</span>
+              </div>
             </div>
           </div>
 
           <!-- Gate 2 -->
           <div class="regf-gate-card">
-            <span class="regf-gate-number">GATE 02</span>
-            <div class="regf-gate-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <div class="regf-gate-thumb">
+              <img src="assets/images/sections/regf-gate-frequency.jpg" alt="7-in-7 Frequency Capping Call Limiter" loading="lazy" width="400" height="200">
+              <span class="regf-gate-number">GATE 02</span>
             </div>
-            <h3 class="regf-gate-title">7-in-7 Frequency Capping</h3>
-            <p class="regf-gate-desc">
-              Outbound attempts are automatically throttled to a strict maximum of 7 telephone calls per debtor within any rolling 7-consecutive-day cycle.
-            </p>
-            <div class="regf-gate-status">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>0 Frequency Breaches</span>
+            <div class="regf-gate-body">
+              <h3 class="regf-gate-title">7-in-7 Frequency Capping</h3>
+              <p class="regf-gate-desc">
+                Outbound attempts are automatically throttled to a strict maximum of 7 telephone calls per debtor within any rolling 7-consecutive-day cycle.
+              </p>
+              <div class="regf-gate-status">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>0 Frequency Breaches</span>
+              </div>
             </div>
           </div>
 
           <!-- Gate 3 -->
           <div class="regf-gate-card">
-            <span class="regf-gate-number">GATE 03</span>
-            <div class="regf-gate-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+            <div class="regf-gate-thumb">
+              <img src="assets/images/sections/regf-gate-validation.jpg" alt="Model Form Validation Notice Documentation" loading="lazy" width="400" height="200">
+              <span class="regf-gate-number">GATE 03</span>
             </div>
-            <h3 class="regf-gate-title">Model Form Validation Notice</h3>
-            <p class="regf-gate-desc">
-              Automated generation of itemized tear-off debt dispute documentation delivered electronically with instant timestamping for legal verification.
-            </p>
-            <div class="regf-gate-status">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Model Form Compliant</span>
+            <div class="regf-gate-body">
+              <h3 class="regf-gate-title">Model Form Validation Notice</h3>
+              <p class="regf-gate-desc">
+                Automated generation of itemized tear-off debt dispute documentation delivered electronically with instant timestamping for legal verification.
+              </p>
+              <div class="regf-gate-status">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Model Form Compliant</span>
+              </div>
             </div>
           </div>
         </div>
@@ -492,17 +877,17 @@
             </p>
 
             <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
-              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
-                <span style="font-size: 0.88rem; font-weight: 700;">Statutory 30-Day Dispute Freeze</span>
-                <span style="font-size: 0.82rem; font-weight: 800; color: var(--success);">AUTOMATED PAUSE</span>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; gap: 0.75rem;">
+                <span style="font-size: 0.88rem; font-weight: 700; color: var(--text-main);">Statutory 30-Day Dispute Freeze</span>
+                <span style="font-size: 0.76rem; font-weight: 800; color: #10B981; background: rgba(16, 185, 129, 0.14); padding: 0.25rem 0.65rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap; letter-spacing: 0.04em;">AUTOMATED PAUSE</span>
               </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
-                <span style="font-size: 0.88rem; font-weight: 700;">Mini-Miranda Disclosure Verification</span>
-                <span style="font-size: 0.82rem; font-weight: 800; color: var(--success);">100% ENFORCED</span>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; gap: 0.75rem;">
+                <span style="font-size: 0.88rem; font-weight: 700; color: var(--text-main);">Mini-Miranda Disclosure Verification</span>
+                <span style="font-size: 0.76rem; font-weight: 800; color: #10B981; background: rgba(16, 185, 129, 0.14); padding: 0.25rem 0.65rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap; letter-spacing: 0.04em;">100% ENFORCED</span>
               </div>
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span style="font-size: 0.88rem; font-weight: 700;">Place of Employment Contact Check</span>
-                <span style="font-size: 0.82rem; font-weight: 800; color: var(--color-secondary);">PROHIBITION GATE</span>
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.75rem;">
+                <span style="font-size: 0.88rem; font-weight: 700; color: var(--text-main);">Place of Employment Contact Check</span>
+                <span style="font-size: 0.76rem; font-weight: 800; color: #60A5FA; background: rgba(59, 130, 246, 0.16); padding: 0.25rem 0.65rem; border-radius: 6px; border: 1px solid rgba(59, 130, 246, 0.4); white-space: nowrap; letter-spacing: 0.04em;">PROHIBITION GATE</span>
               </div>
             </div>
           </div>
@@ -633,50 +1018,62 @@
         <div class="security-enclave-grid">
           <!-- Pillar 1 -->
           <div class="security-card reveal-fade-up delay-100">
-            <div class="security-icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <div class="security-card-thumb">
+              <img src="assets/images/sections/security-aes-vault.jpg" alt="AES-256 Cloud Vault Cryptographic Infrastructure" loading="lazy" width="400" height="220">
+              <div class="security-card-badge">SOC 2 Type II</div>
             </div>
-            <h3 class="security-card-title">AES-256 Cloud Vault</h3>
-            <p class="security-card-desc">
-              End-to-end envelope encryption protecting sensitive PII both at rest in isolated databases and in transit across TLS 1.3 tunnels.
-            </p>
-            <span class="security-cert-badge">SOC 2 Type II Certified</span>
+            <div class="security-card-body">
+              <h3 class="security-card-title">AES-256 Cloud Vault</h3>
+              <p class="security-card-desc">
+                End-to-end envelope encryption protecting sensitive PII both at rest in isolated databases and in transit across TLS 1.3 tunnels.
+              </p>
+              <span class="security-cert-badge">SOC 2 Type II Certified</span>
+            </div>
           </div>
 
           <!-- Pillar 2 -->
           <div class="security-card reveal-fade-up delay-200">
-            <div class="security-icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            <div class="security-card-thumb">
+              <img src="assets/images/sections/security-hipaa-enclave.jpg" alt="HIPAA HITECH Healthcare Security Enclave" loading="lazy" width="400" height="220">
+              <div class="security-card-badge">HIPAA BAA</div>
             </div>
-            <h3 class="security-card-title">HIPAA / HITECH Enclave</h3>
-            <p class="security-card-desc">
-              Dedicated healthcare vault providing strict de-identification of patient health data (ePHI) with signed Business Associate Agreements.
-            </p>
-            <span class="security-cert-badge">HIPAA BAA Governed</span>
+            <div class="security-card-body">
+              <h3 class="security-card-title">HIPAA / HITECH Enclave</h3>
+              <p class="security-card-desc">
+                Dedicated healthcare vault providing strict de-identification of patient health data (ePHI) with signed Business Associate Agreements.
+              </p>
+              <span class="security-cert-badge">HIPAA BAA Governed</span>
+            </div>
           </div>
 
           <!-- Pillar 3 -->
           <div class="security-card reveal-fade-up delay-300">
-            <div class="security-icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            <div class="security-card-thumb">
+              <img src="assets/images/sections/security-pci-gateway.jpg" alt="PCI-DSS Level 1 Payment Gateway" loading="lazy" width="400" height="220">
+              <div class="security-card-badge">PCI-DSS L1</div>
             </div>
-            <h3 class="security-card-title">PCI-DSS Level 1 Gateway</h3>
-            <p class="security-card-desc">
-              Tokenized credit card and ACH payment gateway with zero raw cardholder storage, eliminating credential theft exposure entirely.
-            </p>
-            <span class="security-cert-badge">PCI-DSS Compliant</span>
+            <div class="security-card-body">
+              <h3 class="security-card-title">PCI-DSS Level 1 Gateway</h3>
+              <p class="security-card-desc">
+                Tokenized credit card and ACH payment gateway with zero raw cardholder storage, eliminating credential theft exposure entirely.
+              </p>
+              <span class="security-cert-badge">PCI-DSS Compliant</span>
+            </div>
           </div>
 
           <!-- Pillar 4 -->
           <div class="security-card reveal-fade-up delay-400">
-            <div class="security-icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <div class="security-card-thumb">
+              <img src="assets/images/sections/security-sha-audit.jpg" alt="SHA-256 Cryptographic Audit Logs" loading="lazy" width="400" height="220">
+              <div class="security-card-badge">Immutable Logs</div>
             </div>
-            <h3 class="security-card-title">SHA-256 Audit Logs</h3>
-            <p class="security-card-desc">
-              Timestamped cryptographic logging of every collector access, dial attempt, notice dispatch, and settlement ledger remittance.
-            </p>
-            <span class="security-cert-badge">Tamper-Proof Audit Trail</span>
+            <div class="security-card-body">
+              <h3 class="security-card-title">SHA-256 Audit Logs</h3>
+              <p class="security-card-desc">
+                Timestamped cryptographic logging of every collector access, dial attempt, notice dispatch, and settlement ledger remittance.
+              </p>
+              <span class="security-cert-badge">Tamper-Proof Audit Trail</span>
+            </div>
           </div>
         </div>
       </div>
@@ -699,41 +1096,41 @@
         <div class="audit-highway-stepper">
           <!-- 2026 -->
           <div class="audit-highway-node reveal-fade-up delay-100">
-            <div class="audit-node-pill">2026</div>
-            <div class="audit-year-header">
-              <span class="audit-year-title" style="font-size: 1.15rem;">BDO / RSM Review</span>
+            <div class="audit-node-top">
+              <div class="audit-node-pill">2026</div>
               <span class="audit-pass-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Cleared</span>
             </div>
+            <h3 class="audit-year-title">BDO / RSM Review</h3>
             <p class="audit-desc">Comprehensive SOC 2 Type II re-certification and CFPB Reg F algorithmic compliance examination. 0 findings.</p>
           </div>
 
           <!-- 2025 -->
           <div class="audit-highway-node reveal-fade-up delay-200">
-            <div class="audit-node-pill">2025</div>
-            <div class="audit-year-header">
-              <span class="audit-year-title" style="font-size: 1.15rem;">Compliance Counsel</span>
+            <div class="audit-node-top">
+              <div class="audit-node-pill">2025</div>
               <span class="audit-pass-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Cleared</span>
             </div>
+            <h3 class="audit-year-title">Compliance Counsel</h3>
             <p class="audit-desc">50-state statutory licensing audit and trust account reconciliation examination. Flawless pass decree.</p>
           </div>
 
           <!-- 2024 -->
           <div class="audit-highway-node reveal-fade-up delay-300">
-            <div class="audit-node-pill">2024</div>
-            <div class="audit-year-header">
-              <span class="audit-year-title" style="font-size: 1.15rem;">Crowe LLP Systems</span>
+            <div class="audit-node-top">
+              <div class="audit-node-pill">2024</div>
               <span class="audit-pass-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Cleared</span>
             </div>
+            <h3 class="audit-year-title">Crowe LLP Systems</h3>
             <p class="audit-desc">HIPAA/HITECH ePHI security enclave validation and AI speech sentiment transcription audit.</p>
           </div>
 
           <!-- 2023 -->
           <div class="audit-highway-node reveal-fade-up delay-400">
-            <div class="audit-node-pill">2023</div>
-            <div class="audit-year-header">
-              <span class="audit-year-title" style="font-size: 1.15rem;">Regulatory Risk</span>
+            <div class="audit-node-top">
+              <div class="audit-node-pill">2023</div>
               <span class="audit-pass-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Cleared</span>
             </div>
+            <h3 class="audit-year-title">Regulatory Risk</h3>
             <p class="audit-desc">FDCPA dispute verification protocol and consumer validation notice compliance benchmark scrub.</p>
           </div>
         </div>
@@ -742,96 +1139,86 @@
 
 
     <!-- ==========================================================================
-         SECTION 7: CONSUMER RIGHTS SAFE HARBOR & COMPLIANCE TERMINAL (DUAL SOVEREIGN)
+         SECTION 7: INSTITUTIONAL COMPLIANCE TERMINAL (CENTERED FORM)
          ========================================================================== -->
-    <section class="section" id="disputeTerminal" aria-label="Consumer Rights and Dispute Resolution">
+    <section class="section" id="disputeTerminal" aria-label="Institutional Compliance Terminal">
       <div class="container">
-        <div class="dispute-safeharbor-layout">
-          <!-- Left: 3-Step Safe Harbor Dispute Process -->
-          <div class="safeharbor-steps-box reveal-fade-left">
-            <span class="section-tag section-tag-gold" style="margin-bottom: 1rem;">Consumer Safe Harbor</span>
-            <h2 style="font-size: 1.85rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.75rem;">
-              Independent Consumer Rights Ombudsman
-            </h2>
-            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.75rem;">
-              If you wish to verify your balance, request debt validation documentation, or file a formal dispute, our Ombudsman Office reviews every inquiry under our 3-step statutory safe harbor:
-            </p>
+        <div class="section-header text-center reveal-fade-up">
+          <span class="section-tag section-tag-gold">Official Request Portal</span>
+          <h2 class="section-title">Institutional Compliance Terminal</h2>
+          <p class="section-desc">
+            Request official state licensing certificates, surety bond binders, or SOC 2 Type II audit packages.
+          </p>
+        </div>
 
-            <div class="safeharbor-steps-list">
-              <div class="safeharbor-step-item">
-                <div class="safeharbor-step-num">1</div>
-                <div>
-                  <h4 class="safeharbor-step-title">Automated 30-Day Statutory Pause</h4>
-                  <p class="safeharbor-step-desc">All outbound communications immediately lock upon receipt of dispute notice.</p>
-                </div>
-              </div>
-
-              <div class="safeharbor-step-item">
-                <div class="safeharbor-step-num">2</div>
-                <div>
-                  <h4 class="safeharbor-step-title">Itemized Creditor Accounting Verification</h4>
-                  <p class="safeharbor-step-desc">Full original agreement contracts and payment histories audited and dispatched.</p>
-                </div>
-              </div>
-
-              <div class="safeharbor-step-item">
-                <div class="safeharbor-step-num">3</div>
-                <div>
-                  <h4 class="safeharbor-step-title">Zero Adverse Bureau Reporting</h4>
-                  <p class="safeharbor-step-desc">No negative credit filings occur while an account is under active ombudsman review.</p>
-                </div>
-              </div>
+        <div class="dispute-terminal-box reveal-fade-up delay-100">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span class="pulse-dot"></span>
+              <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-accent); font-weight: 800;">Encrypted Dispatch Portal</span>
             </div>
-
-            <div style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px dashed var(--border-color); font-size: 0.82rem; color: var(--text-muted);">
-              Hotline: <strong style="color: var(--text-main);">(800) 555-0199 Ext. 4</strong> | Email: <strong style="color: var(--text-main);">ombudsman@aegisrecovery.com</strong>
-            </div>
+            <span style="font-size: 0.72rem; color: #94A3B8; font-family: monospace;">TLS 1.3 SECURED</span>
           </div>
 
-          <!-- Right: Institutional Compliance Terminal Form -->
-          <div class="dispute-terminal-box reveal-fade-right">
-            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem;">
-              <span class="pulse-dot"></span>
-              <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-accent); font-weight: 800;">Secure Portal</span>
+          <form action="contact.html" method="GET" style="display: flex; flex-direction: column; gap: 1.15rem;">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="compInquirerName" class="form-label" style="color: #F1F5F9;">Full Legal Name / Title</label>
+              <input type="text" id="compInquirerName" class="form-input" required placeholder="e.g. Sarah Jenkins, General Counsel">
             </div>
-            <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; color: #FFFFFF;">
-              Institutional Compliance Terminal
-            </h3>
-            <p style="font-size: 0.875rem; color: #CBD5E1; margin-bottom: 1.5rem;">
-              Request state licensing certificates, surety bond binders, or SOC 2 Type II audit packages.
-            </p>
 
-            <form action="contact.html" method="GET" style="display: flex; flex-direction: column; gap: 1rem;">
-              <div class="form-group" style="margin-bottom: 0;">
-                <label for="compInquirerName" class="form-label" style="color: #F1F5F9;">Full Legal Name / Title</label>
-                <input type="text" id="compInquirerName" class="form-input" required placeholder="e.g. Sarah Jenkins, General Counsel">
-              </div>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="compInquirerOrg" class="form-label" style="color: #F1F5F9;">Institution / Legal Firm</label>
+              <input type="text" id="compInquirerOrg" class="form-input" required placeholder="e.g. Horizon Banking Group">
+            </div>
 
-              <div class="form-group" style="margin-bottom: 0;">
-                <label for="compInquirerOrg" class="form-label" style="color: #F1F5F9;">Institution / Legal Firm</label>
-                <input type="text" id="compInquirerOrg" class="form-input" required placeholder="e.g. Horizon Banking Group">
-              </div>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="compPackageType" class="form-label" style="color: #F1F5F9;">Documentation Requested</label>
+              <select id="compPackageType" class="form-select">
+                <option value="50state">50-State Licensing &amp; Surety Bond Package</option>
+                <option value="soc2">SOC 2 Type II Independent Audit Report</option>
+                <option value="regf">CFPB Reg F Telephony Compliance Certification</option>
+                <option value="dispute">Formal Case Dispute &amp; Debt Validation</option>
+              </select>
+            </div>
 
-              <div class="form-group" style="margin-bottom: 0;">
-                <label for="compPackageType" class="form-label" style="color: #F1F5F9;">Documentation Requested</label>
-                <select id="compPackageType" class="form-select">
-                  <option value="50state">50-State Licensing &amp; Surety Bond Package</option>
-                  <option value="soc2">SOC 2 Type II Independent Audit Report</option>
-                  <option value="regf">CFPB Reg F Telephony Compliance Certification</option>
-                  <option value="dispute">Formal Case Dispute &amp; Debt Validation</option>
-                </select>
-              </div>
+            <div class="form-group" style="margin-bottom: 0.25rem;">
+              <label for="compEmail" class="form-label" style="color: #F1F5F9;">Corporate Email Address</label>
+              <input type="email" id="compEmail" class="form-input" required placeholder="counsel@institution.com">
+            </div>
 
-              <div class="form-group" style="margin-bottom: 0.5rem;">
-                <label for="compEmail" class="form-label" style="color: #F1F5F9;">Corporate Email Address</label>
-                <input type="email" id="compEmail" class="form-input" required placeholder="counsel@institution.com">
-              </div>
+            <button type="submit" class="btn btn-theme-cta">
+              <span>Submit Request</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
 
-              <button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center; padding: 0.85rem; font-size: 0.95rem;">
-                <span>Dispatch Compliance Package</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </button>
-            </form>
+    <!-- ==========================================================================
+         SECTION 8: STATUTORY COMPLIANCE CALL TO ACTION RIBBON (ABOVE FOOTER)
+         ========================================================================== -->
+    <section class="section compliance-cta-section" id="complianceCta" aria-label="Compliance Consultation and Licensing Verification">
+      <div class="container text-center">
+        <div class="compliance-cta-card">
+          <span class="cta-badge-tag" style="background: rgba(197, 160, 89, 0.18); color: #DFBA73; border: 1px solid rgba(197, 160, 89, 0.45); padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; display: inline-block; margin-bottom: 1.25rem;">
+            50-State Statutory Governance
+          </span>
+          <h2 class="cta-card-title" style="color: #FFFFFF; font-size: clamp(1.85rem, 3.5vw, 2.35rem); font-weight: 800; margin-bottom: 0.85rem; line-height: 1.25;">
+            Need Sovereign Regulatory Clearance for Your Portfolio?
+          </h2>
+          <p class="cta-card-desc" style="color: #CBD5E1; font-size: 1rem; max-width: 680px; margin: 0 auto 2rem; line-height: 1.65;">
+            Connect directly with our Legal Governance &amp; Compliance Officers. Request our full 50-state licensing binder, surety bond dossier, or SOC 2 Type II audit packages.
+          </p>
+          <div class="cta-card-actions" style="display: flex; gap: 1.25rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <a href="#disputeTerminal" class="btn btn-compliance-theme">
+              <span>Open Compliance Terminal</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="tel:+18005550199" class="btn btn-compliance-outline">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>Call Counsel: (800) 555-0199</span>
+            </a>
           </div>
         </div>
       </div>

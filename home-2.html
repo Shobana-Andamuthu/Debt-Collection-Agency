@@ -13,6 +13,59 @@
   <!-- Core CSS -->
   <link rel="stylesheet" href="assets/css/style.css?v=106">
   <link rel="stylesheet" href="assets/css/responsive.css?v=106">
+
+  <style>
+    /* Section 8: Studio Discovery CTA & Onboarding Badge */
+    .studio-onboarding-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      padding: 0.4rem 1rem !important;
+      border-radius: 9999px !important;
+      font-size: 0.75rem !important;
+      font-weight: 800 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      background: rgba(245, 158, 11, 0.18) !important;
+      border: 1.5px solid #F59E0B !important;
+      color: #F59E0B !important;
+      margin-bottom: 1.25rem !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    }
+    .cta-form {
+      background: #FFFFFF !important;
+      border-radius: 20px !important;
+      padding: 2.25rem !important;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25) !important;
+    }
+    [data-theme="dark"] .cta-form {
+      background: #0F172A !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    }
+    .cta-form-title {
+      font-size: 1.45rem !important;
+      font-weight: 900 !important;
+      color: #0A192F !important;
+      margin: 0 0 0.35rem 0 !important;
+      line-height: 1.25 !important;
+    }
+    [data-theme="dark"] .cta-form-title {
+      color: #FFFFFF !important;
+    }
+    .cta-form-desc {
+      font-size: 0.95rem !important;
+      color: #0F172A !important;
+      margin: 0 0 1.5rem 0 !important;
+      line-height: 1.5 !important;
+      font-weight: 700 !important;
+    }
+    [data-theme="dark"] .cta-form-desc {
+      color: #F8FAFC !important;
+      font-weight: 700 !important;
+    }
+  </style>
+</head>
 <body>
 
   <!-- PAGE PRELOADER -->
@@ -469,33 +522,33 @@
           <!-- Left: Connected Node Stream -->
           <div class="reveal-fade-left">
             <div class="section-badge badge-gold">Multi-Tier Data Architecture</div>
-            <h2 class="section-title">Autonomous Skip-Tracing &amp; Propensity Data Stream</h2>
-            <p class="section-desc" style="margin-bottom: 2rem;">
-              Locating vanished debtors and assessing true repayment capacity requires continuous waterfall enrichment across tri-bureau APIs, property records, and commercial registries.
+            <h2 class="section-title">Autonomous Skip-Tracing &amp; Propensity Stream</h2>
+            <p class="section-desc" style="margin-bottom: 1.75rem;">
+              Continuous waterfall enrichment across credit bureaus, registries, and asset databases for rapid debtor location.
             </p>
 
             <div class="pipeline-stream">
               <div class="pipeline-card-node">
                 <div class="pipeline-node-icon">01</div>
                 <div class="pipeline-node-body">
-                  <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--text-main);">Tri-Bureau Real-Time Identity Reconciliation</h4>
-                  <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.55; margin: 0;">Direct API synchronization across Experian, Equifax, and TransUnion ensures active phone, email, and residential verification within seconds of portfolio intake.</p>
+                  <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--text-main);">Tri-Bureau Identity Reconciliation</h4>
+                  <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin: 0;">Instant API sync across Experian, Equifax, and TransUnion for verified phone and address data.</p>
                 </div>
               </div>
 
               <div class="pipeline-card-node">
                 <div class="pipeline-node-icon">02</div>
                 <div class="pipeline-node-body">
-                  <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--text-main);">Commercial Asset &amp; Corporate Waterfall Ingestion</h4>
-                  <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.55; margin: 0;">Automated discovery of corporate operating accounts, UCC-1 lien filings, pending contract receivables, and state corporate registry filings.</p>
+                  <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--text-main);">Commercial Asset Waterfall</h4>
+                  <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin: 0;">Automated detection of corporate accounts, UCC-1 liens, and state business registry filings.</p>
                 </div>
               </div>
 
               <div class="pipeline-card-node">
                 <div class="pipeline-node-icon">03</div>
                 <div class="pipeline-node-body">
-                  <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--text-main);">Machine-Learning Propensity &amp; Liquidity Scoring</h4>
-                  <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.55; margin: 0;">Proprietary algorithms analyze debtor cash flow velocity to recommend realistic installment agreements that guarantee completed settlement fulfillment.</p>
+                  <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--text-main);">ML Propensity &amp; Liquidity Scoring</h4>
+                  <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin: 0;">Predictive scoring models debtor cash flow to structure realistic, high-fulfillment payment plans.</p>
                 </div>
               </div>
             </div>
@@ -779,7 +832,7 @@
           <div class="studio-cta-grid">
             <!-- Left Side Info -->
             <div>
-              <span class="section-badge badge-gold" style="background: rgba(197, 160, 89, 0.25); color: #F3E5AB;">Confidential Onboarding Studio</span>
+              <span class="studio-onboarding-badge">Confidential Onboarding Studio</span>
               <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.25rem; color: #FFFFFF;">
                 Request a Complimentary 48-Hour Portfolio Scrub &amp; Valuation
               </h2>

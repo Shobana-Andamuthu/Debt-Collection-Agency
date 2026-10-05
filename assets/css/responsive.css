@@ -226,6 +226,11 @@
     padding: 2.5rem 1.75rem;
   }
 
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
   .home-services-cockpit {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -463,13 +468,24 @@
   }
 
   .service-card {
-    padding: 2rem 1.5rem;
+    padding: 0 !important;
   }
 
   .service-badge {
-    position: static;
-    margin-bottom: 1rem;
-    align-self: flex-start;
+    position: absolute !important;
+    top: 0.85rem !important;
+    right: 0.85rem !important;
+    margin-bottom: 0 !important;
+    align-self: auto !important;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .principle-card-thumb {
+    height: 180px;
   }
 
   .workflow-timeline {
@@ -2187,47 +2203,78 @@ ul.ph-crumbs {
    GLOBAL RESPONSIVE FIXES ENGINE (NAVBAR ICON VISIBILITY, STAGES & ORBITS)
    ========================================================================== */
 
-/* 1. NAVBAR MENU ICON VISIBILITY ENGINE (GOLD IN DARK MODE, SOLID NAVY IN LIGHT MODE) */
+/* 1. NAVBAR MENU ICON (MATCHED HARMONIOUS STYLE WITH THEME TOGGLE & RTL BUTTONS) */
 .hamburger-btn {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
-  gap: 4px !important;
-  width: 40px !important;
-  height: 40px !important;
+  gap: 4.5px !important;
+  width: 38px !important;
+  height: 38px !important;
   padding: 6px !important;
   border-radius: var(--radius-md) !important;
-  background-color: rgba(245, 158, 11, 0.2) !important;
-  border: 1.5px solid #F59E0B !important;
-  color: #F59E0B !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(197, 160, 89, 0.25) !important;
+  color: #E2E8F0 !important;
   z-index: 1000000 !important;
   box-sizing: border-box !important;
+  transition: all var(--transition-fast) !important;
+  cursor: pointer !important;
 }
 
 .hamburger-line {
   display: block !important;
-  width: 20px !important;
-  height: 2.5px !important;
-  background-color: #F59E0B !important;
+  width: 18px !important;
+  height: 2px !important;
+  background-color: #E2E8F0 !important;
   border-radius: 2px !important;
   flex-shrink: 0 !important;
+  transition: transform var(--transition-normal), opacity var(--transition-fast), background-color var(--transition-fast) !important;
+}
+
+.hamburger-btn:hover {
+  background-color: rgba(197, 160, 89, 0.2) !important;
+  border-color: rgba(197, 160, 89, 0.5) !important;
+}
+
+.hamburger-btn:hover .hamburger-line {
+  background-color: #E6CA65 !important;
+}
+
+[data-theme="dark"] .hamburger-btn,
+html[data-theme="dark"] .hamburger-btn {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(197, 160, 89, 0.25) !important;
+  color: #E2E8F0 !important;
+}
+
+[data-theme="dark"] .hamburger-line,
+html[data-theme="dark"] .hamburger-line {
+  background-color: #E2E8F0 !important;
+}
+
+[data-theme="dark"] .hamburger-btn:hover,
+html[data-theme="dark"] .hamburger-btn:hover {
+  background-color: rgba(197, 160, 89, 0.2) !important;
+  border-color: rgba(197, 160, 89, 0.5) !important;
+}
+
+[data-theme="dark"] .hamburger-btn:hover .hamburger-line,
+html[data-theme="dark"] .hamburger-btn:hover .hamburger-line {
+  background-color: #DFBA73 !important;
 }
 
 [data-theme="light"] .hamburger-btn,
-.site-header[data-theme="light"] .hamburger-btn,
-header[data-theme="light"] .hamburger-btn,
-.dashboard-header[data-theme="light"] .hamburger-btn {
-  background-color: #0F172A !important;
-  border-color: #0F172A !important;
-  color: #FFFFFF !important;
+html[data-theme="light"] .hamburger-btn {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(197, 160, 89, 0.25) !important;
+  color: #E2E8F0 !important;
 }
 
 [data-theme="light"] .hamburger-line,
-[data-theme="light"] .hamburger-btn .hamburger-line,
-.site-header[data-theme="light"] .hamburger-line,
-.dashboard-header[data-theme="light"] .hamburger-line {
-  background-color: #FFFFFF !important;
+html[data-theme="light"] .hamburger-line {
+  background-color: #E2E8F0 !important;
 }
 
 /* FORENSIC MINI LEDGER CONTRAST & RESPONSIVE STACKING (Screenshot 1) */
@@ -2441,6 +2488,54 @@ header[data-theme="light"] .hamburger-btn,
 body.auth-page-body {
   padding-top: 0 !important;
   margin-top: 0 !important;
+}
+
+/* ==========================================================================
+   GLOBAL MOBILE RESPONSIVENESS REFINEMENTS
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* 1. Intake & CTA Form Submit Buttons (Prevent Overflow) */
+  .cta-form button[type="submit"],
+  .intake-form-box button[type="submit"],
+  .dispute-terminal-box button[type="submit"] {
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+    padding: 0.9rem 1rem !important;
+    font-size: clamp(0.88rem, 3.5vw, 1rem) !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Stepper Timeline 5-Column Grid */
+  .stepper-nodes-grid {
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 0.2rem !important;
+    width: 100% !important;
+  }
+
+  /* 3. Milestone Metric Pills */
+  .milestone-metric-pill {
+    flex-wrap: wrap !important;
+    gap: 0.75rem !important;
+    padding: 0.75rem 1rem !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 4. Footer Single Column Layout & Email Text Wrapping */
+  .footer-top-grid,
+  .footer-top,
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .footer-contact-info p,
+  .footer-contact-item span {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
 }
 
 

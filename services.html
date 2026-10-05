@@ -17,6 +17,160 @@
   <!-- Core Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css?v=106">
   <link rel="stylesheet" href="assets/css/responsive.css?v=106">
+
+  <style>
+    /* Practice Pillars 4-Card Straight Horizontal Baseline Alignment */
+    .services-grid {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 1.5rem !important;
+      align-items: stretch !important;
+    }
+    .service-card {
+      display: flex !important;
+      flex-direction: column !important;
+      height: 100% !important;
+      background: var(--bg-surface) !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: 20px !important;
+      overflow: hidden !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+      transition: all 0.35s ease !important;
+    }
+    .service-card-body {
+      padding: 1.5rem 1.35rem !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 1 !important;
+      box-sizing: border-box !important;
+    }
+    .statute-pill-wrap {
+      height: 28px !important;
+      display: flex !important;
+      align-items: center !important;
+      margin-bottom: 0.65rem !important;
+    }
+    .statute-pill {
+      display: inline-flex !important;
+      align-items: center !important;
+      padding: 0.25rem 0.65rem !important;
+      background: rgba(37, 99, 235, 0.08) !important;
+      border: 1px solid rgba(37, 99, 235, 0.25) !important;
+      border-radius: 6px !important;
+      font-size: 0.72rem !important;
+      font-weight: 700 !important;
+      color: var(--color-secondary) !important;
+      font-family: monospace !important;
+      margin: 0 !important;
+      white-space: nowrap !important;
+    }
+    .service-title {
+      font-size: 1.15rem !important;
+      font-weight: 800 !important;
+      color: var(--text-main) !important;
+      height: 3rem !important;
+      min-height: 3rem !important;
+      max-height: 3rem !important;
+      display: flex !important;
+      align-items: center !important;
+      margin: 0 0 0.65rem 0 !important;
+      line-height: 1.25 !important;
+    }
+    .service-desc {
+      font-size: 0.85rem !important;
+      color: var(--text-body) !important;
+      line-height: 1.5 !important;
+      height: 3.6rem !important;
+      min-height: 3.6rem !important;
+      max-height: 3.6rem !important;
+      margin: 0 0 1.25rem 0 !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      overflow: hidden !important;
+    }
+    .service-footer {
+      margin-top: auto !important;
+      padding-top: 1.15rem !important;
+      border-top: 1.5px solid var(--border-color) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0.85rem !important;
+    }
+    .service-yield-row {
+      height: 44px !important;
+      min-height: 44px !important;
+      max-height: 44px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 0.4rem 0.75rem !important;
+      background: var(--bg-surface-alt) !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: 10px !important;
+      box-sizing: border-box !important;
+    }
+    .service-yield-label {
+      font-size: 0.75rem !important;
+      color: var(--text-muted) !important;
+      font-weight: 700 !important;
+      white-space: nowrap !important;
+    }
+    .service-yield-value {
+      font-size: 0.82rem !important;
+      color: var(--color-accent) !important;
+      font-weight: 800 !important;
+      white-space: nowrap !important;
+    }
+    .service-action-link {
+      height: 42px !important;
+      min-height: 42px !important;
+      max-height: 42px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 0 1rem !important;
+      background: rgba(197, 160, 89, 0.08) !important;
+      border: 1px solid rgba(197, 160, 89, 0.3) !important;
+      border-radius: 10px !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      color: var(--color-accent) !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      transition: all 0.25s ease !important;
+    }
+    .service-action-link:hover {
+      background: var(--color-accent) !important;
+      color: #0A192F !important;
+      border-color: var(--color-accent) !important;
+      box-shadow: 0 4px 15px rgba(197, 160, 89, 0.35) !important;
+    }
+    @media (max-width: 1100px) and (min-width: 769px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+      }
+      .service-title {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+      }
+      .service-desc {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+      }
+    }
+  </style>
+</head>
 <body>
 
   <!-- PAGE PRELOADER -->
@@ -180,30 +334,32 @@
          SECTION 1: PAGE HERO & STRATEGIC OVERVIEW
          ========================================================================== -->
     <section class="page-hero" aria-label="Services Overview">
-      <div class="container reveal-fade-up">
-        <nav class="page-hero-breadcrumbs" aria-label="Breadcrumb">
-          <a href="index.html">Home</a>
-          <span class="breadcrumb-separator">/</span>
-          <span class="breadcrumb-current">Services</span>
-        </nav>
+      <div class="container">
+        <div class="page-hero-content reveal-fade-up">
+          <nav class="page-hero-breadcrumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current">Services</span>
+          </nav>
 
-        <h1 class="page-hero-title">Comprehensive Debt Resolution &amp; Capital Recovery</h1>
-        <p class="page-hero-desc">
-          Ethical mediation, regulatory-first compliance, and high-velocity asset liquidation across commercial enterprise, healthcare systems, and consumer portfolios.
-        </p>
+          <h1 class="page-hero-title">Comprehensive Debt Resolution &amp; Capital Recovery</h1>
+          <p class="page-hero-desc">
+            Ethical mediation, regulatory-first compliance, and high-velocity asset liquidation across commercial enterprise, healthcare systems, and consumer portfolios.
+          </p>
 
-        <div class="page-hero-badges">
-          <div class="page-hero-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            <span>SOC 2 Type II Certified</span>
-          </div>
-          <div class="page-hero-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-            <span>CFPB 7X7 Rule Compliant</span>
-          </div>
-          <div class="page-hero-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>100% Contingency-Based</span>
+          <div class="page-hero-badges">
+            <div class="page-hero-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>SOC 2 Type II Certified</span>
+            </div>
+            <div class="page-hero-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              <span>CFPB 7X7 Rule Compliant</span>
+            </div>
+            <div class="page-hero-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>100% Contingency-Based</span>
+            </div>
           </div>
         </div>
       </div>
@@ -225,112 +381,101 @@
         <div class="services-grid">
           <!-- Pillar 1: Commercial B2B -->
           <div class="service-card reveal-fade-up delay-100">
-            <div class="service-badge">Enterprise B2B</div>
-            <div class="service-icon-box">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path><line x1="12" y1="11" x2="12" y2="17"></line><line x1="9" y1="14" x2="15" y2="14"></line></svg>
+            <div class="service-card-thumb">
+              <img src="assets/images/sections/service-b2b-corporate.jpg" alt="Commercial B2B Debt Recovery" loading="lazy" width="400" height="250">
+              <div class="service-badge">Enterprise B2B</div>
             </div>
-            <span class="statute-pill">UCC § 9-601 &bull; Corporate Trade Credit</span>
-            <h3 class="service-title">Commercial B2B &amp; Vendor Resolution</h3>
-            <p class="service-desc">
-              High-balance corporate collections with executive-level mediation, multi-source asset discovery, and corporate contract dispute settlements.
-            </p>
-            <div class="service-footer">
-              <div class="service-yield-row">
-                <span class="service-yield-label">Benchmark Recovery Yield:</span>
-                <span class="service-yield-value">76.4% Historical Net</span>
+            <div class="service-card-body">
+              <div class="statute-pill-wrap">
+                <span class="statute-pill">UCC § 9-601 &bull; Trade Credit</span>
               </div>
-              <ul class="service-features">
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Corporate Asset &amp; Bank Discovery</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>UCC Lien &amp; Insolvency Priority Screening</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Preservation of Commercial Partnerships</span>
-                </li>
-              </ul>
-              <a href="#commercialDeepDive" class="service-action-link">
-                <span>Explore B2B Solutions</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
+              <h3 class="service-title">Commercial B2B Resolution</h3>
+              <p class="service-desc">Executive mediation and forensic corporate asset recovery for enterprise balances.</p>
+              <div class="service-footer">
+                <div class="service-yield-row">
+                  <span class="service-yield-label">Historical Net:</span>
+                  <span class="service-yield-value">76.4% Yield</span>
+                </div>
+                <a href="#commercialDeepDive" class="service-action-link">
+                  <span>Explore B2B Solutions</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
             </div>
           </div>
 
           <!-- Pillar 2: Consumer & Healthcare -->
           <div class="service-card reveal-fade-up delay-200">
-            <div class="service-badge">Healthcare &amp; Consumer</div>
-            <div class="service-icon-box">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <div class="service-card-thumb">
+              <img src="assets/images/sections/service-healthcare-patient.jpg" alt="Healthcare and Medical Debt Resolution" loading="lazy" width="400" height="250">
+              <div class="service-badge">Healthcare &amp; Consumer</div>
             </div>
-            <span class="statute-pill">CFPB Reg F &bull; HIPAA/HITECH Security</span>
-            <h3 class="service-title">Ethical Consumer &amp; Medical Debt</h3>
-            <p class="service-desc">
-              Compassionate, dignified repayment structuring ensuring complete CFPB compliance, HIPAA patient data safeguards, and brand reputation defense.
-            </p>
-            <div class="service-footer">
-              <div class="service-yield-row">
-                <span class="service-yield-label">Voluntary Settlement Rate:</span>
-                <span class="service-yield-value">88.4% Compliance</span>
+            <div class="service-card-body">
+              <div class="statute-pill-wrap">
+                <span class="statute-pill">CFPB Reg F &bull; HIPAA Secured</span>
               </div>
-              <ul class="service-features">
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Income-Matched Installment Plans</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>HIPAA &amp; FDCPA Audited Outreach</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Digital Self-Service Settlement Portals</span>
-                </li>
-              </ul>
-              <a href="#consumerDeepDive" class="service-action-link">
-                <span>Explore Consumer Care</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
+              <h3 class="service-title">Ethical Consumer &amp; Medical</h3>
+              <p class="service-desc">Compassionate, HIPAA-compliant patient balance restructuring protecting goodwill.</p>
+              <div class="service-footer">
+                <div class="service-yield-row">
+                  <span class="service-yield-label">Voluntary Settlement:</span>
+                  <span class="service-yield-value">88.4% Rate</span>
+                </div>
+                <a href="#consumerDeepDive" class="service-action-link">
+                  <span>Explore Consumer Care</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
             </div>
           </div>
 
-          <!-- Pillar 3: Legal Forwarding -->
+          <!-- Pillar 3: FinTech & Revolving Portfolios -->
           <div class="service-card reveal-fade-up delay-300">
-            <div class="service-badge">Legal &amp; Judgment</div>
-            <div class="service-icon-box">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <div class="service-card-thumb">
+              <img src="assets/images/sections/service-fintech-banking.jpg" alt="FinTech and Banking Portfolio Resolution" loading="lazy" width="400" height="250">
+              <div class="service-badge">FinTech &amp; Banking</div>
             </div>
-            <span class="statute-pill">28 U.S.C. § 1961 &bull; 50-State Bar</span>
-            <h3 class="service-title">Legal Forwarding &amp; Arbitration</h3>
-            <p class="service-desc">
-              Structured pre-litigation viability analysis and legal forwarding through our vetted 50-state creditor attorney network for uncooperative accounts.
-            </p>
-            <div class="service-footer">
-              <div class="service-yield-row">
-                <span class="service-yield-label">Litigation Success Rate:</span>
-                <span class="service-yield-value">91.2% Favorable Decrees</span>
+            <div class="service-card-body">
+              <div class="statute-pill-wrap">
+                <span class="statute-pill">GLBA &bull; Automated Scoring</span>
               </div>
-              <ul class="service-features">
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Cost-Benefit Litigation Suitability Audits</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>50-State Creditors' Bar Network</span>
-                </li>
-                <li>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Post-Judgment Asset Attachment</span>
-                </li>
-              </ul>
-              <a href="#legalDeepDive" class="service-action-link">
-                <span>Explore Legal Options</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
+              <h3 class="service-title">FinTech &amp; Banking Portfolios</h3>
+              <p class="service-desc">Algorithmic debt analytics and automated self-service recovery for loan accounts.</p>
+              <div class="service-footer">
+                <div class="service-yield-row">
+                  <span class="service-yield-label">Digital Resolution:</span>
+                  <span class="service-yield-value">62.8% Gain</span>
+                </div>
+                <a href="#commercialDeepDive" class="service-action-link">
+                  <span>Explore Banking Care</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Legal Forwarding -->
+          <div class="service-card reveal-fade-up delay-400">
+            <div class="service-card-thumb">
+              <img src="assets/images/sections/service-legal-arbitration.jpg" alt="Legal Forwarding and Arbitration" loading="lazy" width="400" height="250">
+              <div class="service-badge">Legal &amp; Judgment</div>
+            </div>
+            <div class="service-card-body">
+              <div class="statute-pill-wrap">
+                <span class="statute-pill">28 U.S.C. § 1961 &bull; 50-State Bar</span>
+              </div>
+              <h3 class="service-title">Legal Forwarding &amp; Arbitration</h3>
+              <p class="service-desc">Pre-litigation suitability audits and legal forwarding via 50-state attorney network.</p>
+              <div class="service-footer">
+                <div class="service-yield-row">
+                  <span class="service-yield-label">Favorable Decrees:</span>
+                  <span class="service-yield-value">91.2% Success</span>
+                </div>
+                <a href="#legalDeepDive" class="service-action-link">
+                  <span>Explore Legal Options</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -347,7 +492,7 @@
             <span class="section-tag section-tag-sapphire">B2B Capital Protection</span>
             <h2 class="section-title">Commercial Debt Recovery &amp; Corporate Asset Discovery</h2>
             <p class="section-desc">
-              When business debtors fail to pay invoices or default on commercial credit, aggressive consumer-style methods fail. Our licensed B2B mediators conduct forensic audits, engage C-suite officers, and establish realistic liquidation schedules.
+              Forensic audits, C-suite officer engagement, and realistic liquidation schedules for delinquent business receivables.
             </p>
 
             <div class="feature-check-list">
@@ -357,7 +502,7 @@
                 </div>
                 <div class="feature-check-text">
                   <strong>Forensic Corporate Asset Mapping</strong>
-                  <p>Comprehensive corporate registry searches, UCC lien priority reviews, and commercial bank intelligence before initiating contact.</p>
+                  <p>Comprehensive corporate registry and bank intelligence searches prior to contact.</p>
                 </div>
               </div>
 
@@ -366,8 +511,8 @@
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
                 <div class="feature-check-text">
-                  <strong>Executive-Level Negotiation</strong>
-                  <p>Our senior negotiators communicate directly with CFOs, controllers, and corporate legal counsel rather than clerks.</p>
+                  <strong>Executive-Level Direct Negotiation</strong>
+                  <p>Direct discussions with CFOs, controllers, and legal counsel rather than clerks.</p>
                 </div>
               </div>
 
@@ -376,8 +521,8 @@
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
                 <div class="feature-check-text">
-                  <strong>Structured Promissory &amp; Security Agreements</strong>
-                  <p>Securing unresolved balances with confessions of judgment, personal guarantees, or collateral liens when appropriate.</p>
+                  <strong>Structured Security Agreements</strong>
+                  <p>Securing unresolved balances with confessions of judgment or collateral liens.</p>
                 </div>
               </div>
             </div>
@@ -438,7 +583,7 @@
             <span class="section-tag section-tag-gold">Ethical Consumer Care</span>
             <h2 class="section-title">Compassionate Consumer &amp; Medical Debt Resolution</h2>
             <p class="section-desc">
-              Your patients and customers deserve dignity. Aegis operates with empathy and absolute compliance, resolving past-due consumer obligations while upholding your institutional goodwill.
+              Dignified, empathetic recovery workflows resolving past-due balances while preserving consumer trust.
             </p>
 
             <div class="feature-check-list">
@@ -448,7 +593,7 @@
                 </div>
                 <div class="feature-check-text">
                   <strong>HIPAA &amp; HITECH Compliant Workflows</strong>
-                  <p>End-to-end encrypted electronic Protected Health Information (ePHI) processing with strict minimum-necessary disclosures.</p>
+                  <p>End-to-end encrypted ePHI processing with strict minimum-necessary disclosures.</p>
                 </div>
               </div>
 
@@ -458,7 +603,7 @@
                 </div>
                 <div class="feature-check-text">
                   <strong>Proprietary Financial Hardship Protocols</strong>
-                  <p>Objective income-ratio analysis that generates realistic, non-predatory structured repayment plans without harassment.</p>
+                  <p>Income-ratio analysis generating realistic structured repayment plans without harassment.</p>
                 </div>
               </div>
 
@@ -467,8 +612,8 @@
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
                 <div class="feature-check-text">
-                  <strong>FDCPA Rule 7X7 Contact Integrity</strong>
-                  <p>Automated frequency controls strictly enforce no more than 7 calls in 7 days per account, preventing consumer harassment claims.</p>
+                  <strong>FDCPA Rule 7X7 Contact Controls</strong>
+                  <p>Strict automated limit of no more than 7 calls in 7 days per account.</p>
                 </div>
               </div>
             </div>
@@ -502,7 +647,7 @@
             <span class="section-tag section-tag-sapphire">Legal Governance</span>
             <h2 class="section-title">50-State Legal Forwarding &amp; Judgment Enforcement</h2>
             <p class="section-desc">
-              When voluntary settlement channels are exhausted and solvent debtors refuse engagement, Aegis provides transparent litigation forwarding through a vetted network of licensed collection attorneys.
+              Transparent litigation forwarding and post-judgment recovery through our licensed 50-state collection attorney network.
             </p>
 
             <div class="feature-check-list">
@@ -512,7 +657,7 @@
                 </div>
                 <div class="feature-check-text">
                   <strong>Pre-Suit Asset Viability Scoring</strong>
-                  <p>We evaluate real estate ownership, liquid accounts, and active employment before recommending legal action to ensure ROI.</p>
+                  <p>Evaluating real estate, liquid accounts, and employment to verify legal ROI.</p>
                 </div>
               </div>
 
@@ -521,8 +666,8 @@
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
                 <div class="feature-check-text">
-                  <strong>Creditor-Retained Authorization Control</strong>
-                  <p>No legal proceedings or lawsuits are ever filed without explicit, written client approval on a per-case basis.</p>
+                  <strong>Client-Retained Authorization Control</strong>
+                  <p>No lawsuit or proceeding is ever filed without explicit written client approval.</p>
                 </div>
               </div>
 
@@ -531,8 +676,8 @@
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
                 <div class="feature-check-text">
-                  <strong>Post-Judgment Execution</strong>
-                  <p>Wage garnishment, bank levies, judgment liens, and asset seizure execution managed strictly within state jurisdictional rules.</p>
+                  <strong>Post-Judgment Execution &amp; Recovery</strong>
+                  <p>Wage garnishment, bank levies, and judgment liens enforced across jurisdictions.</p>
                 </div>
               </div>
             </div>

@@ -242,6 +242,15 @@
   }
 
   /* Home 1 Section 5 & 6 Tablet */
+  .compliance-horizontal-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .compliance-h-card {
+    min-height: auto;
+  }
+
   .home-compliance-bento {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -470,6 +479,27 @@
 
   .compliance-visual-frame img {
     height: 300px;
+  }
+
+  .compliance-horizontal-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .compliance-h-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .compliance-h-thumb {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    height: 190px;
+  }
+
+  .compliance-h-content {
+    padding: 1.25rem 1.25rem 1rem;
   }
 
   .home-compliance-bento {

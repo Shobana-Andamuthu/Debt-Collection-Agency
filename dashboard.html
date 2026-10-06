@@ -107,63 +107,8 @@
           <line x1="21" y1="12" x2="9" y2="12"></line>
         </svg>
       </a>
-
-      <!-- Hamburger Button (Mobile) -->
-      <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" onclick="toggleMobileMenu(event)">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
     </div>
   </header>
-
-  <!-- MOBILE DRAWER NAVIGATION -->
-  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
-  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Drawer">
-    <div class="mobile-drawer-header">
-      <a href="index.html" class="nav-brand">
-        <div class="brand-emblem" style="width: 38px; height: 38px;">
-          <img src="assets/images/icons/logo.svg" alt="Aegis Logo" width="24" height="24">
-        </div>
-        <div class="brand-text">
-          <span class="brand-title" style="font-size: 1.1rem;">AEGIS <span class="gold-accent">PORTAL</span></span>
-        </div>
-      </a>
-      <button type="button" class="icon-btn" id="drawerCloseBtn" aria-label="Close navigation menu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-
-    <ul class="mobile-nav-list">
-      <li class="mobile-nav-item has-dropdown">
-        <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
-          <span>Home</span>
-          <span class="dropdown-arrow">▼</span>
-        </a>
-        <div class="mobile-submenu">
-          <a href="index.html" class="mobile-submenu-link">Home 1 — Ethical Recovery</a>
-          <a href="home-2.html" class="mobile-submenu-link">Home 2 — Compliance &amp; Intelligence</a>
-        </div>
-      </li>
-      <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
-      <li class="mobile-nav-item"><a href="compliance.html" class="mobile-nav-link">Compliance &amp; Licensing</a></li>
-      <li class="mobile-nav-item"><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
-      <li class="mobile-nav-item"><a href="recovery-process.html" class="mobile-nav-link">Recovery Process</a></li>
-      <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
-      <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-      <li class="mobile-nav-item"><a href="dashboard.html" class="mobile-nav-link active">Dashboard</a></li>
-    </ul>
-
-    <div class="mobile-drawer-footer">
-      <a href="login.html" class="btn btn-gold btn-sm" style="width: 100%;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
-        <span>Portal Login</span>
-      </a>
-    </div>
-  </aside>
 
   <!-- ==========================================================================
        DASHBOARD LAYOUT (SIDEBAR + MAIN CONTENT — STRICTLY NO PUBLIC FOOTER)
@@ -319,36 +264,36 @@
               </thead>
               <tbody>
                 <tr style="border-bottom: 1px solid var(--border-color);">
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">#AE-9041</td>
-                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600;">Meridian Health Systems</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--color-accent);">$145,000</td>
-                  <td style="padding: 1rem;"><span style="background: var(--success-bg); color: var(--success); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700;">Escrow Settled</span></td>
-                  <td style="padding: 1rem; color: var(--text-muted);">Elena Rostova, Esq.</td>
-                  <td style="padding: 1rem;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Details</button></td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">#AE-9041</td>
+                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600; white-space: nowrap;">Meridian Health Systems</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--color-accent); white-space: nowrap;">$145,000</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><span style="display: inline-block; white-space: nowrap; background: var(--success-bg); color: var(--success); padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; line-height: 1.2;">Escrow Settled</span></td>
+                  <td style="padding: 1rem; color: var(--text-muted); white-space: nowrap;">Elena Rostova, Esq.</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Details</button></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color);">
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">#AE-8932</td>
-                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600;">Pinnacle Logistics Corp</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--color-accent);">$84,500</td>
-                  <td style="padding: 1rem;"><span style="background: var(--info-bg); color: var(--info); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700;">Structured Plan</span></td>
-                  <td style="padding: 1rem; color: var(--text-muted);">Marcus Vance, JD</td>
-                  <td style="padding: 1rem;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Details</button></td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">#AE-8932</td>
+                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600; white-space: nowrap;">Pinnacle Logistics Corp</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--color-accent); white-space: nowrap;">$84,500</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><span style="display: inline-block; white-space: nowrap; background: var(--info-bg); color: var(--info); padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; line-height: 1.2;">Structured Plan</span></td>
+                  <td style="padding: 1rem; color: var(--text-muted); white-space: nowrap;">Marcus Vance, JD</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Details</button></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color);">
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">#AE-8819</td>
-                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600;">Apex Global Tech</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--color-accent);">$230,000</td>
-                  <td style="padding: 1rem;"><span style="background: var(--warning-bg); color: var(--warning); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700;">Legal Demand Sent</span></td>
-                  <td style="padding: 1rem; color: var(--text-muted);">Elena Rostova, Esq.</td>
-                  <td style="padding: 1rem;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Details</button></td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">#AE-8819</td>
+                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600; white-space: nowrap;">Apex Global Tech</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--color-accent); white-space: nowrap;">$230,000</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><span style="display: inline-block; white-space: nowrap; background: var(--warning-bg); color: var(--warning); padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; line-height: 1.2;">Legal Demand Sent</span></td>
+                  <td style="padding: 1rem; color: var(--text-muted); white-space: nowrap;">Elena Rostova, Esq.</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Details</button></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color);">
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">#AE-8704</td>
-                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600;">Vanguard BioMed Inc</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--color-accent);">$62,000</td>
-                  <td style="padding: 1rem;"><span style="background: var(--success-bg); color: var(--success); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700;">ACH Remitted</span></td>
-                  <td style="padding: 1rem; color: var(--text-muted);">Sarah Jenkins, VP</td>
-                  <td style="padding: 1rem;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Details</button></td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">#AE-8704</td>
+                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600; white-space: nowrap;">Vanguard BioMed Inc</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--color-accent); white-space: nowrap;">$62,000</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><span style="display: inline-block; white-space: nowrap; background: var(--success-bg); color: var(--success); padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; line-height: 1.2;">ACH Remitted</span></td>
+                  <td style="padding: 1rem; color: var(--text-muted); white-space: nowrap;">Sarah Jenkins, VP</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Details</button></td>
                 </tr>
               </tbody>
             </table>
@@ -366,12 +311,12 @@
           <form onsubmit="event.preventDefault(); alert('Placement successfully ingested into Sovereign Vault! Initial data scrub initiated.');">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 1.25rem;">
               <div>
-                <label style="display: block; font-weight: 700; font-size: 0.85rem; color: var(--text-main); margin-bottom: 0.4rem;">Debtor / Company Name *</label>
-                <input type="text" placeholder="e.g. Meridian Health Systems Corp" required style="width: 100%; padding: 0.8rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-strong); background: var(--bg-body); color: var(--text-main);">
+                <label class="form-label" for="dashDebtorName">Debtor / Company Name *</label>
+                <input type="text" id="dashDebtorName" class="form-input" placeholder="e.g. Meridian Health Systems Corp" required>
               </div>
               <div>
-                <label style="display: block; font-weight: 700; font-size: 0.85rem; color: var(--text-main); margin-bottom: 0.4rem;">Debt Category *</label>
-                <select style="width: 100%; padding: 0.8rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-strong); background: var(--bg-body); color: var(--text-main);">
+                <label class="form-label" for="dashDebtCat">Debt Category *</label>
+                <select id="dashDebtCat" class="form-select">
                   <option>Commercial B2B Portfolio</option>
                   <option>Healthcare &amp; Medical Claims</option>
                   <option>Financial Services &amp; Credit</option>
@@ -379,12 +324,12 @@
                 </select>
               </div>
               <div>
-                <label style="display: block; font-weight: 700; font-size: 0.85rem; color: var(--text-main); margin-bottom: 0.4rem;">Outstanding Face Value ($) *</label>
-                <input type="text" placeholder="e.g. $125,000" required style="width: 100%; padding: 0.8rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-strong); background: var(--bg-body); color: var(--text-main);">
+                <label class="form-label" for="dashFaceValue">Outstanding Face Value ($) *</label>
+                <input type="text" id="dashFaceValue" class="form-input" placeholder="e.g. $125,000" required>
               </div>
               <div>
-                <label style="display: block; font-weight: 700; font-size: 0.85rem; color: var(--text-main); margin-bottom: 0.4rem;">Days Past Due *</label>
-                <select style="width: 100%; padding: 0.8rem 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-strong); background: var(--bg-body); color: var(--text-main);">
+                <label class="form-label" for="dashDaysPast">Days Past Due *</label>
+                <select id="dashDaysPast" class="form-select">
                   <option>30 – 60 Days</option>
                   <option>61 – 90 Days</option>
                   <option selected>91 – 180 Days</option>
@@ -424,82 +369,82 @@
             </div>
           </div>
 
-          <div style="overflow-x: auto;">
-            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+          <div style="overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <table style="width: 100%; min-width: 720px; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
               <thead>
-                <tr style="border-bottom: 2px solid var(--border-color); color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                  <th style="padding: 0.75rem 1rem;">Case ID</th>
-                  <th style="padding: 0.75rem 1rem;">Debtor Company</th>
-                  <th style="padding: 0.75rem 1rem;">Face Value</th>
-                  <th style="padding: 0.75rem 1rem;">Recovered</th>
-                  <th style="padding: 0.75rem 1rem;">Status</th>
-                  <th style="padding: 0.75rem 1rem;">Assigned Counsel</th>
-                  <th style="padding: 0.75rem 1rem;">Action</th>
+                <tr style="border-bottom: 2px solid var(--border-color); color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; background: var(--bg-surface-alt);">
+                  <th style="padding: 0.85rem 1rem;">Case ID</th>
+                  <th style="padding: 0.85rem 1rem;">Debtor Company</th>
+                  <th style="padding: 0.85rem 1rem;">Face Value</th>
+                  <th style="padding: 0.85rem 1rem;">Recovered</th>
+                  <th style="padding: 0.85rem 1rem;">Status</th>
+                  <th style="padding: 0.85rem 1rem;">Assigned Counsel</th>
+                  <th style="padding: 0.85rem 1rem;">Action</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style="border-bottom: 1px solid var(--border-color);">
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">#AE-9041</td>
-                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600;">Meridian Health Systems</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">$145,000</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--success);">$145,000</td>
-                  <td style="padding: 1rem;"><span style="background: var(--success-bg); color: var(--success); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700;">Escrow Settled</span></td>
-                  <td style="padding: 1rem; color: var(--text-muted);">Elena Rostova, Esq.</td>
-                  <td style="padding: 1rem;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">View File</button></td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">#AE-9041</td>
+                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600; white-space: nowrap;">Meridian Health Systems</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">$145,000</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--success); white-space: nowrap;">$145,000</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><span style="display: inline-block; white-space: nowrap; background: var(--success-bg); color: var(--success); padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; line-height: 1.2;">Escrow Settled</span></td>
+                  <td style="padding: 1rem; color: var(--text-muted); white-space: nowrap;">Elena Rostova, Esq.</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">View File</button></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color);">
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">#AE-8932</td>
-                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600;">Pinnacle Logistics Corp</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">$84,500</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--color-accent);">$42,250</td>
-                  <td style="padding: 1rem;"><span style="background: var(--info-bg); color: var(--info); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700;">Structured Plan</span></td>
-                  <td style="padding: 1rem; color: var(--text-muted);">Marcus Vance, JD</td>
-                  <td style="padding: 1rem;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Manage</button></td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">#AE-8932</td>
+                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600; white-space: nowrap;">Pinnacle Logistics Corp</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">$84,500</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--color-accent); white-space: nowrap;">$42,250</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><span style="display: inline-block; white-space: nowrap; background: var(--info-bg); color: var(--info); padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; line-height: 1.2;">Structured Plan</span></td>
+                  <td style="padding: 1rem; color: var(--text-muted); white-space: nowrap;">Marcus Vance, JD</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Manage</button></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color);">
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">#AE-8819</td>
-                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600;">Apex Global Tech</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">$230,000</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-muted);">$0</td>
-                  <td style="padding: 1rem;"><span style="background: var(--warning-bg); color: var(--warning); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700;">Legal Demand Sent</span></td>
-                  <td style="padding: 1rem; color: var(--text-muted);">Elena Rostova, Esq.</td>
-                  <td style="padding: 1rem;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">View File</button></td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">#AE-8819</td>
+                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600; white-space: nowrap;">Apex Global Tech</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">$230,000</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-muted); white-space: nowrap;">$0</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><span style="display: inline-block; white-space: nowrap; background: var(--warning-bg); color: var(--warning); padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; line-height: 1.2;">Legal Demand Sent</span></td>
+                  <td style="padding: 1rem; color: var(--text-muted); white-space: nowrap;">Elena Rostova, Esq.</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">View File</button></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color);">
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">#AE-8704</td>
-                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600;">Vanguard BioMed Inc</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">$62,000</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--success);">$62,000</td>
-                  <td style="padding: 1rem;"><span style="background: var(--success-bg); color: var(--success); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700;">ACH Remitted</span></td>
-                  <td style="padding: 1rem; color: var(--text-muted);">Sarah Jenkins, VP</td>
-                  <td style="padding: 1rem;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Receipt PDF</button></td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">#AE-8704</td>
+                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600; white-space: nowrap;">Vanguard BioMed Inc</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">$62,000</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--success); white-space: nowrap;">$62,000</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><span style="display: inline-block; white-space: nowrap; background: var(--success-bg); color: var(--success); padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; line-height: 1.2;">ACH Remitted</span></td>
+                  <td style="padding: 1rem; color: var(--text-muted); white-space: nowrap;">Sarah Jenkins, VP</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Receipt PDF</button></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color);">
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">#AE-8611</td>
-                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600;">Titan Heavy Equipment</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">$118,400</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--color-accent);">$35,000</td>
-                  <td style="padding: 1rem;"><span style="background: rgba(147, 51, 234, 0.12); color: #9333EA; padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700;">Active Litigation</span></td>
-                  <td style="padding: 1rem; color: var(--text-muted);">Elena Rostova, Esq.</td>
-                  <td style="padding: 1rem;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Docket</button></td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">#AE-8611</td>
+                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600; white-space: nowrap;">Titan Heavy Equipment</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">$118,400</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--color-accent); white-space: nowrap;">$35,000</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><span style="display: inline-block; white-space: nowrap; background: rgba(147, 51, 234, 0.12); color: #9333EA; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; line-height: 1.2;">Active Litigation</span></td>
+                  <td style="padding: 1rem; color: var(--text-muted); white-space: nowrap;">Elena Rostova, Esq.</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">Docket</button></td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color);">
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">#AE-8540</td>
-                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600;">Summit Financial Holdings</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main);">$95,000</td>
-                  <td style="padding: 1rem; font-weight: 700; color: var(--text-muted);">$0</td>
-                  <td style="padding: 1rem;"><span style="background: rgba(100, 116, 139, 0.12); color: var(--text-muted); padding: 0.25rem 0.65rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700;">Skip-Trace Scrub</span></td>
-                  <td style="padding: 1rem; color: var(--text-muted);">Marcus Vance, JD</td>
-                  <td style="padding: 1rem;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">View File</button></td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">#AE-8540</td>
+                  <td style="padding: 1rem; color: var(--text-main); font-weight: 600; white-space: nowrap;">Summit Financial Holdings</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-main); white-space: nowrap;">$95,000</td>
+                  <td style="padding: 1rem; font-weight: 700; color: var(--text-muted); white-space: nowrap;">$0</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><span style="display: inline-block; white-space: nowrap; background: rgba(100, 116, 139, 0.12); color: var(--text-muted); padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; line-height: 1.2;">Skip-Trace Scrub</span></td>
+                  <td style="padding: 1rem; color: var(--text-muted); white-space: nowrap;">Marcus Vance, JD</td>
+                  <td style="padding: 1rem; white-space: nowrap;"><button type="button" class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.78rem;">View File</button></td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; font-size: 0.85rem; color: var(--text-muted);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-muted); flex-wrap: wrap; gap: 1rem;">
             <div>Showing 1 - 6 of 24 placement cases</div>
-            <div style="display: flex; gap: 0.5rem;">
-              <button type="button" class="btn btn-outline btn-sm" disabled>Previous</button>
-              <button type="button" class="btn btn-gold btn-sm">Next Page &rarr;</button>
+            <div style="display: flex; gap: 0.75rem; align-items: center; flex-shrink: 0;">
+              <button type="button" class="btn btn-outline btn-sm" disabled style="min-width: 80px; opacity: 0.6; cursor: not-allowed; white-space: nowrap;">Previous</button>
+              <button type="button" class="btn btn-gold btn-sm" style="min-width: 105px; white-space: nowrap;">Next Page &rarr;</button>
             </div>
           </div>
         </div>

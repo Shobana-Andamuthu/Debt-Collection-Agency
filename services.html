@@ -841,14 +841,14 @@
               </div>
             </div>
 
-            <div style="background: rgba(17, 34, 64, 0.85); border: 1px solid rgba(197, 160, 89, 0.35); border-radius: var(--radius-xl); padding: 2.25rem; backdrop-filter: blur(8px);">
+            <div class="intake-inquiry-card" style="background: rgba(17, 34, 64, 0.9); border: 1px solid rgba(197, 160, 89, 0.4); border-radius: var(--radius-xl); padding: clamp(1.5rem, 3vw, 2.25rem); backdrop-filter: blur(8px); box-shadow: var(--shadow-xl);">
               <h3 style="font-size: 1.25rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.5rem;">Quick Portfolio Inquiry</h3>
               <p style="font-size: 0.875rem; color: #8892B0; margin-bottom: 1.5rem;">Speak directly with a Senior Practice Director.</p>
 
-              <form action="contact.html" method="GET" style="display: flex; flex-direction: column; gap: 1rem;">
-                <div>
-                  <label for="portfolioType" style="display: block; font-size: 0.8125rem; font-weight: 600; color: #CCD6F6; margin-bottom: 0.35rem;">Portfolio Category</label>
-                  <select id="portfolioType" class="form-control" style="background: #0A192F; border-color: rgba(197, 160, 89, 0.3); color: #FFFFFF;">
+              <form action="contact.html" method="GET" style="display: flex; flex-direction: column; gap: 1.15rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="portfolioType" class="form-label" style="display: block; font-size: 0.8125rem; font-weight: 600; color: #CCD6F6; margin-bottom: 0.4rem;">Portfolio Category</label>
+                  <select id="portfolioType" class="form-select" style="background: #0A192F; border-color: rgba(197, 160, 89, 0.35); color: #FFFFFF;">
                     <option value="commercial">Commercial B2B Receivables</option>
                     <option value="healthcare">Healthcare &amp; Hospital Systems</option>
                     <option value="consumer">Consumer Banking &amp; Credit</option>
@@ -856,9 +856,9 @@
                   </select>
                 </div>
 
-                <div>
-                  <label for="estAmount" style="display: block; font-size: 0.8125rem; font-weight: 600; color: #CCD6F6; margin-bottom: 0.35rem;">Estimated Balance Total</label>
-                  <select id="estAmount" class="form-control" style="background: #0A192F; border-color: rgba(197, 160, 89, 0.3); color: #FFFFFF;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="estAmount" class="form-label" style="display: block; font-size: 0.8125rem; font-weight: 600; color: #CCD6F6; margin-bottom: 0.4rem;">Estimated Balance Total</label>
+                  <select id="estAmount" class="form-select" style="background: #0A192F; border-color: rgba(197, 160, 89, 0.35); color: #FFFFFF;">
                     <option value="under50k">$25,000 – $100,000</option>
                     <option value="100k-500k" selected>$100,000 – $500,000</option>
                     <option value="500k-2m">$500,000 – $2,000,000</option>
@@ -866,9 +866,9 @@
                   </select>
                 </div>
 
-                <a href="contact.html" class="btn btn-gold" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+                <a href="contact.html" class="btn btn-gold" style="width: 100%; justify-content: center; margin-top: 0.5rem; padding: 0.9rem 1rem; font-size: clamp(0.875rem, 3.5vw, 1rem); line-height: 1.35; white-space: normal; text-align: center; display: inline-flex; align-items: center; gap: 0.65rem;">
                   <span>Begin Free Intake Review</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink: 0;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
               </form>
             </div>

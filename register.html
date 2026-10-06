@@ -61,16 +61,16 @@
 
         <form action="dashboard.html" method="get">
           <div style="margin-bottom: 1.35rem;">
-            <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main);" for="regCompany">Organization / Company Name</label>
-            <input type="text" id="regCompany" required placeholder="Acme Financial Corp" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main); font-size: 0.95rem;">
+            <label class="form-label" for="regCompany">Organization / Company Name</label>
+            <input type="text" id="regCompany" class="form-input" required placeholder="Acme Financial Corp">
           </div>
           <div style="margin-bottom: 1.35rem;">
-            <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main);" for="regEmail">Corporate Work Email</label>
-            <input type="email" id="regEmail" required placeholder="finance@company.com" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main); font-size: 0.95rem;">
+            <label class="form-label" for="regEmail">Corporate Work Email</label>
+            <input type="email" id="regEmail" class="form-input" required placeholder="finance@company.com">
           </div>
           <div style="margin-bottom: 1.75rem;">
-            <label style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main);" for="regVolume">Estimated Portfolio Placement</label>
-            <select id="regVolume" style="width: 100%; padding: 0.85rem 1.15rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main); font-size: 0.95rem;">
+            <label class="form-label" for="regVolume">Estimated Portfolio Placement</label>
+            <select id="regVolume" class="form-select">
               <option value="50k">$50,000 – $250,000</option>
               <option value="250k">$250,000 – $1,000,000</option>
               <option value="1m">$1,000,000+</option>

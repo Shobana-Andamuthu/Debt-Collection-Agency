@@ -1676,7 +1676,7 @@
   .wizard-steps-header {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
-    gap: 0.25rem !important;
+    gap: 0.35rem !important;
     flex-wrap: nowrap !important;
     justify-content: space-between !important;
     align-items: flex-start !important;
@@ -1689,25 +1689,28 @@
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
-    gap: 0.2rem !important;
+    gap: 0.25rem !important;
     width: 100% !important;
   }
 
   .wizard-step-node .step-num {
-    width: 28px !important;
-    height: 28px !important;
-    font-size: 0.7rem !important;
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 0.72rem !important;
     margin: 0 auto !important;
     flex-shrink: 0 !important;
   }
 
   .wizard-step-node .step-title {
-    font-size: 0.58rem !important;
-    line-height: 1.15 !important;
+    font-size: 0.65rem !important;
+    line-height: 1.2 !important;
     text-align: center !important;
     max-width: 100% !important;
     white-space: normal !important;
-    word-break: break-word !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+    letter-spacing: 0.01em !important;
   }
 
   .wizard-step-line {
@@ -1904,17 +1907,29 @@ html, body {
   .hero-live-sla-badge,
   .sla-badge,
   .top-notice-bar {
-    font-size: 0.68rem !important;
-    padding: 0.35rem 0.65rem !important;
-    letter-spacing: 0.02em !important;
+    font-size: 0.72rem !important;
+    padding: 0.4rem 0.85rem !important;
+    letter-spacing: 0.03em !important;
     white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
     max-width: 100% !important;
     text-align: center !important;
     line-height: 1.35 !important;
-    display: inline-block !important;
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.4rem !important;
     box-sizing: border-box !important;
+    border-radius: var(--radius-full, 9999px) !important;
+  }
+
+  .section-tag svg,
+  .section-badge svg,
+  .hero-live-sla-badge svg {
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    display: inline-block !important;
   }
 }
 
@@ -2551,11 +2566,27 @@ body.auth-page-body {
     box-sizing: border-box !important;
   }
 
-  /* 2. Stepper Timeline 5-Column Grid */
-  .stepper-nodes-grid {
-    grid-template-columns: repeat(5, 1fr) !important;
-    gap: 0.2rem !important;
+  /* 2. Stepper Timeline Horizontal Scrollable Flow (Prevents Node Squishing) */
+  .timeline-stepper-wrapper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 1.25rem 0.5rem 1rem !important;
     width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .stepper-nodes-grid {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    min-width: 500px !important;
+    gap: 0.5rem !important;
+    width: auto !important;
+  }
+
+  .stepper-node {
+    flex-shrink: 0 !important;
+    width: 92px !important;
   }
 
   /* 3. Milestone Metric Pills */
@@ -2567,23 +2598,233 @@ body.auth-page-body {
     box-sizing: border-box !important;
   }
 
-  /* 4. Footer Single Column Layout & Email Text Wrapping */
-  .footer-top-grid,
-  .footer-top,
-  .footer-grid {
+  /* 5. Comprehensive Form & Dropdown Full Responsiveness */
+  .intake-cta-grid,
+  .intake-vault-grid,
+  .form-grid-2,
+  .form-grid-3,
+  .wizard-grid-2 {
     grid-template-columns: 1fr !important;
-    gap: 2rem !important;
+    gap: 1.25rem !important;
   }
 
-  .footer-contact-info p,
-  .footer-contact-item span {
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
+  .intake-cta-card,
+  .intake-form-box,
+  .intake-inquiry-card,
+  .cta-form,
+  .auth-right-body,
+  .wizard-card-step {
+    padding: 1.5rem 1.15rem !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-input,
+  .form-control,
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  textarea {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
+    min-height: 48px !important;
+    padding: 0.75rem 0.95rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-select,
+  select {
+    font-size: 16px !important;
+    min-height: 48px !important;
+    padding: 0.75rem 0.95rem !important;
+    padding-right: 2.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .custom-select-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .custom-select-trigger {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    font-size: 16px !important;
+    min-height: 48px !important;
+    padding: 0.75rem 0.95rem !important;
+  }
+
+  .custom-select-dropdown {
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .wizard-actions-bar {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+
+  .wizard-actions-bar .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Compliance CTA Card & Buttons */
+  .compliance-cta-card {
+    padding: 2.25rem 1.25rem !important;
+    border-radius: 18px !important;
+  }
+
+  .compliance-cta-card .cta-card-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.85rem !important;
+  }
+
+  .compliance-cta-card .btn,
+  .btn-compliance-theme,
+  .btn-compliance-outline {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    padding: 0 1rem !important;
+    font-size: 0.95rem !important;
+    box-sizing: border-box !important;
+  }
+  /* 6. Dashboard Header & Table Full Responsiveness */
+  .dashboard-header .hamburger-btn,
+  #dashboardHeader .hamburger-btn {
+    display: none !important;
+  }
+
+  .dashboard-header .dashboard-actions {
+    gap: 0.5rem !important;
+  }
+
+  .dashboard-body .btn-back-site span {
+    display: none !important;
+  }
+
+  .dashboard-body .btn-back-site {
+    padding: 0.5rem !important;
+    min-width: 38px !important;
+    justify-content: center !important;
   }
 }
 
+@media (max-width: 1024px) {
+  .intake-cta-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.25rem !important;
+  }
 
+  .intake-cta-card {
+    padding: 2.25rem 1.75rem !important;
+  }
+}
 
+@media (max-width: 480px) {
+  .wizard-steps-header {
+    gap: 0.2rem !important;
+    padding: 0 !important;
+  }
+  .wizard-step-node .step-num {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 0.68rem !important;
+  }
+  .wizard-step-node .step-title {
+    font-size: 0.58rem !important;
+    line-height: 1.15 !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+  }
+}
 
+@media (max-width: 360px) {
+  .section-tag,
+  .section-badge,
+  .hero-live-sla-badge,
+  .sla-badge,
+  .top-notice-bar {
+    font-size: 0.65rem !important;
+    padding: 0.3rem 0.65rem !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .custom-select-trigger,
+  .form-input,
+  .form-control,
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  textarea {
+    font-size: 0.85rem !important;
+    padding: 0.65rem 0.75rem !important;
+    min-height: 42px !important;
+  }
+
+  .custom-select-option {
+    font-size: 0.82rem !important;
+    padding: 0.6rem 0.75rem !important;
+  }
+
+  .form-label,
+  label {
+    font-size: 0.8rem !important;
+    word-break: break-word !important;
+  }
+
+  .btn {
+    padding: 0.75rem 0.85rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+@media (max-width: 240px) {
+  .section-tag,
+  .section-badge,
+  .hero-live-sla-badge,
+  .sla-badge,
+  .top-notice-bar {
+    font-size: 0.58rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  .intake-cta-card,
+  .intake-form-box,
+  .intake-inquiry-card,
+  .cta-form,
+  .auth-right-body,
+  .wizard-card-step,
+  .intake-wizard-container {
+    padding: 0.85rem 0.5rem !important;
+  }
+
+  .custom-select-trigger,
+  .form-input,
+  .form-control {
+    font-size: 0.78rem !important;
+    padding: 0.5rem 0.6rem !important;
+    min-height: 38px !important;
+  }
+
+  .custom-select-option {
+    font-size: 0.75rem !important;
+    padding: 0.5rem 0.6rem !important;
+  }
+}
 
 

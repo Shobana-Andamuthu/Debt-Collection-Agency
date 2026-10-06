@@ -8568,11 +8568,79 @@ ul, ol {
 }
 
 /* --- Section 5: Escrow Remittance Timeline Showcase --- */
+.escrow-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.escrow-visual-frame {
+  margin: 0;
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  border: 1.5px solid var(--border-gold);
+  box-shadow: var(--shadow-2xl);
+  background-color: #0A192F;
+}
+
+.escrow-visual-frame img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+}
+
+.escrow-badge-overlay {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  background: rgba(10, 25, 47, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.escrow-badge-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.escrow-badge-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  letter-spacing: 0.03em;
+}
+
+.escrow-badge-status {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #10B981;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
 .escrow-cards-timeline {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
 }
 
 .escrow-step-item {

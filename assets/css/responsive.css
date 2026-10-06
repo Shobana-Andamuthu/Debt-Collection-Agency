@@ -321,6 +321,20 @@
     gap: 1.25rem;
   }
 
+  /* Escrow Remittance Split Grid Tablet */
+  .escrow-split-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.75rem !important;
+  }
+
+  .escrow-visual-frame {
+    margin-bottom: 0 !important;
+  }
+
+  .escrow-visual-frame img {
+    height: 380px !important;
+  }
+
   /* Home 2 Council Pavilion Tablet */
   .council-governance-grid {
     grid-template-columns: 1fr;
@@ -811,6 +825,36 @@
   .safeharbor-steps-box,
   .dispute-terminal-box {
     padding: 1.75rem 1.25rem;
+  }
+
+  /* Escrow Remittance Split Grid Mobile */
+  .escrow-split-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.25rem !important;
+  }
+
+  .escrow-visual-frame {
+    margin-bottom: 0 !important;
+  }
+
+  .escrow-visual-frame img {
+    height: 280px !important;
+  }
+
+  .escrow-badge-overlay {
+    padding: 0.75rem 1rem !important;
+    bottom: 0.85rem !important;
+    left: 0.85rem !important;
+    right: 0.85rem !important;
+  }
+
+  .escrow-badge-title {
+    font-size: 0.72rem !important;
+  }
+
+  .escrow-badge-status {
+    font-size: 0.65rem !important;
+    padding: 0.2rem 0.5rem !important;
   }
 
   /* Footer on Mobile */

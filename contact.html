@@ -945,13 +945,29 @@
       color: #94A3B8;
     }
 
+    @media (max-width: 1280px) {
+      .regional-hubs-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+      }
+      .placement-guarantee-matrix {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+      }
+      .placement-guarantee-matrix .guarantee-card:nth-child(3) {
+        grid-column: 1 / -1 !important;
+        max-width: calc(50% - 0.75rem) !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+      }
+    }
     @media (max-width: 1023px) {
       .contact-hero-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
       .regional-hubs-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
       }
       .enclave-split-grid {
         grid-template-columns: 1fr;
@@ -960,9 +976,6 @@
       .dispute-alert-banner {
         flex-direction: column;
         align-items: flex-start;
-      }
-      .placement-guarantee-matrix {
-        grid-template-columns: 1fr;
       }
     }
     @media (max-width: 767px) {
@@ -982,10 +995,18 @@
       .contact-quick-telemetry {
         grid-template-columns: 1fr;
       }
+      .placement-guarantee-matrix {
+        grid-template-columns: 1fr !important;
+      }
+      .placement-guarantee-matrix .guarantee-card:nth-child(3) {
+        grid-column: span 1 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+      }
     }
     @media (max-width: 639px) {
       .regional-hubs-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
       }
     }
   </style>

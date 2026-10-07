@@ -1655,7 +1655,15 @@
   }
 
   .placement-guarantee-matrix {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  .placement-guarantee-matrix .guarantee-card:nth-child(3) {
+    grid-column: 1 / -1 !important;
+    max-width: calc(50% - 0.75rem) !important;
+    margin: 0 auto !important;
+    width: 100% !important;
   }
 }
 
@@ -1726,8 +1734,15 @@
   }
 
   .estimate-metrics-grid,
-  .regional-hubs-grid {
-    grid-template-columns: 1fr;
+  .regional-hubs-grid,
+  .placement-guarantee-matrix {
+    grid-template-columns: 1fr !important;
+  }
+
+  .placement-guarantee-matrix .guarantee-card:nth-child(3) {
+    grid-column: span 1 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
   }
 
   .dispute-alert-banner {
@@ -2407,6 +2422,33 @@ ul.ph-crumbs {
     hyphens: none !important;
     -webkit-hyphens: none !important;
     margin: 0 !important;
+  }
+
+  .accreditations-ribbon-showcase {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  .regional-hubs-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  .placement-guarantee-matrix {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  .placement-guarantee-matrix .guarantee-card:nth-child(3) {
+    grid-column: 1 / -1 !important;
+    max-width: calc(50% - 0.75rem) !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+
+  .mods-bento-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
   }
 }
 

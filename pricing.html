@@ -107,6 +107,20 @@
     .divert-cta-actions .btn-outline:hover span {
       color: #0A192F !important;
     }
+
+    @media (max-width: 1280px) {
+      .mods-bento-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .mods-bento-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+      }
+    }
   </style>
 </head>
 <body>

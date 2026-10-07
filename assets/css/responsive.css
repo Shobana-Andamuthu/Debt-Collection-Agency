@@ -1853,7 +1853,7 @@ html, body {
   overflow-x: hidden !important;
 }
 
-/* 2. Header Navbar Responsive Scaling (< 991px & < 576px) */
+/* 2. Header Navbar Responsive Scaling (< 991px, < 576px, < 380px) */
 @media (max-width: 991px) {
   .nav-actions #navLoginBtn,
   .nav-actions .btn-gold,
@@ -1870,33 +1870,149 @@ html, body {
   .dashboard-actions .btn-back-site {
     display: none !important;
   }
+  .site-header .container,
+  .navbar-container,
+  .header-container {
+    padding-inline: 1rem !important;
+  }
 }
 
 @media (max-width: 576px) {
+  :root {
+    --container-padding: 0.85rem;
+  }
+
+  .site-header .container {
+    padding-inline: 0.75rem !important;
+  }
+
+  .site-header .navbar,
+  .navbar {
+    gap: 0.4rem !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
   .brand-subtitle,
   .dashboard-portal-tag {
     display: none !important;
   }
 
+  .site-header .nav-brand,
+  .nav-brand {
+    gap: 0.45rem !important;
+    min-width: 0 !important;
+    flex-shrink: 1 !important;
+  }
+
   .brand-title {
-    font-size: 1.05rem !important;
-    letter-spacing: 0.02em !important;
+    font-size: clamp(0.9rem, 3.8vw, 1.12rem) !important;
+    letter-spacing: -0.01em !important;
+    white-space: nowrap !important;
+    line-height: 1 !important;
   }
 
   .brand-emblem {
     width: 32px !important;
     height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    border-radius: 8px !important;
+    flex-shrink: 0 !important;
   }
 
   .nav-actions,
   .dashboard-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .icon-btn,
+  .hamburger-btn,
+  #hamburgerBtn,
+  .theme-toggle-btn,
+  .rtl-toggle-btn {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .rtl-toggle-btn .dir-label {
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+  }
+
+  .theme-toggle-btn .theme-icon,
+  .theme-toggle-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-header .container {
+    padding-inline: 0.5rem !important;
+  }
+
+  .site-header .navbar,
+  .navbar {
+    gap: 0.25rem !important;
+  }
+
+  .nav-actions,
+  .dashboard-actions {
+    gap: 0.22rem !important;
+  }
+
+  .site-header .nav-brand,
+  .nav-brand {
     gap: 0.35rem !important;
   }
 
-  .icon-btn {
-    width: 36px !important;
-    height: 36px !important;
-    padding: 0 !important;
+  .brand-emblem {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+  }
+
+  .brand-title {
+    font-size: 0.88rem !important;
+  }
+
+  .icon-btn,
+  .hamburger-btn,
+  #hamburgerBtn,
+  .theme-toggle-btn,
+  .rtl-toggle-btn {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    border-radius: 6px !important;
+  }
+
+  .rtl-toggle-btn .dir-label {
+    font-size: 0.65rem !important;
+  }
+
+  .theme-toggle-btn .theme-icon,
+  .theme-toggle-btn svg {
+    width: 14px !important;
+    height: 14px !important;
   }
 }
 
@@ -2269,8 +2385,8 @@ ul.ph-crumbs {
   justify-content: center !important;
   align-items: center !important;
   gap: 4.5px !important;
-  width: 38px !important;
-  height: 38px !important;
+  width: 38px;
+  height: 38px;
   padding: 6px !important;
   border-radius: var(--radius-md) !important;
   background-color: rgba(255, 255, 255, 0.08) !important;
@@ -2824,6 +2940,212 @@ body.auth-page-body {
   .custom-select-option {
     font-size: 0.75rem !important;
     padding: 0.5rem 0.6rem !important;
+  }
+}
+
+/* ==========================================================================
+   COMPREHENSIVE MOBILE ICON & CONSOLE RESPONSIVE SYSTEM
+   ========================================================================== */
+
+/* 1. Global Header Icons & Action Controls Consistency */
+.site-header .nav-actions,
+.navbar .nav-actions,
+.dashboard-header .dashboard-actions {
+  display: flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+}
+
+.site-header .icon-btn,
+.navbar .icon-btn,
+.site-header .hamburger-btn,
+.navbar .hamburger-btn,
+.dashboard-header .icon-btn {
+  border: 1px solid rgba(197, 160, 89, 0.3) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #E2E8F0 !important;
+  transition: all var(--transition-fast) !important;
+  box-sizing: border-box !important;
+}
+
+.site-header .icon-btn:hover,
+.navbar .icon-btn:hover,
+.site-header .hamburger-btn:hover,
+.navbar .hamburger-btn:hover,
+.dashboard-header .icon-btn:hover {
+  background-color: rgba(197, 160, 89, 0.22) !important;
+  border-color: rgba(197, 160, 89, 0.6) !important;
+  color: #E6CA65 !important;
+}
+
+/* 2. Floating Back To Top Button Responsive Engine */
+.back-to-top,
+.back-to-top-btn,
+#backToTopBtn {
+  position: fixed !important;
+  bottom: 18px !important;
+  right: 18px !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: var(--radius-md, 10px) !important;
+  background: rgba(10, 25, 47, 0.92) !important;
+  border: 1px solid rgba(197, 160, 89, 0.45) !important;
+  color: #C5A059 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 99999 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45), 0 0 12px rgba(197, 160, 89, 0.2) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  cursor: pointer !important;
+  touch-action: manipulation !important;
+  transition: all var(--transition-fast) !important;
+}
+
+.back-to-top:hover,
+.back-to-top-btn:hover,
+#backToTopBtn:hover {
+  background: rgba(23, 42, 69, 0.98) !important;
+  border-color: #E6CA65 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-3px) !important;
+}
+
+[dir="rtl"] .back-to-top,
+[dir="rtl"] .back-to-top-btn,
+[dir="rtl"] #backToTopBtn {
+  right: auto !important;
+  left: 18px !important;
+}
+
+@media (max-width: 576px) {
+  .back-to-top,
+  .back-to-top-btn,
+  #backToTopBtn {
+    bottom: 14px !important;
+    right: 14px !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    border-radius: 8px !important;
+  }
+  [dir="rtl"] .back-to-top,
+  [dir="rtl"] .back-to-top-btn,
+  [dir="rtl"] #backToTopBtn {
+    right: auto !important;
+    left: 14px !important;
+  }
+}
+
+/* 3. Forensic Scrub Console & Filter Switches Full Responsiveness */
+.scrub-terminal-console {
+  max-width: 100% !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.scrub-console-grid {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.scrub-filter-toggle {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.scrub-toggle-switch {
+  flex-shrink: 0 !important;
+}
+
+@media (max-width: 991px) {
+  .scrub-console-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .scrub-control-pane {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2) !important;
+  }
+
+  [dir="rtl"] .scrub-control-pane {
+    border-left: none !important;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .scrub-console-topbar {
+    padding: 0.85rem 1rem !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+    justify-content: space-between !important;
+  }
+
+  .scrub-console-topbar > span:not(.badge):not(.scrub-traffic-lights) {
+    font-size: 0.72rem !important;
+    word-break: break-all !important;
+    order: 3;
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+
+  .scrub-control-pane,
+  .scrub-monitor-pane {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .scrub-filter-toggle {
+    padding: 0.85rem 1rem !important;
+    gap: 0.75rem !important;
+  }
+
+  .scrub-filter-toggle > div:first-child {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+
+  .scrub-filter-toggle span {
+    font-size: 0.88rem !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .scrub-stats-ribbon {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .scrub-stat-pod {
+    padding: 0.85rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .scrub-filter-toggle {
+    padding: 0.75rem 0.85rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .scrub-toggle-switch {
+    width: 38px !important;
+    height: 22px !important;
+  }
+
+  .scrub-toggle-switch::after {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .scrub-filter-toggle.active .scrub-toggle-switch::after {
+    transform: translateX(16px) !important;
   }
 }
 

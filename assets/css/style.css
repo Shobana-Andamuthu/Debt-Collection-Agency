@@ -10162,7 +10162,8 @@ textarea:-webkit-autofill {
   padding: 1.25rem 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 1.15rem;
   cursor: pointer;
   transition: all var(--transition-fast);
   text-align: left;

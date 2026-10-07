@@ -2333,15 +2333,98 @@ ul.ph-crumbs {
   }
 }
 
-/* Command Center & Hub Display Mobile Layout Protection (< 991px & < 576px) */
-@media (max-width: 991px) {
-  .command-display-panel {
+/* Command Center & Hub Display Responsive Layout Protection (iPad Pro, Tablets & Mobile) */
+@media (max-width: 1280px) {
+  .command-room-arena {
     grid-template-columns: 1fr !important;
+    gap: 2.25rem !important;
+    margin-top: 2.5rem !important;
+  }
+
+  .command-hubs-nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.15rem !important;
+    width: 100% !important;
+  }
+
+  .command-display-panel {
+    grid-template-columns: 1.15fr 0.85fr !important;
     gap: 1.5rem !important;
   }
 
   .display-panel-content {
-    padding: 1.5rem 1.25rem !important;
+    padding: 2.25rem 1.75rem !important;
+  }
+
+  .display-panel-media {
+    min-height: 100% !important;
+  }
+
+  .command-telemetry-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+    margin-top: 1.5rem !important;
+    width: 100% !important;
+  }
+
+  .telemetry-box {
+    padding: 1rem 1.15rem !important;
+    border-radius: 14px !important;
+    min-height: 90px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+    transition: all 0.25s ease !important;
+  }
+
+  [dir="rtl"] .telemetry-box {
+    text-align: right !important;
+  }
+
+  .telemetry-lbl {
+    font-size: 0.68rem !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.4rem !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+  }
+
+  .telemetry-val {
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .command-display-panel {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .display-panel-content {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .display-panel-media {
+    height: 280px !important;
+    min-height: 260px !important;
+    max-height: 320px !important;
+    width: 100% !important;
   }
 
   .command-hub-title {
@@ -2360,17 +2443,58 @@ ul.ph-crumbs {
     overflow-wrap: break-word !important;
     line-height: 1.6 !important;
   }
+}
+
+@media (max-width: 850px) {
+  .command-display-panel {
+    grid-template-columns: 1fr !important;
+  }
 
   .command-telemetry-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: 1fr !important;
     gap: 0.75rem !important;
+  }
+
+  .telemetry-box {
+    min-height: auto !important;
+    padding: 0.9rem 1.1rem !important;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 640px) {
+  .command-hubs-nav {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .command-hub-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0.85rem !important;
+    padding: 0.95rem 1.15rem !important;
+    border-radius: 12px !important;
+    text-align: left !important;
+  }
+
+  .display-panel-content {
+    padding: 1.5rem 1.2rem !important;
+  }
+
+  .display-panel-media {
+    height: 220px !important;
+    min-height: 200px !important;
+  }
+}
+
+@media (max-width: 480px) {
   .command-telemetry-grid {
     grid-template-columns: 1fr !important;
-    gap: 0.5rem !important;
+    gap: 0.65rem !important;
+  }
+
+  .telemetry-box {
+    padding: 0.75rem 0.9rem !important;
   }
 }
 

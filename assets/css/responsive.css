@@ -3149,4 +3149,39 @@ body.auth-page-body {
   }
 }
 
+/* 4. SLA 4-Quadrant Institutional Matrix (iPad Pro & Tablets: 2 Cards Per Row) */
+@media (max-width: 1366px) and (min-width: 641px) {
+  .sla-quadrant-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+    margin-top: 2rem !important;
+  }
+
+  .sla-quad-card {
+    padding: 2rem 1.5rem !important;
+    min-height: auto !important;
+  }
+
+  .sla-big-num {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .sla-quadrant-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    margin-top: 1.75rem !important;
+  }
+
+  .sla-quad-card {
+    padding: 1.5rem 1.25rem !important;
+  }
+
+  .sla-big-num {
+    font-size: 1.95rem !important;
+  }
+}
+
+
 
